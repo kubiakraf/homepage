@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>brudnopis z WTFa</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>git - system kontroli wersji</h1>
+        autor: Rafał Kubiak WTF edycja #3
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JS</a>
+        <a href="vcs.html">VSC</a>
+        <a href="git.html">git</a>
+        <a href="entities.html">entities</a>
+        <a href="power.html">Power User</a>
+        <a href="net.html">Internet</a>
+        <a href="terminal.html">Terminal</a>
+      </nav>
+
+      <p>Repozytorium = wszystkie pliki projektu nad którymi pracuję</p>
+      <p>Commit - stan projektu i opis tego co się zmieniło od ostatniego zapisu</p>
+      <p>Dodajemy commita po większej porcji zmian, lepiej częściej niż rzadziej.</p>
+
+      <section>
+        <h2>Command line</h2>
+        <ul>
+          <li>git config --global user.name "J0n Doe"</li>
+          <li>git config --global user.email "jondoe@example.com"</li>
+          <li>git status - polecenie do śledzenia zmian</li>
+          <li>git add. - dodanie zmian do commita</li>
+          <li>.git - tym katalogiem zarządza oprogramowanie do obsługi gita, nie ruszać</li>
+        </ul>
+        <article>
+          <h3>create a new repository on the command line:</h3>
+          <ul>
+            <li>echo "# 'repo'" >> README.md</li>
+            <li>git init - new repository</li>
+            <li>git add README.md</li>
+            <li>git commit -m "opis zmian" - comitowanie zmian</li>
+            <li>git branch -M main</li>
+            <li>git remote add origin https://github.com/"user"/"repo"</li>
+            <li>git push -u orign main</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>push an existing repository on the command line:</h3>
+          <ul>
+            <li>git remote add origin https://github.com/"user"/"repo"</li>
+            <li>git branch -M main</li>
+            <li>git push -u orign main</li>
+          </ul>
+        </article>
+
+        <article>
+          <h3>Podstawowy flow</h3>
+          <ul>
+            <li>git add.</li>
+            <li>git commit -m "opis zmian"</li>
+            <li>git push</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <p>Strona szkoleniowa z frontendu.</p>
+
+      <div>Rafał Kubiak &copy;</div>
+    </footer>
+  </body>
+</html>

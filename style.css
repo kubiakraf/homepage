@@ -1,0 +1,35 @@
+body {
+  background-color: #636262;
+  color: whitesmoke;
+}
+
+h1 {
+  color: #ccc;
+}
+
+h2 {
+  color: darkgreen;
+  background-color: rgb(168, 171, 171);
+}
+
+section {
+  background: rgb(95, 95, 124);
+}
+
+ul {
+  list-style: none;
+}
+
+.my-article {
+  background-color: #343434;
+}
+
+.url-green {
+  color: greenyellow;
+}
+.url-red {
+  color: red;
+}
+.url-bold {
+  font-weight: bold;
+}

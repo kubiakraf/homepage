@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>brudnopis z WTFa</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Jak działa internet</h1>
+        autor: Rafał Kubiak WTF edycja #3
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JS</a>
+        <a href="vcs.html">VSC</a>
+        <a href="git.html">git</a>
+        <a href="entities.html">entities</a>
+        <a href="power.html">Power User</a>
+        <a href="net.html">Internet</a>
+        <a href="terminal.html">Terminal</a>
+      </nav>
+
+      <article>
+        <h2>HTTP - HyperText Transfer Protocol</h2>
+        <p>
+          Protokół do transportowania HTMLa.<br />
+          Protokół którego w większości przypadków, używa przeglądarka do transporotowania
+          danych.<br />
+          Z serwera do naszej przeglądarki z przeglądarki do serwera.
+        </p>
+        <ul>
+          Kody odpowiedzi HTTP
+          <li>100 - poczekaj chwilkę, za chwilę będziesz mógł zrobić kolejne rządanie</li>
+          <li>200 - OK</li>
+          <li>30x - Szukasz w złym miejscu - przekieruję Cię w dobre</li>
+          <li>404 - Strony nie odnaleziono, nie mam tego co potrzebujesz</li>
+          <li>50x - nie czuję się najlepiej..., błąd wewnętrzny serwera</li>
+        </ul>
+        <p>Aktualnie coraz częściej HTTP/2, który jest szybszy i pozwala na więcej połączeń.</p>
+      </article>
+
+      <article>
+        <h2>HTTPS - HyperText Transfer Protocol Secure</h2>
+        <p>
+          Strony z kłódką. Dane są dodatkowo szyfrowane, dzięki czemu połączenie z serwerami jest
+          bezpieczne.
+        </p>
+      </article>
+
+      <article>
+        <h2>URL - Uniform Resource Locator</h2>
+        <p>Nazwa zasobu, który chcemy pobrać.</p>
+        <table>
+          <tbody>
+            <tr class="url-green">
+              <td></td>
+              <td></td>
+
+              <td colspan="3">super ważny / (root)</td>
+
+              <td></td>
+            </tr>
+            <tr class="url-bold">
+              <td class="url-red">https://</td>
+              <td>cotenfrontend.pl</td>
+              <td class="url-red">:443</td>
+              <td class="url-green">/</td>
+              <td>index.html</td>
+              <td class="url-red">?parametr=wartość</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                host <br />
+                (adres serwera)
+              </td>
+              <td></td>
+              <td></td>
+              <td colspan="2">
+                ścieżka dostępu<br />
+                do zasobu
+              </td>
+            </tr>
+            <tr class="url-red">
+              <td>protokół</td>
+              <td></td>
+              <td>
+                port<br />(ukryte<br />
+                https - 443<br />http - 80)
+              </td>
+              <td></td>
+              <td></td>
+              <td>parametry</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <article>
+        <h2>DNS</h2>
+        <p>
+          Przeglądarka za jego pomocą szuka wpisanego adresu strony. Tłumaczy wpisane nazwy na
+          adresy serwerów.<br />
+          Po znalezieniu serwera przeglądarka odpytuje go o index. <br />Przeglądarka działa w
+          oparciu o system request - response. Wysyła zapytanie do serwera o wartość zasobu jeśli
+          serwer go posiada to przeglądarka otrzymuje go.
+        </p>
+      </article>
+
+      <article>
+        <h2></h2>
+        <p></p>
+      </article>
+    </main>
+    <footer>
+      <p>Strona szkoleniowa z frontendu.</p>
+
+      <div>Rafał Kubiak &copy;</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>brudnopis z WTFa</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>CSS3 - Cascading Style Sheets (Kaskadowe arkusze stylów)</h1>
+        autor: Rafał Kubiak WTF edycja #3
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+        <a href="javascript.html">JS</a>
+        <a href="vcs.html">VSC</a>
+        <a href="git.html">git</a>
+        <a href="entities.html">entities</a>
+        <a href="power.html">Power User</a>
+        <a href="net.html">Internet</a>
+        <a href="terminal.html">Terminal</a>
+      </nav>
+
+      <article>
+        <h2>Definicja</h2>
+        <p>
+          Definiuje wygląd, prezentację na ekranach, czytnikach, wydrukach. Składnia CSS to reguły.
+          Przeglądarki potrafią różnie interpretować CSS co prowadzi do różnic w wyświetlaniu.
+        </p>
+        <div>
+          selektor &#123; <br />
+          właścwości: wartość;
+          <br />&#125;
+        </div>
+      </article>
+
+      <article>
+        <h2>Deklaracja styli</h2>
+        <ul>
+          <li>
+            inlinowe - ma jest nadżędny na innymi stylami, tylko jeśli nie możemy edytować pliku ze
+            stylami bo są np. w zewnętrznej bibliotece.<br />
+            &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;
+          </li>
+          <li>w head pliku html</li>
+          <li>
+            Deklarowanie pliku zewnętrznego ze stylami CSS w head strony:
+            <div>&lt; link href="style.css" rel="stylesheet" type="text/css" &gt;</div>
+          </li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Łączenie selektorów</h2>
+        <p>// po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
+        <div>
+          section a &#123; <br />
+          właścwości: wartość; <br />&#125;
+        </div>
+      </article>
+
+      <article class="my-article">
+        <h2>Specyficzność w CSS</h2>
+        <table>
+          <tr>
+            <td>( _</td>
+            <td>, _ )</td>
+            <td>, _</td>
+            <td>, _</td>
+            <td>, _</td>
+          </tr>
+          <tr>
+            <td>!important</td>
+            <td>style=""</td>
+            <td>#name</td>
+            <td>.name</td>
+            <td>element</td>
+          </tr>
+        </table>
+
+        <section>
+          <h3>Dziedziczenie</h3>
+          <p>
+            selektor {name:wartość;} <br />
+            !important - reguła umieszczana po deklaracji ale przed średnikiem czyni ją nadrzędną,
+            ale jeśli ma być dziedziczony i nie jest zdefiniowany bezpośrenio do danego elementu nie
+            jest brany pod uwagę. nadpisuje inne reguły dotyczące tej własności.<br />
+
+            #id #(hash) - selektor id - nie używamy <br />
+            .class .(kropka) - selektor klasy<br />
+            element - selektor elementu <br />
+          </p>
+
+          <p>
+            Jeśli specyficzność jest równa - pierwszeństwo ma selektor "bliżej" elementu, czyli
+            niżej, na końcu pliku.
+          </p>
+          <p>
+            Rekomendowane jest dodawanie klas do wszystkich elementów i unikanie zagnieżdzeń. Nie
+            dodawać styli za pomocą tagów (selektor elementu).
+          </p>
+        </section>
+        <section>
+          <h3>wartość: inherit;</h3>
+          <p>
+            Definiujemy tą wartością, że coś ma być dziedziczone. Jak np. color linków dziedziczony
+            po &lt;section&gt; w którym link się znajduje:
+          </p>
+          <div>
+            section a &#123; <br />
+            color: inherit; <br />&#125;
+          </div>
+        </section>
+        <section>
+          <h3>Lista dziedziczonych własności CSS</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>border-collapse</td>
+                <td>font-style</td>
+                <td>list-style-position</td>
+                <td>text-indent</td>
+              </tr>
+              <tr>
+                <td>border-spacing</td>
+                <td>font-variant</td>
+                <td>list-style-type</td>
+                <td>text-justify</td>
+              </tr>
+              <tr>
+                <td>caption-side</td>
+                <td>font-weight</td>
+                <td>list-style</td>
+                <td>text-shadow</td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td>font-size-adjust</td>
+                <td>orphans</td>
+                <td>text-transform</td>
+              </tr>
+              <tr>
+                <td>curosr</td>
+                <td>font-stretch</td>
+                <td>quotes</td>
+                <td>visibility</td>
+              </tr>
+              <tr>
+                <td>direction</td>
+                <td>font</td>
+                <td>tab-size</td>
+                <td>white-space</td>
+              </tr>
+              <tr>
+                <td>empty-cells</td>
+                <td>letter-spacing</td>
+                <td>text-align</td>
+                <td>widows</td>
+              </tr>
+              <tr>
+                <td>font-family</td>
+                <td>line-height</td>
+                <td>text-align-last</td>
+                <td>word-break</td>
+              </tr>
+              <tr>
+                <td>font-size</td>
+                <td>list-style-image</td>
+                <td>text-decoration-color</td>
+                <td>word-spacing</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>word-wrap</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
+
+      <article>
+        <h2>Nazewnictwo klas</h2>
+        <ul>
+          <li>pojedyńcze słowa z języka angielskiego</li>
+          <li>nazwy zgodne z ich funkcją na stronie</li>
+          <li>startuj z małej litery</li>
+          <li>nie zaczynać od cyfry</li>
+          <li>
+            jeśli dwa słowa nie używamu spacji:
+            <ul>
+              <li>- camelCase - łączenie wyrazów zlepiając je i oddzielając wielkimi literami</li>
+              <li>- kebab-case - łączenie wyrazów myślnikiem</li>
+              <li>
+                - snake_case - łączenie wyrazów za pomocą dolnej belki - nie używać bo nie zawsze
+              </li>
+              <li>- PascalCase - zaczynamy od wielkiej litery i łączymy nimi kolejne wyrazy</li>
+            </ul>
+          </li>
+          <li>starać się aby każdy element miał jedną klasę, unikać specyficzności</li>
+          <li>jeśli wybierzemy jakiś schemat nazewnictwa to trzymamy się go konsekwentnie</li>
+        </ul>
+      </article>
+
+      <article>
+        <h2>Podsumowanie klas</h2>
+        <ul>
+          <li>HTML: class="name" = CSS: .name</li>
+          <li>HTML: id="name" = CSS: #name</li>
+          <li>stylujemy po klasach (bez zagnieżdzeń)</li>
+          <li>nazwyamy klasy po angielsku zgodnie z przeznaczeniem</li>
+          <li>tworzymy klasy nawet jeśli mamy tylko jeden element danego typu</li>
+        </ul>
+      </article>
+    </main>
+
+    <footer>
+      <p>Strona szkoleniowa z frontendu.</p>
+
+      <div>Rafał Kubiak &copy;</div>
+    </footer>
+  </body>
+</html>
