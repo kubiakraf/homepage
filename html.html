@@ -27,7 +27,7 @@
         <a href="terminal.html">Terminal</a>
       </nav>
 
-      <section>
+      <article>
         <h2>Definicja</h2>
         <p>
           Nie jest językiem programowania, jest językiem znaczników. HTML5 stał się tak zwanym
@@ -37,64 +37,85 @@
           sekcje, artykuły, nagłówki - to jest struktura. Posiada swoją zdefiniowaną składnię -
           znaczniki, które zawierają w sobie treść.
         </p>
-      </section>
+      </article>
 
-      <section>
-        <h3>main</h3>
+      <article>
+        <h2>main</h2>
         <p>Unikatowa treść strony, nie występująca na innych podstronach.</p>
-      </section>
+      </article>
 
-      <section>
-        <h3>header</h3>
+      <article>
+        <h2>header</h2>
         <p>
           Nałówek - dokumentu(main) / sekcji(section) / artykułu(article) Kontener, pudełko na
           nagłówki.
         </p>
-      </section>
+      </article>
 
-      <section>
-        <h3>nav</h3>
+      <article>
+        <h2>nav</h2>
         <p>Znacznik opakowujący nawigację serwisu. Umieszcza się go w &lt;header&gt;</p>
-      </section>
+      </article>
 
-      <section>
-        <h3>article | section</h3>
+      <article>
+        <h2>article | section</h2>
         <p>
           Sekcja to jakby dział sklepu, póka. <br />Artykuł to tak jakby artykuł w sklepie na półce.
           Może mieć w sobie sekcje i zaczynają się od nagłówka.
         </p>
-      </section>
+        <article>
+          <h2>article</h2>
+          <ul>
+            <li>
+              do oznaczania niezależnych, samodzielnych elementów zawartości, które mają sens w
+              oderwaniu od reszty strony
+            </li>
+            <li>pojedynczy artykuł, wpis na blogu, komentarz, wiadomość itp.</li>
+            <li>powinien zawierać treść, która stanowi samodzielny byt</li>
+          </ul>
+        </article>
+        <article>
+          <h2>section</h2>
+          <ul>
+            <li>używany do logicznego podzielenia zawartości strony na sekcje</li>
+            <li>może zawierać różne rodzaje zawrtości: tekst, obrazy, listy itp</li>
+            <li>cel - pomóc w organizacji strony i podzielenie na spójne części</li>
+            <li>gdy mam treść, którą można logicznie pogrupować</li>
+            <li>gdy nie są na tyle niezależne, aby stanowić osobne artykuły</li>
+          </ul>
+        </article>
+      </article>
 
-      <section>
-        <h3>footer</h3>
+      <article>
+        <h2>footer</h2>
         <p>Stopka - dokumentu / sekcji / artykułu</p>
         <p>
           Jeśli mamy wiele pod stron to &lt;footer&gt; musi znaleść się za &lt;main&gt;, bo powiela
           się na wszystkich stronach
         </p>
-      </section>
+      </article>
 
-      <section>
-        <h3>h1-h6</h3>
+      <article>
+        <h2>h1-h6</h2>
         <p>
           Nagłówek tekstowy - dokumentu / sekcji / artykułu W dokumencie od największego do
           najmniejszego. Opakowany przez header jeśli są dodatkowe info dotyczące nagłówka np. data
           publikacji, autor
         </p>
-      </section>
+      </article>
 
-      <section>
-        <h3>p - paragraf</h3>
+      <article>
+        <h2>p - paragraf</h2>
         <p>Blok tekstu.</p>
-      </section>
+      </article>
 
-      <section>
-        <h3>&lt;br/&gt; - break line</h3>
+      <article>
+        <h2>&lt;br /&gt; - break line</h2>
         <p>Złamanie tekstu</p>
-      </section>
+      </article>
 
-      <section>
-        <h3>Elementy do wyróżnienia tekstu</h3>
+      <article>
+        <h2>Elementy do wyróżnienia tekstu</h2>
         <ul>
           <li>&lt;b&gt; - bold - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać</li>
           <li>&lt;i&gt; - italic - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać</li>
@@ -104,16 +125,16 @@
           </li>
           <li>&lt;em&gt; - italic i podkreśla, że tekst może mieć inne znaczenie (np. ironia)</li>
         </ul>
-      </section>
+      </article>
 
-      <section>
-        <h3>a - anchor</h3>
+      <article>
+        <h2>a - anchor (kotwica)</h2>
         &lt;a href="https://..." target="_blank" &gt;"opis"&lt;/a&gt;<br />
         &lt;a href="#name" &gt;"chapter 1"&lt;/a&gt; przenosi do elementu &lt;zancznik id="name"&gt;
-      </section>
+      </article>
 
-      <section>
-        <h3>img - image</h3>
+      <article>
+        <h2>img - image</h2>
         &lt;img src="*.jpg" alt="alternativ text"/&gt;
         <p>Jest to znacznik samozamykający się.</p>
         <p>
@@ -122,10 +143,10 @@
           Brak / z przodu ścieżki czyni adres zasobu relatywnym.<br />
           Jeśli dodam go w stronie robionej na dysku to będzie odwoływać się do początku dysku C.
         </p>
-      </section>
+      </article>
 
-      <section>
-        <h3>Relacje między elementami</h3>
+      <article>
+        <h2>Relacje między elementami</h2>
         <ul>
           <li>Głómny element html to korzeń,</li>
           <li>dalej są zagnieżdżenia, które mogą mieć w sobie kolejne zagnieżdżenia.</li>
@@ -135,7 +156,7 @@
           </li>
           <li>Pojedyńczy element nazywamy węzłem lub nodem.</li>
         </ul>
-      </section>
+      </article>
     </main>
 
     <footer>

@@ -119,7 +119,7 @@
         </section>
         <section>
           <h3>Lista dziedziczonych własności CSS</h3>
-          <table>
+          <table class="table-inheritanc-css">
             <tbody>
               <tr>
                 <td>border-collapse</td>
@@ -219,7 +219,289 @@
           <li>tworzymy klasy nawet jeśli mamy tylko jeden element danego typu</li>
         </ul>
       </article>
+
+      <article>
+        <h2>div</h2>
+        <ul>
+          <li>nie ma znaczenia semantycznego</li>
+          <li>
+            gdy chcemy coś opakować i tylko kiedy <strong>nie istnieje</strong> odpowiedni
+            semantyczny znacznik
+          </li>
+          <li>przydaje się przy stylowaniu elementów</li>
+          <li>jeśli opakowujemy nim treść to prawdopodobnie robimy to źle</li>
+        </ul>
+      </article>
     </main>
+
+    <article>
+      <h2>display: block</h2>
+      <ul>
+        <li>element zajmuje całą dostępną szerokość ekranu</li>
+        <li>jeśli nawet zajmuje mniej miejsca, rezerwuje tą przestrzeń</li>
+        <li>kolejne elementy będzie przerzucał do kolejnej linii</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>display: inline</h2>
+      <ul>
+        <li>element zajmuje tylko tyle miejsca ile wyświetlana w nim treść</li>
+        <li>kolejne elementy będą następować jeden po drugim w linii</li>
+        <li>wyświetlają się z delikatną przerwą jakby była między nimi spacja.</li>
+        <li>nie działa określanie width i height</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>display: inline-block</h2>
+      <ul>
+        <li>box który ma mniej treści zachowuje się jak liniowy</li>
+        <li>box któy ma więcej treści i wchodzi w kolejną linie staje się blokowym.</li>
+        <li>gdy przestał być całkowicie inline stał się blokowym</li>
+        <li>hybryda pomiędzy inline a block</li>
+        <li>elementy zachowują się trochę inlinowo ale można nadawać im szerokość i wysokość</li>
+      </ul>
+    </article>
+
+    <section>
+      <h2>Definiowanie zachowania bloków</h2>
+      <article>
+        <h3>width i height</h3>
+        <ul>
+          <li>sztywne rozmiary obiektu</li>
+          <li>jeśli się nie mieści na ekranie pojawia się scroll boczny</li>
+          <li>gdy węższy od ekranu pozostawia pustą przestrzeń</li>
+        </ul>
+      </article>
+      <article>
+        <h3>max-width i max-height</h3>
+        <ul>
+          <li>bloki zajmują całą dostępną zdeklarowaną przestrzeń</li>
+          <li>treść dostosowuje się do zmieniającej się szerokości ekranu</li>
+          <li>nie rozszerzy się bardziej niż maksymalna zadelkarowana</li>
+        </ul>
+      </article>
+      <article>
+        <h3>min-width i min-height</h3>
+        <ul>
+          <li>
+            gdy ekran się zmniejsza poniżej zadeklarowanej wartości minimalnej pojawia się boczny
+            scroll
+          </li>
+          <li>element nie może być mniejszy niż zadeklarowana</li>
+          <li>zachowują się trochę jak elementy blokowe</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>overflow</h3>
+        <ul>
+          <li>definiuje jak ma się zachować element gdy treść zajmuje więcej miejsca niż blok</li>
+          <li>: hidden; - wizulanie ucina treść która się nie mieści</li>
+          <li>
+            : auto; - tworzy scrolla aby można przewinąć treść - tylko tam gdzie jest potrzebny
+          </li>
+          <li>
+            : clip; - na tym etapie działa jak hidden ale przydaje się przy bardziej zaawansowanym
+            stylowaniu
+          </li>
+          <li>
+            : scroll; - wszystkie elementy, niezależnie czy potrzebują mają pasek do przewijania
+          </li>
+          <li>
+            : visible; - treść wystaje po za blok, tak jakby overflow nie był definiowany<br />
+            w tym przypadku treść nachodzi na treść elementu poniżej, nie respektuje jego
+            przestrzeni
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <article>
+      <h2>jednostki</h2>
+      <p>zapisywać bez spacji</p>
+      <ul>
+        <li>0 - bez jednostek, zero to jest zero nieważne czego</li>
+        <li>
+          px - piksele - jeden punkt na ekranie <br />
+          przeliczony przez przeglądarkę a nie ten ze specyfikacji technicznej monitora
+        </li>
+        <li>
+          % - procenty - wartość odnosząca się do wielkości rodzica. <br />
+          element wyżej musi mieć zdefiniowaną wysokość aby móc wyrazić ją w procentach
+        </li>
+        <li>
+          vw - viewport width - szerokość okna w którym wyświetla się dokument w procentach<br />
+          nie odnosi się do rodzica, zawsze do okna ekranu (posiada margines)
+        </li>
+        <li>
+          vh - viewport height - bierze całą wysokość okna (nie całości dokumantu) <br />
+          gdy treść sekcji ma być na cały ekran jest to robione za pomocą height: 100vh;
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Box model</h2>
+      <table class="table-box-model">
+        <tbody class="table-margin">
+          <tr>
+            <td colspan="10">margin</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="8" class="table-border">border</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="table-border"></td>
+            <td colspan="6" class="table-padding">padding</td>
+            <td class="table-border"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="table-border"></td>
+            <td class="table-padding"></td>
+            <td colspan="4" class="table-element">element</td>
+            <td class="table-padding"></td>
+            <td class="table-border"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="table-border"></td>
+            <td colspan="6" class="table-padding"></td>
+            <td class="table-border"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td colspan="8" class="table-border"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Wszystkie elementy na stronie są otoczone "niewidzialnym prostokątem"<br />
+        Jest widoczny gdy podświetla się go w Inspect
+      </p>
+      <ul>
+        <li>
+          <h3>margin</h3>
+          <ul>
+            <li>Określa o ile element ma się odsunąć od innych elementów, które go otaczają.</li>
+            <li>Zapisuyjemy tak samo jak padding.</li>
+            <li>marginesy nakładają się na siebie.</li>
+            <li>elementy są od siebie odsunięte o wyższą wartość, mniejsza jest jako minimalna.</li>
+            <li>
+              margin: __px auto; pierwsza wartość do top-bottom a druga auto = wyśrodkowanie
+              elementu
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>border</h3>
+          <ul>
+            <li>
+              <h4>Zapis pełny:</h4>
+              <ul>
+                <li>border-width: 3px;</li>
+                <li>border-style: solid;</li>
+                <li>border-color: #fe201a;</li>
+              </ul>
+            </li>
+            <li>
+              <h4>Zapis skrótowy:</h4>
+              <ul>
+                <li>border: 3px solid #fe201a;</li>
+              </ul>
+            </li>
+            <li>
+              <h4>wybór fragmentu ramki:</h4>
+              <ul>
+                <li>border-top: 3px solid #fe201a;</li>
+                <li>border-right</li>
+                <li>border-bottom</li>
+                <li>border-left</li>
+              </ul>
+            </li>
+            <li>
+              <h4>border-radius:</h4>
+
+              <ul>
+                <li>Odpowiada za zaokrąglenie.</li>
+                <li>px lub %</li>
+                <li>Nie tzeba definiować border aby mieć zaokrąglony box.</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>padding</h3>
+          <ul>
+            <li>definiuje o ile nasza treść ma być oddalona od ramki, krawędzi tego elementu</li>
+
+            <li>
+              <h4>Zapis pełny:</h4>
+              <ul>
+                <li>padding-top: 4px;</li>
+                <li>padding-right: 4px;</li>
+                <li>padding-bottom: 5px;</li>
+                <li>padding-left: 6px;</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Zapis skrótowy (shorthand):</h4>
+              <ul>
+                <li>padding: top right bottom left;</li>
+                <li>padding: 4px 4px 5px 6px;</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Wartości lustrzane:</h4>
+              <ul>
+                <li>padding: top right-left bottom;</li>
+                <li>padding: 4px 5px 6px;</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Drugi zapis skrótowy:</h4>
+              <ul>
+                <li>padding: top-bottom right-left;</li>
+                <li>padding: 4px 5px 6px;</li>
+              </ul>
+            </li>
+
+            <li>
+              <h4>Wszystkie wartości są takie same:</h4>
+              <ul>
+                <li>padding: 16px;</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
 
     <footer>
       <p>Strona szkoleniowa z frontendu.</p>

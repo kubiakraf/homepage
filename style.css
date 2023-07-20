@@ -24,6 +24,12 @@ ul {
   background-color: #343434;
 }
 
+/*Lista dziedziczonych własności w CSS*/
+.table-inheritanc-css {
+  width: 800px;
+}
+
+/* */
 .url-green {
   color: greenyellow;
 }
@@ -32,4 +38,30 @@ ul {
 }
 .url-bold {
   font-weight: bold;
+}
+
+/*box model graph*/
+.table-box-model {
+  border-collapse: collapse;
+  color: black;
+  width: 400px;
+  height: 210px;
+}
+
+.table-margin {
+  background-color: rgb(214, 167, 80);
+}
+.table-border {
+  background-color: rgb(226, 226, 101);
+}
+.table-padding {
+  background-color: rgb(175, 206, 129);
+}
+.table-element {
+  background-color: lightblue;
+}
+
+/* Stopka */
+footer {
+  background-color: #575757;
 }
