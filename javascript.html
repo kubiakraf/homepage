@@ -10,9 +10,12 @@
   <body>
     <main>
       <header>
-        <h1>JS - JavaScript</h1>
+        <h1>
+          <div class="logo-js"><span class="logo-js-text">JS</span></div>
+        </h1>
         autor: Rafał Kubiak WTF edycja #3
       </header>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="html.html">HTML</a>
@@ -28,7 +31,7 @@
       </nav>
 
       <article>
-        <h2>Najpopularniejszy język programowania na świecie</h2>
+        <h2>JS - JavaScript (język skryptowy)</h2>
         <ul>
           <li>Odpowiada za interakcje.</li>
           <li>Pozwala na programowanie we frontendzie (język obiektowy).</li>
@@ -56,7 +59,42 @@
     <article>
       <h2>Z czego składa się JavaScript</h2>
       <ul>
-        <li>Wartości - są tym dla JS czym liczby dla matematyki</li>
+        <li>
+          Wartości - są tym dla JS czym liczby dla matematyki
+          <ul>
+            <li>
+              Typy proste w JS (primitives) - rodzaje wartości
+              <ul>
+                <li>String - tekst, otaczamy ' lub " (zalecane ')</li>
+                <li>Number - liczba</li>
+                <li>Bigint - duża liczba, większa niż 2<sup>53</sup></li>
+                <li>
+                  boolean - true lub false, wykorzystywany do tworzenia logiki w JS, sprawdzania
+                  warunków
+                </li>
+                <li>
+                  null - wartość celowo niezdefiniowana, wiemy, że powinna jakaś być ale jej nie ma,
+                  (typeof zwraca 'object' - wskazanie na pusty obiekt, wszystko w JS jest obiektem)
+                </li>
+                <li>
+                  undefined - brak definicji - zmienna nigdzie nie deklarowana JS niewie co to jest
+                </li>
+                <li>
+                  *symbol - tworzy "unikalne opakowanie" - praktycznie się z niego nie korzysta -
+                  ciekawostka
+                </li>
+              </ul>
+            </li>
+            <li>typeof name - sprawdza w konsili typ zmiennej</li>
+            <li>
+              immutability - niemutowalność. Jeden z fundamentalnych konceptów JS. Nie możemy
+              zmieniać wartości primitive values w JS. To co zmieniamy to połączenia między nimi, a
+              zmiennymi.<br />
+              Nasze zmienne nie modyfikują tych wartości.
+            </li>
+          </ul>
+        </li>
+
         <li>Operacje porównywania</li>
         <li>Literały</li>
         <li>
@@ -87,8 +125,8 @@
                       pobiera dane tylko raz na początku i nie można jej zmienić nawet jakbym
                       podpiął pod wartość const wartość z let
                     </li>
-                    <li>let a= 20;</li>
-                    <li>const b = a</li>
+                    <li>let a= 20; - można zmieniać dowolnie wartość</li>
+                    <li>const b = a - b przyjmuje pierwszą przypisaną wartość do a</li>
                   </ul>
                 </li>
                 <li>VAR - tego już raczej nie używamy</li>
@@ -113,6 +151,5 @@
 
       <div>Rafał Kubiak &copy;</div>
     </footer>
-    <script src="main.js"></script>
   </body>
 </html>

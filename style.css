@@ -90,6 +90,22 @@ ul {
   background-color: lightblue;
 }
 
+/* logo JS*/
+.logo-js {
+  background-color: #f7e018;
+  color: black;
+  font-weight: 800;
+  font-size: 48px;
+  font-family: 'Arial';
+  height: 100px;
+  position: relative;
+}
+.logo-js-text {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
 /* Stopka */
 footer {
   background-color: #575757;
