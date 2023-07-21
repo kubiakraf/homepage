@@ -3,25 +3,8 @@ body {
   color: whitesmoke;
 }
 
-h1 {
-  color: #ccc;
-}
-
-h2 {
-  color: darkgreen;
-  background-color: rgb(168, 171, 171);
-}
-
-section {
-  background: rgb(95, 95, 124);
-}
-
 ul {
   list-style: none;
-}
-
-.my-article {
-  background-color: #343434;
 }
 
 /*Lista dziedziczonych własności w CSS*/
@@ -95,9 +78,9 @@ ul {
   background-color: #f0db4f;
   color: #323330;
   font-weight: 800;
-  font-size: 48px;
+  font-size: 2em;
   font-family: 'Arial';
-  height: 100px;
+  height: 250px;
   position: relative;
 }
 .logo-js-text {
@@ -106,15 +89,38 @@ ul {
   right: 10px;
 }
 
-.header-image {
+.h1-js {
+  margin: 0;
+}
+
+.header-image-term {
   background-image: url(img/terminal.jpg);
-  height: 300px;
+  height: 250px;
   background-position: center;
   background-size: 70% 100%;
   background-repeat: no-repeat;
   background-color: #302300;
+  font-family: Arial;
+  font-size: 1.5em;
   padding-left: 10px;
   padding-top: 20px;
+  font-weight: 800;
+  text-shadow: 3px 3px 2px #323330;
+}
+
+.header-image-power {
+  background-image: url(img/pu1.jpg), url(img/pu3.jpg), url(img/pu2.jpg);
+  height: 250px;
+  background-position: 0 0, center, 100% 0;
+  background-size: 33.33% 110%;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-color: #302300;
+  font-family: Arial;
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-weight: 800;
+  text-shadow: 3px 3px 2px #323330;
 }
 
 /* Stopka */
