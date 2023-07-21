@@ -502,6 +502,86 @@
             <li>można dodać padding do elementu</li>
           </ul>
         </li>
+
+        <li>
+          <h3>position: fixed;</h3>
+          <ul>
+            <li>odpawiada za przyklejenie elementu do vievportu - otwartego okna</li>
+            <li>i pływa razem ze stroną</li>
+            <li>jest ciągle przyklejony w pozycji: top, left, right, bottom</li>
+            <li>gdy ma z-index: -1; podczas przesuwania chowa się za elementami</li>
+            <li>używany w urządzeniach mobilnych do przyklejania przycisku np. menu</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>position: sticky;</h3>
+          <ul>
+            <li>
+              bardzo przydatna własność szczególnie przy dłuższych tekstach i chcemy przykleić
+              nagłówek wewnątrz kontenera
+            </li>
+            <li>nie zadziała bez własności zdefiniowanej własności top</li>
+            <li>jeśli rodzić ma własność overflow to sticky nie zadziała</li>
+            <li>jest przyklejony w pozycji: top, w miejscu w którym był jako np. nagłówek</li>
+            <li>
+              pływa razem ze stroną do momentu aż dojdzie do końca elementu gdzie się zatrzymuje
+            </li>
+            <li>działa tylko wewnątrz rodzica</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>float</h3>
+          <ul>
+            <li>
+              element w divie jest opływany przez tekst jak np w wordzie
+              <ul>
+                <li>width: 100px;</li>
+                <li>height: 100px</li>
+                <li>background: red;</li>
+                <li>margin-right: 20px;</li>
+                <li>float: left;</li>
+              </ul>
+            </li>
+            <li>
+              margines diva, który jest automatyczny na całą szerokość jest zastępowany przez ten
+              który definiujemy
+            </li>
+            <li>nie używamy float do budowania layoutów</li>
+            <li>tylko do opływania img</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>clear</h3>
+          <ul>
+            <li>czyści floaty</li>
+            <li>clear: both; - czyści lewy i prawy</li>
+            <li></li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>Z-index</h3>
+          <ul>
+            <li>odpowiada za ułożenie warstw</li>
+            <li>im wyższy index to element będzie wyżej</li>
+            <li>tło może mieć wartość -1</li>
+            <li>
+              domyślnie ten element, który jest niżej w kodzie jest wgrywany ostatni na stronę i
+              może nadpisać wcześniejsze
+            </li>
+            <li>
+              Microsof Edge ma wbudowane narzędzie do podglądu Z-index
+              <ul>
+                <li>uruchomić dev tools</li>
+                <li>Ctrl + Shift + P</li>
+                <li>3D View</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </article>
 
