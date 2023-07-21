@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>brudnopis z WTFa</title>
+    <linl href="normalize.css" rel="stylesheet" type="text/css" />
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
@@ -580,6 +581,39 @@
                 <li>3D View</li>
               </ul>
             </li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Ujednolicanie styli - przeglądarki posiadają własne style (user agent stylecheet)</h2>
+      <ul>
+        <li>
+          Reset - stara technika
+          <ul>
+            <li>* { - selektor uniwersalny, wybiera wszystkie elementy na stronie</li>
+            <li>margin: 0;</li>
+            <li>padding: 0;</li>
+            <li>
+              outline: none; - niewidać, na jaką wartość przeskoczyło się tabulatorem = problem dla
+              ludzi słabowidzących
+            </li>
+            <li>}</li>
+          </ul>
+        </li>
+        <li>
+          Normalizacja -
+          <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
+          <ul>
+            <li>
+              Elementy będą wyświetlać się na różnych przeglądarkach bardziej spójnie, zgodnie z
+              najnowszymi standardami.
+            </li>
+            <li>skopiować treść i dodać do projektu jako normalize.css</li>
+            <li></li>
+            <li></li>
+            <li></li>
           </ul>
         </li>
       </ul>
