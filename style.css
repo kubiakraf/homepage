@@ -41,11 +41,40 @@ ul {
 }
 
 /*box model graph*/
-.table-box-model {
-  border-collapse: collapse;
+.box-model-margin {
   color: black;
+  background-color: rgb(214, 167, 80);
   width: 400px;
-  height: 210px;
+  height: 200px;
+  padding: 3px;
+}
+.box-model-border {
+  color: black;
+  background-color: rgb(226, 226, 101);
+  width: 350px;
+  height: 150px;
+  padding: 3px;
+  margin-left: 20px;
+  margin-top: 5px;
+  border: 1px solid black;
+}
+.box-model-padding {
+  color: black;
+  background-color: rgb(175, 206, 129);
+  width: 300px;
+  height: 100px;
+  padding: 3px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.box-model-element {
+  color: black;
+  background-color: lightblue;
+  width: 200px;
+  height: 50px;
+  padding: 3px;
+  margin-left: 45px;
+  margin-top: 5px;
 }
 
 .table-margin {

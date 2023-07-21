@@ -344,58 +344,18 @@
 
     <article>
       <h2>Box model</h2>
-      <table class="table-box-model">
-        <tbody class="table-margin">
-          <tr>
-            <td colspan="10">margin</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td colspan="8" class="table-border">border</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="table-border"></td>
-            <td colspan="6" class="table-padding">padding</td>
-            <td class="table-border"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="table-border"></td>
-            <td class="table-padding"></td>
-            <td colspan="4" class="table-element">element</td>
-            <td class="table-padding"></td>
-            <td class="table-border"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td class="table-border"></td>
-            <td colspan="6" class="table-padding"></td>
-            <td class="table-border"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td colspan="8" class="table-border"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+
+      <div class="box-model-margin">
+        margin
+        <div class="box-model-border">
+          border
+          <div class="box-model-padding">
+            padding
+            <div class="box-model-element">element</div>
+          </div>
+        </div>
+      </div>
+
       <p>
         Wszystkie elementy na stronie są otoczone "niewidzialnym prostokątem"<br />
         Jest widoczny gdy podświetla się go w Inspect
@@ -498,6 +458,48 @@
                 <li>padding: 16px;</li>
               </ul>
             </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>box-sizing: border-box;</h3>
+          <ul>
+            <li>
+              sprawia, że podany wymiar width i height jest traktowany jako całkowity aż do border
+            </li>
+            <li>element + padding + border = zdeklarowany width i height</li>
+            <li>standardowa wartość to content-box;</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>position: static;</h3>
+          <ul>
+            <li>
+              domyślna wartość - przeglądarka sama decyduje o układzie elementu (na podstawie jego
+              parametrów)
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>position: relative;</h3>
+          <ul>
+            <li>
+              pozwala stworzyć pewnego rodzaju przestrzeń, względem której możemy umieszczać inne
+              elementy
+            </li>
+            <li>samo dodanie nic nie zmienia wizulanie ale pozwala na wykorzystanie przestrzeni</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>position: absolute;</h3>
+          <ul>
+            <li>absolutne pozycjonowanie względem elementu z relative</li>
+            <li>top: left: right: bottom:</li>
+            <li>top: 0px - element będzie przyklejony do krawędzi paddinga</li>
+            <li>można dodać padding do elementu</li>
           </ul>
         </li>
       </ul>
