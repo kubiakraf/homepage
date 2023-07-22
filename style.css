@@ -80,7 +80,6 @@ ul {
   color: #323330;
   font-weight: 800;
   font-size: 2em;
-  font-family: 'Arial';
   height: 250px;
   position: relative;
   opacity: 50%;
@@ -98,7 +97,6 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: #302300;
-  font-family: Arial;
   font-size: 1.5em;
   padding-left: 10px;
   padding-top: 20px;
@@ -114,7 +112,6 @@ ul {
   background-size: 70% 100%;
   background-repeat: no-repeat;
   background-color: #302300;
-  font-family: Arial;
   font-size: 1.5em;
   padding-left: 10px;
   padding-top: 20px;
@@ -130,7 +127,6 @@ ul {
   background-size: 33.33% 110%;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-color: #302300;
-  font-family: Arial;
   font-size: 1.5em;
   padding-left: 10px;
   padding-top: 20px;
@@ -146,7 +142,6 @@ ul {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: #302300;
-  font-family: Arial;
   font-size: 1.5em;
   padding-left: 10px;
   padding-top: 20px;
