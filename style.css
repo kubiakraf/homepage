@@ -141,6 +141,22 @@ ul {
   opacity: 50%;
 }
 
+.header-image-chat {
+  background-image: url(img/chatgpt-logo.jpg);
+  height: 250px;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: #302300;
+  font-family: Arial;
+  font-size: 1.5em;
+  padding-left: 10px;
+  padding-top: 20px;
+  font-weight: 800;
+  text-shadow: 3px 3px 2px #323330;
+  opacity: 50%;
+}
+
 /* Stopka */
 footer {
   background-color: #575757;
