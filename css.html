@@ -59,14 +59,14 @@
 
       <article>
         <h2>Łączenie selektorów</h2>
-        <p>// po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
+        <p>po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
         <div>
           section a &#123; <br />
           właścwości: wartość; <br />&#125;
         </div>
       </article>
 
-      <article class="my-article">
+      <article>
         <h2>Specyficzność w CSS</h2>
         <table>
           <tr>
@@ -120,7 +120,7 @@
         </section>
         <section>
           <h3>Lista dziedziczonych własności CSS</h3>
-          <table class="table-inheritanc-css">
+          <table class="css__inheritanc--table">
             <tbody>
               <tr>
                 <td>border-collapse</td>
@@ -346,13 +346,13 @@
     <article>
       <h2>Box model</h2>
 
-      <div class="box-model-margin">
+      <div class="css__box-model--margin">
         margin
-        <div class="box-model-border">
+        <div class="css__box-model--border">
           border
-          <div class="box-model-padding">
+          <div class="css__box-model--padding">
             padding
-            <div class="box-model-element">element</div>
+            <div class="css__box-model--element">element</div>
           </div>
         </div>
       </div>
@@ -621,6 +621,42 @@
             <li>}</li>
           </ul>
         </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>BEM - block element modifier</h2>
+      <ul>
+        <li>Block - nadrzędny element</li>
+        <li>Element - część bloku (nie musi być bezpośrednim dzieckiem)</li>
+        <li>
+          Modifier - modyfikator - jeśli element występuje w kilku wariantach tworzymy dodatkową
+          klasę.
+        </li>
+      </ul>
+      <ul>
+        <li>block__element--modifier</li>
+        <li>Nadajemy klasami sens semantyczny odwzorowując strukturę strony</li>
+        <li>zaczynamy od stylu blockowego (nagłówek)</li>
+        <li>następnie style elemtów (rozdziały)</li>
+        <li>a pod każdym elementem modyfikatory (pod rozdziały)</li>
+        <br />
+        <li>Szukamy elementów na stronie i dzielimy na bloki.</li>
+        <li>Myślimy o elementach składowych / robimy analizę-selekcję.</li>
+        <li>
+          Tworzymy dwie klasy jeśli element ma modyfiaktor (w modyfiaktorze zmieniamy tylko unikalne
+          dla niego wartości, nie przepisujemy rzeczy z klasy bazowej).
+        </li>
+      </ul>
+
+      <p>Powstał ponieważ:</p>
+      <ul>
+        <li>Świat stylowania doszedł wysokiego stopnia skomplikowania (specyficznosć).</li>
+        <li>Problem z logicznym nazywaniem klas.</li>
+        <li>Brak ujednoliconego spopsobu stylowania.</li>
+        <li>Importanty. Nadpisywanie rzeczy (znowu specyiczność).</li>
+        <li>Brak odwzorowania struktury HTML w CSS.</li>
+        <li>Stylowanie kilkoma klasami, powtarzające się nazwy.</li>
       </ul>
     </article>
 

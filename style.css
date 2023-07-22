@@ -18,30 +18,30 @@ ul {
 }
 
 /*Lista dziedziczonych własności w CSS*/
-.table-inheritanc-css {
+.css__inheritanc--table {
   width: 800px;
 }
 
-/* */
-.url-green {
+/*diagram url*/
+.net__url--green {
   color: greenyellow;
 }
-.url-red {
+.net__url--red {
   color: red;
 }
-.url-bold {
+.net__url--bold {
   font-weight: bold;
 }
 
 /*box model graph*/
-.box-model-margin {
+.css__box-model--margin {
   color: black;
   background-color: rgb(214, 167, 80);
   width: 400px;
   height: 200px;
   padding: 3px;
 }
-.box-model-border {
+.css__box-model--border {
   color: black;
   background-color: rgb(226, 226, 101);
   width: 350px;
@@ -51,7 +51,7 @@ ul {
   margin-top: 5px;
   border: 1px solid black;
 }
-.box-model-padding {
+.css__box-model--padding {
   color: black;
   background-color: rgb(175, 206, 129);
   width: 300px;
@@ -60,7 +60,7 @@ ul {
   margin-left: 20px;
   margin-top: 5px;
 }
-.box-model-element {
+.css__box-model--element {
   color: black;
   background-color: lightblue;
   width: 200px;
@@ -70,24 +70,11 @@ ul {
   margin-top: 5px;
 }
 
-.table-margin {
-  background-color: rgb(214, 167, 80);
-}
-.table-border {
-  background-color: rgb(226, 226, 101);
-}
-.table-padding {
-  background-color: rgb(175, 206, 129);
-}
-.table-element {
-  background-color: lightblue;
-}
-
 /* logo JS*/
-.h1-js {
+.js__h1 {
   margin: 0;
 }
-.logo-js {
+.js__h1--logo {
   background-color: #f0db4f;
   color: #323330;
   font-weight: 800;
@@ -97,13 +84,13 @@ ul {
   position: relative;
   opacity: 50%;
 }
-.logo-js-text {
+.js__h1--text {
   position: absolute;
   bottom: 0;
   right: 22px;
 }
 
-.header-image-figma {
+.figma__header--img {
   background-image: url(img/figma-logo.jpg);
   height: 250px;
   background-position: center;
@@ -119,7 +106,7 @@ ul {
   opacity: 50%;
 }
 
-.header-image-term {
+.terminal__header--img {
   background-image: url(img/terminal.jpg);
   height: 250px;
   background-position: center;
@@ -135,7 +122,7 @@ ul {
   opacity: 50%;
 }
 
-.header-image-power {
+.power__header--img {
   background-image: url(img/pu1.jpg), url(img/pu3.jpg), url(img/pu2.jpg);
   height: 250px;
   background-position: 0 0, center, 100% 0;
@@ -151,7 +138,7 @@ ul {
   opacity: 50%;
 }
 
-.header-image-chat {
+.chat__header--img {
   background-image: url(img/chatgpt-logo.jpg);
   height: 250px;
   background-position: center;
