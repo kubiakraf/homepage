@@ -26,7 +26,7 @@
         <a href="./git.html">git</a>
         <a href="./entities.html">entities</a>
         <a href="./power.html">Power User</a>
-        <a href="./chatGPT.html">ChatGPT</a>
+        <a href="./chat.html">ChatGPT</a>
         <a href="./net.html">Internet</a>
         <a href="./terminal.html">Terminal</a>
         <a href="./figma.html">Figma</a>
@@ -164,6 +164,79 @@
       </article>
     </main>
 
+    <article>
+      <h2>DOM - Document Object Model</h2>
+      <ul>
+        <li>Plik html ani źródło strony(view source) to nie jest DOM</li>
+        <li>to co widzimy w devtoolsach to jest DOM - to taki złożony w przeglądarce HTML</li>
+        <li>plik HTML to instrukcja - to co w devtoolsach to działająca strona (skręcony mebel)</li>
+        <li>DOM to taki pomost między HTML a JS</li>
+        <li>JavaScript może modyfikować DOM</li>
+        <li>
+          funkcja querySelector zwraca node (węzeł) z HTML-a, selektor jest zapisywany zgodnie z CSS
+        </li>
+        <li>
+          korzystając z BEM - tworzymy dodatkową klasę z mofygikatorem --js (block__element--js)
+          <br />
+          (ułatwia identyfikację / wyklucza potencjalne problemy)
+        </li>
+      </ul>
+      <ul>
+        <li>document.querySelektor('.selector') &larr; Tak samo jak w CSS!</li>
+        <li>
+          main.js:
+          <ul>
+            <li>const header = document.querySelector('h1')</li>
+            <li>console.log(header) - odnosi się do elementu</li>
+            <li>=> w Inspect w Console pojawia się węzeł dokumentu:</li>
+            <li>&#9658;h1.page-header__heading.page-header__heading--js :</li>
+            <li>&#9660; lista pól i funkcji do wykorzystania na tym elemencie</li>
+            <li>
+              dodanie "defer" przed "src" do polecenia wczytania JavaScriptu powoduje, że Consola
+              zwraca nam to co w sourceview
+            </li>
+            <li>>&lt;script defer src="main.js"&gt; &lt;/script&gt; :</li>
+            <li>
+              &lt; h1 class="h1.page-header__heading page-header__heading--js">Treść nagłówka z kodu
+              html&lt;/h1&gt;
+            </li>
+            <li>klasy zostały nadane zgodnie z BEM w kodzie</li>
+            <li>const header = document.querySelector('.page-header__heading--js')</li>
+            <li>wybór za pomocą selektora</li>
+          </ul>
+        </li>
+        <li>
+          nazwaZmiennejQuerySelector.innerHTML = 'treść'
+          <ul>
+            <li>własność innerHTML odpowiada za treść elementu</li>
+            <li>
+              console.log(header.innerHTML) = wyświetli w Console aktualną treść headera - podaje
+              wartość a nie element
+            </li>
+            <li>
+              header.innerHTML = 'string' - podmienia wartość, którą przeglądarka wyświetli - bo js
+              nadpisuje html
+            </li>
+            <li>np:</li>
+            <li>
+              header.innerHTML = 'Nazywam się ${firstName} i mam ${age} lat.' - będzie się
+              wyświetlać w h1 na stronie
+            </li>
+          </ul>
+          <ul>
+            <li>
+              console.log(header.style) = w Console: &#9658;CSSStyleCeclaration - wszystkie
+              własności CSSowe które są możliwe i można je modyfikować:
+            </li>
+            <li>
+              header.style.color = 'red'; - wpisanie w main.js nadpisze inlinowo w html, styl ccsowy
+              w DOM
+            </li>
+            <li>w kodzie nie widać bo widoczne w DOM i oczywiście generuje problemy</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
     <footer>
       <p>
         Strona szkoleniowa z frontendu.<br />
