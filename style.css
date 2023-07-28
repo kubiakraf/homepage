@@ -6,7 +6,7 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  font-family: 'Tektur', cursive;
+  font-family: 'Tektur', monospace;
 }
 
 body {
