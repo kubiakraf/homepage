@@ -12,6 +12,9 @@ html {
 body {
   background-color: #636262;
   color: whitesmoke;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
 }
 
 ul {
@@ -90,53 +93,7 @@ ul {
   right: 22px;
 }
 
-.figma__header--img {
-  background-image: url(img/figma-logo.jpg);
-  height: 250px;
-  background-position: center;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-color: #302300;
-  font-size: 1.5em;
-  padding-left: 10px;
-  padding-top: 20px;
-  font-weight: 800;
-  text-shadow: 3px 3px 2px #323330;
-  opacity: 50%;
-}
-
-.terminal__header--img {
-  background-image: url(img/terminal.jpg);
-  height: 250px;
-  background-position: center;
-  background-size: 70% 100%;
-  background-repeat: no-repeat;
-  background-color: #302300;
-  font-size: 1.5em;
-  padding-left: 10px;
-  padding-top: 20px;
-  font-weight: 800;
-  text-shadow: 3px 3px 2px #323330;
-  opacity: 50%;
-}
-
-.power__header--img {
-  background-image: url(img/pu1.jpg), url(img/pu3.jpg), url(img/pu2.jpg);
-  height: 250px;
-  background-position: 0 0, center, 100% 0;
-  background-size: 33.33% 110%;
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-color: #302300;
-  font-size: 1.5em;
-  padding-left: 10px;
-  padding-top: 20px;
-  font-weight: 800;
-  text-shadow: 3px 3px 2px #323330;
-  opacity: 50%;
-}
-
-.chat__header--img {
-  background-image: url(img/chatgpt-logo.jpg);
+.header__img {
   height: 250px;
   background-position: center;
   background-size: 100% 100%;
