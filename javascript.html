@@ -143,7 +143,80 @@
           </ul>
         </li>
         <li>Obiekty</li>
-        <li>Funkcje</li>
+        <li>
+          Funkcje
+          <ul>
+            <li>Na wejściu dostaje dane - argumenty</li>
+            <li>Dla podanego argumentu zwraca jakąś wartość</li>
+            <li>Posiada określony wzór</li>
+            <li>f(x)=x*7 :</li>
+            <li>
+              function calculate(myNumber) {<br />
+              return myNumber*7;<br />
+              }
+              <ul>
+                <li>function - deklaracja</li>
+                <li>myNumber - parametr</li>
+                <li>return - słowo kluczowe</li>
+                <li>myNumber*7 - Wynik</li>
+              </ul>
+            </li>
+            <li>
+              console.log(calculate(2)); - wyświetli wynik dla wskazania na wartość myNumber = 2
+            </li>
+            <li>calculate(2); - to samo co wyżej bez console.log</li>
+            <li>Deklarujemy nazwę funkcji - ale nie musimy zawsze tego robić</li>
+            <li>W środku dokonujemy obliczeń / wykonujemy zadania</li>
+            <li>
+              Funkcja przyjmuje argumenty (ale nie musi)
+              <ul>
+                <li>function hello() {</li>
+                <li>console.log('hello');</li>
+                <li>}</li>
+                <li>hello(); - wywołanie console.log</li>
+              </ul>
+            </li>
+            <li>
+              Funkcja zwraca zawsze coś (nawet jeśli nie mamy return - wtedy zwraca undefined)
+            </li>
+            <li>Funkcje powstaly po to aby deklarować w nich kod, który się powtarza.</li>
+            <li>(DRY - don't repeat yourself)</li>
+            <li>Zwiększamy czytelność kodu.</li>
+            <li>Łatwiejsze szukanie błędów.</li>
+          </ul>
+          <br />
+          <ul>
+            <li>
+              => (Fat) arrow functions
+              <ul>
+                <li>const calculate = (myNumber) => {</li>
+                <li>myNumber = myNumber +3;</li>
+                <li>console.log(myNumber); //nie jest potrzebne tylko, żeby podejrzeć stan</li>
+                <li>return myNumber*7;</li>
+                <li>}</li>
+                <li><br /></li>
+                <li>calculate(2): //35</li>
+                <li><br /></li>
+                <li>Skrócona froma:</li>
+                <li>const calculate = myNumber => myNumber+3*7</li>
+                <li><br /></li>
+                <li>Skraca zapis deklaracji funkcji.</li>
+                <li>
+                  Zwiększa czytelność (choć jest to dyskusyjne). Trzymać się w projekcie jednego
+                  sposobu zapisu funkcji aby nie robić niepotrzebnego bałaganu.
+                </li>
+                <li>
+                  Nie tworzy nowego kontekstu <em>this</em>, nie ma dostępu do <em>arguments</em> i
+                  <em>super</em> - na rozmowie kwalifikacyjnej może pojawić się pytanie o to.
+                </li>
+                <li>
+                  Nie jest zamiennikiem "tradycyjnej" funkcji (ale w większości przypadków nie widać
+                  różnicy jeśli nie korzysta się <em>arguments</em> i <em>super</em>).
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </article>
 
