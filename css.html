@@ -690,6 +690,230 @@
       </ul>
     </article>
 
+    <article>
+      <h2>display: flex;</h2>
+      <ul>
+        <li>
+          Algorytm, sposob działania - przeliczenie pewnych wartości aby elementy zachowywały się w
+          oczekiwany sposób.
+        </li>
+        <li>elementy blokowe (dzieci), zachowują się jak liniowe</li>
+        <li>
+          W narzędziach developerskich pojawia się obok włączonego flexa ikona, w której można
+          eksperymentować z różnymi ustawieniam, różnych właściwości
+        </li>
+        <li>
+          align-self trzeba dopisać sobie w devtoolsach w klasie z flex, niestety nie jest łatwe
+          klikalne, ale pojawiają się na liście rozwijalne wszystkie opcje
+        </li>
+        <li>
+          <h3>flex-direction:</h3>
+          <ul>
+            <li>row - domyślny - interesuje go tylk oś X jak coś się nie mieści wystaje na Y</li>
+            <li>
+              column - wygląda jakby nic się nie zmieniło - interesuje go tylko oś Y i jak coś się
+              nie mieści wystaje na X
+            </li>
+            <li>row-reverse - dociągnięcie do prawej strony i odwrócenie kolejności</li>
+            <li>
+              column-reverse - odwórcenie kolejności, pozornie wyglądają jak elementy blokowe, w
+              DOMie okazuje się, że są w kolejności pierwotnej.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>flex-wrap:</h3>
+          <ul>
+            <li>zawijanie wiersza / koluumny</li>
+            <li>
+              nowrap - wartość domyślna, flex stara się upchnąć wszystkie elementy w jednej linii,
+              pudełku.
+            </li>
+            <li>
+              wrap - już nie stata się upchnąć w jednym wierszu elementów i mają rzeczywisty wymiar
+              a nie zmniejszany aby zmieścić w jednej linii. <br />
+              Głównym wymiarem jest wysokość, jeśli nie ma podanej to rozciąga w dół, jeśli mniejsza
+              niż elementów to będą wystawać na szerokości.
+            </li>
+            <li>wrap-reverse - zaczyna od dołu i jak wystaje za rodzica to na górze.</li>
+          </ul>
+        </li>
+        <li>
+          <h3>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;</h3>
+          - zapis skrótowy
+        </li>
+        <li>np. flex-flow: row wrap;</li>
+        <li></li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>justify-content:</h2>
+      <ul>
+        <li>ustawianie elementów wzdłuż osi flex-direction</li>
+        <li>dodaję go do kontenera (rodzica).</li>
+      </ul>
+      <ul>
+        <li>flex-start - wartość domyślna</li>
+        <li>
+          flex-end - elemenety są dosunięte do końca w zależności po której osi się poruszam
+          zachowując kolejność
+        </li>
+        <li>center - centrowane - nie trzeba używać margin: 0 auto;</li>
+        <li>
+          space-between - rozciąga w całym kontenerze w równych odstępach po wybranej osi (row - X,
+          column - Y)
+        </li>
+        <li>
+          space-around - dodaje po bokach dodatkowe przestrzenie równe &#189; odległości pomiędzy
+          elementami (tak jakby wszystkie elementy miała po bokach marginesy), nie trzebe liczyć
+          ręcznie, a jest to niemożliwe dla każdego urządzenia.
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>align-content:</h2>
+      <ul>
+        <li>
+          ustawianie (wszystkich) /kolumn wzdłuż osi przeciwnej do flex-direction<br />(taki
+          justify-content dla drugiej osi)
+        </li>
+        <li>działa tylko i wyłącznie kiedy jest włączony flex-wrap: wrap;</li>
+        <li>i kiedy mamy więcej niż jeden wiersz lub więcej niż jedną kolumnę</li>
+        <li>nie używa się za często</li>
+        <li><br /></li>
+        <li>
+          stretch - domyślny - rozciąga obiekty w całym konterze wzdłóż osi przeciwnej do flexa
+        </li>
+        <li>
+          flex-start - nie zagospodarowuje całej przestrzeni w drugiej osi, przerzuca wiersze na
+          początek
+        </li>
+        <li>flex-end - przyklejone do dołu</li>
+        <li>center - wyśrodkuje</li>
+        <li>
+          space-between - elementy rozsuną się na maxa w rodzicu, gdy brak podanej wysokości nie
+          widać zmian
+        </li>
+        <li>space-around</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>align-items:</h2>
+      <ul>
+        <li>ustawianie elementów wzdłuż osi przeciwnej do flex-direction</li>
+        <li>ustawianie wewnątrz wiersza</li>
+        <li><br /></li>
+        <li>
+          stretch - domyślna wartość, rozciąganie maksymalne do granic kontenera, jeśi nie ma
+          podanej wysokości to do wysokości elementu, kjtóry jest najwyższy w danym wierszu.
+        </li>
+        <li>
+          flex-start - przyklej do początkowej krawędzi, największy element jest dłuższy od innych
+        </li>
+        <li>flex-end</li>
+        <li>center - środek osi kontenera lub najwyższego elementu</li>
+        <li>baseline - ustawia elementy względem elementu początkowego</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>align-self:</h2>
+      <ul>
+        <li>ustawianie elementu wzgłuż osi przeciwnej do flex-direction</li>
+        <li>
+          jakiś pojedyńczy element może zachowywać się inaczej niż inne znajdujące się z nim w
+          wierszu
+        </li>
+        <li><br /></li>
+        <li>stretch</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>baseline</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>order:</h2>
+      <ul>
+        <li>odpowiada za kolejnosć</li>
+        <li>0 - domyślnie</li>
+        <li>może przyjmować wartość licz całkowitych (-/+)</li>
+        <li>im wyższa wartość tym później element występuje</li>
+        <li>przydatny gdy chcę ustawić kolejność elementów zależnie od rozdzielczości ekranu</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>flex-grow:</h2>
+      <ul>
+        <li>liczba / proporcja</li>
+        <li>
+          0 - wartość domyślna, element ma nie rosnąć, nawet gdy inne mają np. 1, ma być taki jak na
+          początku i niech się nie zmienia
+        </li>
+        <li>1 - wolna przestrzeń zostanie rozdysponowana pomiędzy elementy po równo</li>
+        <li>
+          2 - jeśli jakiemuś elementowi nadam taką wartość dostanie podwójną ilość miejsca względem
+          pojedyńczego elemntu a reszta po równo
+        </li>
+        <li>3 - z trzech elementów ten dostanie potrójną = &#8535; a reszta po &#8533;</li>
+        <li></li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>flex-shrink:</h2>
+      <ul>
+        <li>odpowiada za to jak element ma się zachowywać gdy ma się kurczyć</li>
+        <li>
+          1 - domyślna wartoś - przestrzeń liczona proporcjonalnie do wszystkich elementów, nawet
+          przy zdefiniowanej szerokości
+        </li>
+        <li>
+          0 - nie pozwala elementowi na rośnięcie powyżej width nawet jak ma dostępną przestrzeń
+        </li>
+        <li>0 - w kontenerze definiuje wszsystkie elementy na sztywno, blokuje rozmiar</li>
+        <li>
+          ale poniżej zdefiniowanej szerokości element się kurczy i dostosowuje do szerokości ekranu
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>flex-basis:</h2>
+      <ul>
+        <li>odnosi się tylko do dzieci kontenera</li>
+        <li>działa jak min-height, min-width - zależnie od kierunku osi bazowej flexa</li>
+        <li>none - domyślnie</li>
+        <li>rozmiar bazowy => flex-basis: 100px;</li>
+        <li></li>
+        <li></li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</h2>
+      <ul>
+        <li>flex: 1 0 100px;</li>
+        <li>1 - grow - rosną równomiernie w całej dostępnej przestrzeni</li>
+        <li>0 - shrink - nie maleją</li>
+        <li>100px - minimalna wartość i elementy nie będą mniejsze bo shrink = 0</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Odstępy</h2>
+      <ul>
+        <li>row-gap: odstęp między wierszami - widać w flex-direction: column;</li>
+        <li>column-gap: odstęm między kolumnami - w flex-direction: row;</li>
+        <li>gap: 2 rem; - nie trzeba się zastanawiać w jakim trybie jesteśmy</li>
+      </ul>
+    </article>
+
     <footer>
       <p>
         Strona szkoleniowa z frontendu.<br />
