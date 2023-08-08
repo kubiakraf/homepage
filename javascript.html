@@ -165,13 +165,51 @@
                 <li>console.log(deathStar.diameter) //= 120000</li>
               </ul>
             </li>
-            <li><strong>bracket notation</strong> - drugi sposób wywołania</li>
+            <li>
+              <strong>bracket notation</strong> - drugi sposób wywołani
+              <ul>
+                <li>console.log(obiekt['value'])</li>
+                <li></li>
+                <li></li>
+              </ul>
+            </li>
+
+            <li><br /></li>
+            <li>
+              Immutability w obiektach - nie mutowalność w obiektach
+              <ul>
+                <li>Nie możemy zmieniać wartości primitive values w JS.</li>
+                <li>To co zmieniamy to połączenia między nimi, a zmiennymi.</li>
+                <li><br /></li>
+                <li>const humanOne = {</li>
+                <li>name: 'Stefan',</li>
+                <li>age: 32</li>
+                <li>}</li>
+                <li><br /></li>
+                <li>humanOne.age = 35;</li>
+                <li><br /></li>
+                <li>console.log(humanOne)</li>
+                <li><br /></li>
+                <li>&#8883;{name: 'Stefan", age: 35}</li>
+                <li><br /></li>
+                <li>const humanTwo = humanOne;</li>
+                <li>
+                  Każda zmiana w jednym obiekcie wpłynie na zmianę w drugim, bez znaczenia w którym.
+                  Oba obiekty są równe. Jest to połączenie do obiektu a nie jego kopia.
+                </li>
+                <li>
+                  Inaczej jest podczas kopiowania typów prostych zawsze wskazujemy na połączenia
+                  wartości, nie "obserwujemy" stanu w obiekcie.
+                </li>
+                <li>Wskazanie na zagnieżdżony obiekt, równierz tworzy połączenie do obiektu.</li>
+              </ul>
+            </li>
             <li></li>
             <li></li>
           </ul>
         </li>
         <li>
-          Funkcje
+          2 Funkcje
           <ul>
             <li>Na wejściu dostaje dane - argumenty</li>
             <li>Dla podanego argumentu zwraca jakąś wartość</li>
