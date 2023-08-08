@@ -914,6 +914,167 @@
       </ul>
     </article>
 
+    <article>
+      <h2>background</h2>
+      <ul>
+        <li>
+          <h3>background-image: url('sciezka-do-pliku');</h3>
+          <ul>
+            <li>
+              nie rozszerza strony, zajmuje tyle miejsca ile jest dostępne, obrazek jest ucinany
+            </li>
+            <li>if plik png z przezroczystością tło prześwituje</li>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+        <li>
+          <h3>background-postion: &lt;pozycja-x&gt; &lt;pozycja-y&gt;</h3>
+          <ul>
+            <li>domyślnie: 0 0; - górny lewy róg elementu do ktorego jest przypinany</li>
+            <li>center center ; - środek elememntu</li>
+            <li>right top;</li>
+            <li>xx% xx%;</li>
+            <li>xxpx xxpx;</li>
+            <li>
+              bootom center; - dolna krawędz obrazka będzie miejscem startu u dołu - środek
+              przesunięty wyżej
+            </li>
+            <li>top center; - start obrazka górna krawędź - środek obrazka przesunięty w dół</li>
+            <li>
+              left center; - lewa krawędż obrazka dotyka lewej krawędzi strony, środek przesunięty w
+              prawo
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>background-repeat:</h3>
+          <ul>
+            <li>
+              repeat - wartość domyślna
+              <ul>
+                <li>if background-position: ceneter center;</li>
+                <li>powtarzanie będzie się rozschodzić od środka</li>
+              </ul>
+            </li>
+            <li>repeat-x - powtarza tylko w osi X</li>
+            <li>repeat-y - powtarza w osi Y</li>
+            <li>
+              no-repeat - tylko raz, w oryginalnym rozmiarze w miejscu zdefiniowanym przez
+              background-position
+            </li>
+            <li>
+              round - rozmiar grafiki jest zaokrąglony w taki sposób aby powtrzenia mieściły się
+              całe w kontenerze bez ucinania, też podczas skalowania
+            </li>
+            <li>
+              space - podobnie jak round ale nie przeskalowuje elementu - trochę jak wrap w flexbox
+              ale do grafik <br />
+              tyle ile się zmieści a jeśli się nie mieści to robi coś w na wzór "space-between"
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>backround-attachment:</h3>
+          <ul>
+            <li>odpowiada za to jak tło jest przyklejane do strony do elementów</li>
+            <li>
+              scroll - domyślne zachowanie tła - przyklejone do treści i przewija się razem z textem
+            </li>
+            <li>fixed - tło jest nieruchome a przewija się jedynie treść strony</li>
+            <li>
+              local
+              <ul>
+                <li>overflow: scroll;</li>
+                <li>
+                  tło skaluje sie do rozmiarów tego elementu, który jest przewijany wewnątrz
+                  overflow
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>background-origin:</h3>
+          <ul>
+            <li>
+              Punkt origin obrazka - względem czego będziemy liczyli punkt startwoy, względem czego
+              będziemy śrdkować, odsuwać tło
+            </li>
+            <li>padding-box - domyślnie</li>
+            <li>border-box - liczone razem z borderem</li>
+            <li>
+              content-box - transformacje tła liczone względem samego contentu z box-model (kolor
+              niebieski)
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h3>background-clip:</h3>
+          <ul>
+            <li>ucinanie tła względem:</li>
+            <li>border-box - domyślna wartość</li>
+            <li>padding-box</li>
+            <li>content-box - tło je usuwane w miejscu gdzie kończy sie treść strony</li>
+          </ul>
+        </li>
+        <li>
+          <h3>
+            background-color:
+            <ul>
+              <li>używaĆ do nadania koloru jeśli jest więcej wartości np. image</li>
+              <li>samo background stosuje wartości domyślne i kasuje inne ustawienia</li>
+            </ul>
+          </h3>
+        </li>
+
+        <li>
+          rgb(a)
+          <ul>
+            <li>kanał alfa 0-1, poziom przezroczystości</li>
+            <li>
+              zastosować do textu z obrazkiem aby lepiej czytało się treść i żeby obrazek nie
+              rozpraszał dodajemy na obrazek tło z opacity
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>background-size:</h3>
+          <ul>
+            <li>auto - domyślna wartość rozmiaru tła taki jak ma obrazek</li>
+            <li>
+              cover - wypełnia cały ekran+, jest większy od ekranu i troche go ucina, aby nie było
+              białych pól i nie zmienia swoich proporcji - jest responsywne
+            </li>
+            <li>contain - widoczny w całości, nie jest ucinany po krawędziach jak przy cover</li>
+            <li>&lt;width&gt; &lt;height&gt;</li>
+          </ul>
+        </li>
+
+        <li>
+          <h3>grqadienty</h3>
+          <ul>
+            <li>
+              <a href="https://cssgradient.io/gradient-backgrounds/" target="_blank"
+                >https://cssgradient.io/gradient-backgrounds/</a
+              >
+            </li>
+            <li>body {</li>
+            <li>
+              background-color: #4158d0 //jeśli przeglądarka nie wspiera gradientów to wyświetli sie
+              ten kolor
+            </li>
+            <li>
+              background-image: linear-gradient(43deg, #4158d028%, #82187a 63%, #FFCC70 100%);
+            </li>
+            <li>}</li>
+            <li>można użyć kolorów rgba, aby zrobić pół przezroczysty gradient</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+
     <footer>
       <p>
         Strona szkoleniowa z frontendu.<br />
