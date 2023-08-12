@@ -12,9 +12,18 @@ html {
 body {
   background-color: #636262;
   color: whitesmoke;
-  width: 1200px;
-  margin: 0 auto;
+  min-width: 80vmax;
+  display: flex;
   padding: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation {
+  justify-content: center;
+  display: flex;
+  gap: 15px;
 }
 
 ul {
@@ -74,25 +83,6 @@ ul {
   margin-top: 5px;
 }
 
-/* logo JS*/
-.js__h1 {
-  margin: 0;
-}
-.js__h1--logo {
-  background-color: #f0db4f;
-  color: #323330;
-  font-weight: 800;
-  font-size: 2em;
-  height: 250px;
-  position: relative;
-  opacity: 50%;
-}
-.js__h1--text {
-  position: absolute;
-  bottom: 0;
-  right: 22px;
-}
-
 .header__img {
   height: 250px;
   background-position: center;
@@ -110,4 +100,45 @@ ul {
 /* Stopka */
 footer {
   background-color: #575757;
+}
+
+/*about.html -- Wizytówka */
+
+.about__card {
+  background-image: linear-gradient(
+    180deg,
+    rgba(32, 80, 47, 0.1) 20%,
+    rgba(52, 145, 81, 0.2) 40%,
+    rgba(12, 28, 20, 0.1) 50%
+  );
+  background-color: #0c1c14;
+  border-radius: 30px;
+  color: #01bf6f;
+  text-shadow: 1px 1px 4px #09da60;
+  border: #0c1c14 solid 3px;
+  flex-basis: 50vh;
+}
+
+.about__card--content {
+}
+
+.about__card--link {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.about__card--link a:link,
+.about__card--link a:visited,
+.about__card--link a:hover {
+  color: #01bf6f;
+  text-shadow: 1px 1px 4px #09da60;
+  text-decoration: none;
+}
+
+.about__card--paragraph {
+  margin: 0;
+}
+
+.about__card h2 {
+  margin: 0;
 }

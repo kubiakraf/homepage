@@ -2,14 +2,22 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wizytówka</title>
-    <link href="style.css" type="text/css" rel="stylesheet" />
-    <link href="normalize.css" type="text/css" rel="stylesheet" />
+    <link href="./normalize.css" type="text/css" rel="stylesheet" />
+    <link href="./style.css" type="text/css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
-      <nav>
+      <header class="header__img">
+        <h1>About me...</h1>
+      </header>
+      <nav class="navigation">
         <a href="./index.html">Home</a>
         <a href="./html.html">HTML</a>
         <a href="./css.html">CSS</a>
@@ -25,22 +33,30 @@
         <a href="./about.html">Wizytówka</a>
       </nav>
 
-      <article>
-        <img src="./img/avatar.png" alt="Awatar użytkownika" />
-        <header>
-          <h1>Kubiak Rafał</h1>
-          <p>frontend developer</p>
-        </header>
+      <article class="about__card">
+        <img src="./img/avatar.png" alt="Awatar użytkownika" height="150px" width="150px" />
 
-        <section>
-          <h2>W sieci:</h2>
-          <ul>
-            <li><a href="#">Artstation</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">instagram</a></li>
-          </ul>
+        <section class="about__card--content">
+          <h2>Kubiak Rafał</h2>
+
+          <p class="about__card--paragraph">frontend developer_</p>
+
+          <p>Przyszły programista, chcący połączyć zainteresowanie sztuką z kodowaniem.</p>
+
+          <p class="about__card--link about__card--paragraph">
+            W sieci: <a href="#">Github</a>
+            <a href="#">instagram <a href="#">Artstation.</a></a>
+          </p>
         </section>
       </article>
+      <footer>
+        <p>
+          Strona szkoleniowa z frontendu.<br />
+          autor: Rafał Kubiak WTF edycja #3
+        </p>
+
+        <div>Rafał Kubiak &copy;</div>
+      </footer>
     </main>
   </body>
 </html>
