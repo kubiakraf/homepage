@@ -12,10 +12,8 @@ html {
 body {
   background-color: #636262;
   color: whitesmoke;
-  min-height: 100vh;
   display: flex;
   margin: 0 auto;
-  display: flex;
   align-items: center;
   justify-content: center;
   max-width: 1200px;
@@ -26,7 +24,6 @@ body {
   justify-content: center;
   display: flex;
   gap: 15px;
-  padding-bottom: 2rem;
 }
 
 ul {
@@ -88,8 +85,9 @@ ul {
 
 .header__img {
   height: 250px;
+  width: 1200px;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: 100%;
   background-repeat: no-repeat;
   background-color: #302300;
   font-size: 1.5em;
@@ -103,7 +101,6 @@ ul {
 /* Stopka */
 footer {
   background-color: #575757;
-  padding-top: 2rem;
 }
 
 /*about.html -- Wizytówka */
@@ -116,12 +113,13 @@ footer {
     rgba(12, 28, 20, 0.1) 50%
   );
   background-color: #0c1c14;
-  border-radius: 16px;
+  border-radius: 1rem;
   color: #01bf6f;
   text-shadow: 1px 1px 4px #09da60;
   border: #0c1c14 solid 3px;
-  flex-basis: 618px;
-  padding: 32px;
+  padding: 2rem;
+  margin: 2rem auto;
+  width: fit-content;
 }
 
 .about__card--content {
