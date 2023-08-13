@@ -12,18 +12,21 @@ html {
 body {
   background-color: #636262;
   color: whitesmoke;
-  min-width: 80vmax;
+  min-height: 100vh;
   display: flex;
-  padding: 0 auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
 }
 
 .navigation {
   justify-content: center;
   display: flex;
   gap: 15px;
+  padding-bottom: 2rem;
 }
 
 ul {
@@ -100,6 +103,7 @@ ul {
 /* Stopka */
 footer {
   background-color: #575757;
+  padding-top: 2rem;
 }
 
 /*about.html -- Wizytówka */
@@ -112,33 +116,51 @@ footer {
     rgba(12, 28, 20, 0.1) 50%
   );
   background-color: #0c1c14;
-  border-radius: 30px;
+  border-radius: 16px;
   color: #01bf6f;
   text-shadow: 1px 1px 4px #09da60;
   border: #0c1c14 solid 3px;
-  flex-basis: 50vh;
+  flex-basis: 618px;
+  padding: 32px;
 }
 
 .about__card--content {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.about__card--link {
-  display: inline-flex;
-  gap: 10px;
+.about__card--description {
+  line-height: 1.375rem;
+  margin: 0;
 }
 
-.about__card--link a:link,
-.about__card--link a:visited,
-.about__card--link a:hover {
+.about__card--info {
+  max-width: 380px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__card--link:link,
+.about__card--link:visited,
+.about__card--link:hover {
   color: #01bf6f;
   text-shadow: 1px 1px 4px #09da60;
   text-decoration: none;
 }
 
-.about__card--paragraph {
+.about__card--name {
+  font-size: 2rem;
+  font-weight: 400;
   margin: 0;
 }
 
-.about__card h2 {
+.about__card--position {
   margin: 0;
+  font-style: italic;
+  font-size: 1.2rem;
 }
