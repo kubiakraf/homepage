@@ -183,8 +183,8 @@
                 <li>To co zmieniamy to połączenia między nimi, a zmiennymi.</li>
                 <li><br /></li>
                 <li>const humanOne = {</li>
-                <li>name: 'Stefan',</li>
-                <li>age: 32</li>
+                <li>&emsp;name: 'Stefan',</li>
+                <li>&emsp;age: 32</li>
                 <li>}</li>
                 <li><br /></li>
                 <li>humanOne.age = 35;</li>
@@ -283,6 +283,132 @@
             </li>
           </ul>
         </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Logika - TRUE or FALSE</h2>
+      <ul>
+        <li>if - jeżeli - przyjmuje po sobie porównanie</li>
+        <li><br /></li>
+        <li>> - lewa strona więszka od prawej</li>
+        <li>&lt; - lewa strona mniejsza od prawej</li>
+        <li>>= - lewa strona większa / równa od prawej</li>
+        <li>&lt;= - lewa strona mniejsza / równa od prawej</li>
+        <li>== - obie strony równe (= - oznacza przypisanie zmiennej)</li>
+        <li>=== - obie strony równe (sprawdza najpierw typeof)</li>
+        <li>
+          != - nie równa się, obie strony różne
+          <ul>
+            <li>if('JavaScript' != 'Java') {</li>
+            <li>&emsp;// wykonaj kod jeśli true</li>
+            <li>}</li>
+          </ul>
+        </li>
+        <li>!== - obie strony różne (sprawdza najpierw typeof)</li>
+        <li><br /></li>
+        <li>
+          Falsy - fałszywe wartości, które zwracają nam false:
+          <ul>
+            <li>false</li>
+            <li>0 - zero zawsze zwraca wartość fałszywą</li>
+            <li>'',"",`` - pusty string</li>
+            <li>null</li>
+            <li>undefined</li>
+            <li>NaN - not a number</li>
+          </ul>
+        </li>
+        <li>
+          Truthy - wszystkie inne wartości dają prawdę:
+          <ul>
+            <li>'Tekst'</li>
+            <li>12</li>
+            <li>-4</li>
+            <li>{} - pusty obiekt</li>
+            <li>[] - tablica</li>
+            <li>true</li>
+            <li>itd.</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>&& - AND - wszystkie warunki muszą być true</h2>
+      <ul>
+        <li>if((myVariable == wartość) && (otherVar !== 'wartość')) {...}</li>
+      </ul>
+      <h2>|| - OR - przynajmniej jeden warunek musi być true</h2>
+
+      <h2>! - NOT - odwraca wartość wyrażenia logicznego</h2>
+      <ul>
+        <li>if(!('JavaScript' == 'Java'))</li>
+        <li>{</li>
+        <li>&emsp;//ten kod się wykona</li>
+        <li>}</li>
+        <li><br /></li>
+        <li><strong>!false => true</strong></li>
+        <li><strong>!true => false</strong></li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>else - rozbudowuje warunek</h2>
+      <p></p>
+      <ul>
+        <li>if (myVariable == value) {</li>
+        <li>&emsp;//wykonaj kod jeśli true, jeśli nie to:</li>
+        <li>} else {</li>
+        <li>&emsp;//wykonaj kod jeśli false</li>
+        <li>}</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>else if - bardzo dokladnie definiujemy co należy sprawdzić</h2>
+      <p></p>
+      <ul>
+        <li>if (myVariable == wartość1) {</li>
+        <li>&emsp;//wykonaj kod jeśli true, jeśli nie to:</li>
+        <li>} else if (myVariable == wartość2){</li>
+        <li>&emsp;//wykonaj kod jeśli true</li>
+        <li>} else {</li>
+        <li>&emsp;//wykonaj kod jeśli poprzednie warunki nie są spełnione</li>
+        <li>}</li>
+        <li>
+          pierwszy napotkany true jest wykonywany i przerywa sprawdzanie daelej, nawet jeśi kolejne
+          też mogą być true
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>switch - do sprawdzania wartości</h2>
+      <ul>
+        <li>switch (myVariable) {</li>
+        <li>&emsp;case 4: // otwarcie</li>
+        <li>&emsp;&emsp;console.log('my number to 4')</li>
+        <li>&emsp;break; // zamknięcie</li>
+        <li>&emsp;case 8:</li>
+        <li>&emsp;&emsp;console.log('my number to 8')</li>
+        <li>&emsp;break;</li>
+        <li>&emsp;deafault: // else w przypadku switcha</li>
+        <li>&emsp;&emsp;console.log('nie wiem ile wynosisz - default response')</li>
+        <li>&emsp;} // nie trzeba break bo to ostatnia domyślna odpowiedź</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>zapis skrócony if'a</h2>
+      <ul>
+        <li>(zmienna1 > zmienna2) ? console log('trude'):console.log('false')</li>
+        <li>&emsp;1. porównanie, które chcę sprawdzić</li>
+        <li>&emsp;2. ? - znak zapytania</li>
+        <li>&emsp;3. to co ma się wykonać jeśli true</li>
+        <li>&emsp;4. : - dwukropek</li>
+        <li>&emsp;5. to co ma się wykonać jeśli false</li>
+        <li>Nie można wrzucić do środka dłuższego kodu.</li>
+        <li>Jednolinijkowe porównania na szybko, często wykorzystywane do pracy z Reactem.</li>
       </ul>
     </article>
 
