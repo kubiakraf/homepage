@@ -278,15 +278,111 @@
 
     <article>
       <h2>Formularze</h2>
-      <ul>
-        <li>Umożliwiają kontakt ze światem i wysyłanie danych.</li>
-        <li>form - otwarcie formularz, wyznacza jego granice</li>
-        <li>input - znacznik samozamykający, najczęściej opakowany w znacznik p</li>
-        <li>name="nazwaPola"</li>
-        <li>id="idPola"</li>
-        <li></li>
-        <li></li>
-      </ul>
+      <p>Umożliwiają kontakt ze światem i wysyłanie danych.</p>
+      <section>
+        <h3>type="text"</h3>
+        <ul>
+          <li>
+            &lt;form&gt; - otwarcie formularz, wyznacza jego granice
+            <ul>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label for="firstName"&gt;Imię&lt;/label&gt; - etykieta do pola formularza z
+                opisem
+                <ul>
+                  <li>powiązanie label z idPola - for==id</li>
+                  <li>po kliknięciu w nazwę pola można pisać w inpucie</li>
+                </ul>
+              </li>
+              <li>
+                &lt;input type="text" id="firstName" name="firstName" value="Rafał"
+                placeholder="Wpisz imię"/&gt;
+                <ul>
+                  <li>
+                    &lt;input /&gt; - znacznik samozamykający, najczęściej opakowany w znacznik p,
+                    aby było w miarę prawidłowo semantycznie
+                  </li>
+                  <li>type="text" - podstawowy typ inputa, jednowierszowy text</li>
+                  <li>
+                    id="idPola" - używany do identyfikowacji pola, zwykle takie samo jako nazwa
+                    pola, ale to nie to samo
+                  </li>
+                  <li>name="nazwaPola" - atrybut inputa</li>
+                  <li>value="wartość" - domyślna wartość dla inputa</li>
+                  <li>
+                    placeholder="wyszarzona podpowiedź" - wyświetla się gdy inut jest pusty, nie
+                    zastępuje labela
+                  </li>
+                </ul>
+              </li>
+              <li>&lt;/p&gt;</li>
+            </ul>
+          </li>
+
+          <li>&lt;/form&gt;</li>
+          <li><br /></li>
+          <li>
+            &lt;fieldset&gt; - grupuje dane formularza i otacza ramką
+            <ul>
+              <li>&lt;legend&gt;Dane adresowe:&lt;/legend&gt; - wcina od góry w ramkę</li>
+              <li>&lt;p&gt;</li>
+              <li>&lt;label for="street"&gt;Ulica&lt;/label&gt;</li>
+              <li>
+                &lt;input placeholder="Twoja ulica" id="street" name="street" type="text" /&gt;
+              </li>
+              <li>&lt;label for="city"&gt;Miasto&lt;/label&gt;</li>
+              <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
+              <li>&lt;/p&gt;</li>
+            </ul>
+          </li>
+          <li>&lt;/fieldset&gt;</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>type="radio"</h3>
+        <p>
+          Tylko jeden może być aktywny - poole jednokrotnego wyboru. <br />Zagnieżdzając input w
+          label, nie trzeba wypisywać for i id:
+        </p>
+        <ul>
+          <li>
+            &lt;fieldset&gt;
+            <ul>
+              <li>&lt;legend&gt;Ulubione lody:&lt;/legend&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" name="icecream" /&gt;Czekoladowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" name="icecream" /&gt;Waniliowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" name="icecream" /&gt;Pistacjowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li></li>
+            </ul>
+          </li>
+          <li>&lt;/fieldset&gt;</li>
+        </ul>
+        name - łączy ze sobą radio aby nie możnabyło zaznaczyć kilku
+      </section>
+
+      <section>
+        <h3>type="checkbox"</h3>
+        <ul>
+          <li>poole wielokrotnego wyboru</li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </section>
     </article>
 
     <footer>
