@@ -412,6 +412,34 @@
       </ul>
     </article>
 
+    <article>
+      <h2>Jak dostać się do wartości inputa:</h2>
+      <ul>
+        <li>Posługujemy się id - w konsoli wpusuję np: height, age, firstName itp</li>
+        <li>otrzymuję cały input zawierający to id np.:</li>
+        <li>
+          &lt;input type="range" id="height" name="height" min="0" max="220" step="5" value="160"
+          /&gt;
+        </li>
+        <li>height.value</li>
+        <li>otrzymam wartość taką jaka jest obecnie</li>
+        <li><br /></li>
+        <li>bardziej tradycyjny sposób, przez stworzenie zmiennej:</li>
+        <li>Jeśli nadpiszę: const height = "ok"</li>
+        <li>otrzymam: 'ok' jako wartość zmiennej, to już nie jest ten input</li>
+        <li><br /></li>
+        <li>tak jakby było to wpisane gdzieś w moim JavaScriptcie aby się odnieść do inputa:</li>
+        <li>const favNumber = document.querySelector('#favNumber')</li>
+        <li>favNumber - otrzymam cały input</li>
+        <li>favNumber.value - otrzymam wartość taką jaka jest obecnie (pobranie wartości)</li>
+        <li>
+          favNumber.value = 100 - wartość mogę ustalić i zmieni się na stronie, po pobraniu
+          querySelectorem elementu związanego z formularzem, można modyfikować wartości formularza
+          za pomocą JS
+        </li>
+      </ul>
+    </article>
+
     <p>&lt;script src="main.js"&gt; &lt;/script&gt;</p>
 
     <footer>
