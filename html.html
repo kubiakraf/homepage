@@ -293,9 +293,6 @@
                   <li>powiązanie label z idPola - for==id</li>
                   <li>po kliknięciu w nazwę pola można pisać w inpucie</li>
                 </ul>
-                <h3>type="password"</h3>
-                &lt;label for="secret"&gt;Tajna wiadomość:&lt;/label&gt; &lt;imput
-                placeholder="secret" id="secret" type="password" name="secret" /&gt;
               </li>
               <li>
                 &lt;input type="text" id="firstName" name="firstName" value="Rafał"
@@ -356,11 +353,6 @@
             <label for="age">Wiek:</label>
             <input id="age" name="age" type="number" value="40" placeholder="Ile masz lat?" />
           </p>
-
-          <section>
-            <label for="secret">Tajna wiadomość:</label>
-            <imput placeholder="secret" id="secret" type="password" name="secret" />
-          </section>
         </form>
 
         <ul>
@@ -376,11 +368,15 @@
               <li>&lt;label for="city"&gt;Miasto&lt;/label&gt;</li>
               <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
 
-              <li>&lt;label for="city"&gt;Nr telefonu&lt;/label&gt;</li>
-              <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
+              <li>&lt;label for="phone"&gt;Nr telefonu&lt;/label&gt;</li>
+              <li>
+                &lt;input placeholder="Twój numer telefonu" id="phone" name="phone" type="tel" /&gt;
+              </li>
 
-              <li>&lt;label for="city"&gt;Miasto&lt;/label&gt;</li>
-              <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
+              <li>&lt;label for="email"&gt;E-mail&lt;/label&gt;</li>
+              <li>
+                &lt;input placeholder="Twoje e-mail" id="email" name="email" type="email" /&gt;
+              </li>
 
               <li>&lt;/p&gt;</li>
             </ul>
@@ -407,6 +403,15 @@
             <input placeholder="Twoje e-mail" id="email" name="email" type="email" />
           </p>
         </fieldset>
+      </section>
+
+      <section>
+        <h3>type="password"</h3>
+        &lt;label for="secret"&gt;Tajna wiadomość:&lt;/label&gt; &lt;imput placeholder="secret"
+        id="secret" type="password" name="secret" /&gt;
+
+        <label for="secret">Tajna wiadomość:</label>
+        <imput placeholder="secret" id="secret" type="password" name="secret" />
       </section>
 
       <section>
