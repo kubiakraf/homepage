@@ -1,7 +1,8 @@
 
 const firstName = "Rafał";
-const age = 40;
+const lastName = "Kubiak";
+const age = 41;
 
 alert('Witaj');
 
-alert(`Nazywam się ${firstName} i mam ${age} lat. Od pół roku uczę się pisać strony www, teraz próbuje zrobić to z kursem WTF - co ten frontend III edycja. Prowadzącym jest Macieja Korsan.`);
+alert(`Nazywam się ${firstName} ${lastName} i mam ${age} lat. Uczę się pisać strony www, teraz próbuje zrobić to z kursem WTF - co ten frontend III edycja. Prowadzącym jest Macieja Korsan.`);
