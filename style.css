@@ -40,7 +40,7 @@ ul {
   color: greenyellow;
 }
 .net__url--red {
-  color: red;
+  color: rgb(170, 41, 41);
 }
 .net__url--bold {
   font-weight: bold;
