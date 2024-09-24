@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>brudnopis z WTFa</title>
-    <linl href="./normalize.css" rel="stylesheet" type="text/css" />
+    <link href="./normalize.css" rel="stylesheet" type="text/css" />
     <link href="./style.css" rel="stylesheet" type="text/css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap"
@@ -46,9 +46,61 @@
         </p>
       </article>
 
+<article>
+  <h2>znacznik/tag/elemetn</h2>
+  <p>
+    &amp;lt;znacznik atrybut=&amp;quot;wartość&amp;quot;&amp;gt;treść&amp;lt;/znacznik&amp;gt;
+  </p>
+  <p>
+    Semantyczny - mający znaczenie, znaczniki nadają znaczenie treści, którą opakowują.
+  </p>
+</article>
+
+
+<article>
+  <h2>Podstawowa struktóra dokumentu HTML</h2>
+  <ul>
+    <li><!DOCTYPE html> - typ dokumnetu</li>
+    <li><html lang="en"> - korzeń strony i atrybut języka strony, ważne dla czytników ekranowych</li>
+    <li><head> - dodatkowe informacje dla przeglądarki potrzebne do załadowania strony oraz silników wyszukujących</li>
+    <li><meta charset="UTF-8"> - kodowanie znaków dla całego świata</li>
+    <li><meta name="viewport" content="width=device-width, initial-scale=1.0"> -  info o responsywności</li>
+    <li><title>Document</title> - tytuł dokumentu na zakładce w przeglądarce</li>
+    <li></li>
+    <li></head></li>
+    <li><body></li>
+    <li><main></li>
+    <li><header></li>
+    <li><h1></h1></li>
+    <li></header></li>
+    <li><section></li>
+    <li><h2></h2></li>
+    <li><p>treść paragrafu 1</p></li>
+    <li</section></li>
+    <li><section></li>
+      <li><h2></h2></li>
+      <li><article></li>
+        <h3></h3>
+      <li><p>treść paragrafu artykułu</p></li>
+      <li></article></li>
+      <li><article></li>
+        <h3></h3>
+      <li><p>treść paragrafu artykułu</p></li>
+      <li></article></li>
+      <li></section></li>
+    <li></main></li>
+    <li><footer></li>
+<li><p></p></li>
+      <li></footer></li>
+    <li></body></li>
+    <li></html></li>
+  </ul>
+</article>
+
+
       <article>
         <h2>main</h2>
-        <p>Unikatowa treść strony, nie występująca na innych podstronach.</p>
+        <p>Unikatowa treść strony, nie występująca na innych podstronach. Główna część dokumentu.</p>
       </article>
 
       <article>
@@ -67,8 +119,8 @@
       <article>
         <h2>article | section</h2>
         <p>
-          Sekcja to jakby dział sklepu, póka. <br />Artykuł to tak jakby artykuł w sklepie na półce.
-          Może mieć w sobie sekcje i zaczynają się od nagłówka.
+          Sekcja to jakby dział sklepu, półka. Może mieć w sobie kilka artykułów. Zawiera w sobie ten sam rodzaj treści.<br />Artykuł to tak jakby artykuł w sklepie na półce. Samodzielna treść.
+          Jedne artykuł np. na blogu, może mieć w sobie sekcje i zaczynają się one od nagłówka.
         </p>
         <article>
           <h2>article</h2>
@@ -107,7 +159,7 @@
         <p>
           Nagłówek tekstowy - dokumentu / sekcji / artykułu W dokumencie od największego do
           najmniejszego. Opakowany przez header jeśli są dodatkowe info dotyczące nagłówka np. data
-          publikacji, autor
+          publikacji, autor.
         </p>
       </article>
 
@@ -201,7 +253,7 @@
           <li>Pojedyńczy element nazywamy węzłem lub nodem.</li>
         </ul>
       </article>
-    </main>
+   
 
     <article>
       <h2>DOM - Document Object Model</h2>
@@ -412,7 +464,7 @@
         id="secret" type="password" name="secret" /&gt;
 
         <label for="secret">Tajna wiadomość:</label>
-        <imput placeholder="secret" id="secret" type="password" name="secret" />
+        <input placeholder="secret" id="secret" type="password" name="secret" />
       </section>
 
       <section>
@@ -529,7 +581,7 @@
         </p>
       </section>
     </article>
-
+</main>
     <footer>
       <p>
         Strona szkoleniowa z frontendu.<br />
