@@ -1,1090 +1,1095 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>brudnopis z WTFa</title>
-    <linl href="./normalize.css" rel="stylesheet" type="text/css" />
-    <link href="./style.css" rel="stylesheet" type="text/css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <main>
-      <header class="header__img">
-        <h1>CSS3 - Cascading Style Sheets<br />(Kaskadowe arkusze stylów)</h1>
-      </header>
-      <nav class="navigation">
-        <a href="./index.html">Home</a>
-        <a href="./html.html">HTML</a>
-        <a href="./css.html">CSS</a>
-        <a href="./javascript.html">JS</a>
-        <a href="./vcs.html">VSC</a>
-        <a href="./git.html">git</a>
-        <a href="./entities.html">entities</a>
-        <a href="./power.html">Power User</a>
-        <a href="./chat.html">ChatGPT</a>
-        <a href="./net.html">Internet</a>
-        <a href="./terminal.html">Terminal</a>
-        <a href="./figma.html">Figma</a>
-        <a href="./webflow.html">webflow</a>
-        <a href="./about.html">Wizytówka</a>
-      </nav>
 
-      <article>
-        <h2>Definicja</h2>
-        <p>
-          Definiuje wygląd HTMLa, prezentację na ekranach, czytnikach, wydrukach. Składnia CSS to reguły.
-          Przeglądarki potrafią różnie interpretować CSS co prowadzi do różnic w wyświetlaniu.
-          Składnia CSS to reguły:
-        </p>
-        <div>
-          selektor &#123;   - informacja co powinno być ostylowane, jaki fragment strony<br />
-          właścwości: wartość;
-          <br />&#125;
-        </div>
-     
-      </article>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>brudnopis z WTFa</title>
+  <linl href="./normalize.css" rel="stylesheet" type="text/css" />
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400;700&display=swap" rel="stylesheet" />
+</head>
 
-      <article>
-        <h2>Deklaracja styli</h2>
-        <ul>
-          <li>
-            inlinowe - ma jest nadżędny na innymi stylami, tylko jeśli nie możemy edytować pliku ze
-            stylami bo są np. w zewnętrznej bibliotece.<br />
-            &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;
-          </li>
-          <li>w head pliku html</li>
-          <li>
-            Deklarowanie pliku zewnętrznego ze stylami CSS w head strony:
-            <div>&lt; link href="style.css" rel="stylesheet" type="text/css" &gt;</div>
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Łączenie selektorów</h2>
-        <p>po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
-        <div>
-          section a &#123; <br />
-          właścwości: wartość; <br />&#125;
-        </div>
-      </article>
-
-      <article>
-        <h2>Specyficzność w CSS</h2>
-        <table>
-          <tr>
-            <td>( _</td>
-            <td>, _ )</td>
-            <td>, _</td>
-            <td>, _</td>
-            <td>, _</td>
-          </tr>
-          <tr>
-            <td>!important</td>
-            <td>style=""</td>
-            <td>#name</td>
-            <td>.name</td>
-            <td>element</td>
-          </tr>
-        </table>
-
-        <section>
-          <h3>Dziedziczenie</h3>
-          <p>
-            selektor {name:wartość;} <br />
-            !important - reguła umieszczana po deklaracji ale przed średnikiem czyni ją nadrzędną,
-            ale jeśli ma być dziedziczony i nie jest zdefiniowany bezpośrenio do danego elementu nie
-            jest brany pod uwagę. nadpisuje inne reguły dotyczące tej własności.<br />
-
-            #id #(hash) - selektor id - nie używamy <br />
-            .class .(kropka) - selektor klasy<br />
-            element - selektor elementu <br />
-          </p>
-
-          <p>
-            Jeśli specyficzność jest równa - pierwszeństwo ma selektor "bliżej" elementu, czyli
-            niżej, na końcu pliku.
-          </p>
-          <p>
-            Rekomendowane jest dodawanie klas do wszystkich elementów i unikanie zagnieżdzeń. Nie
-            dodawać styli za pomocą tagów (selektor elementu).
-          </p>
-        </section>
-        <section>
-          <h3>wartość: inherit;</h3>
-          <p>
-            Definiujemy tą wartością, że coś ma być dziedziczone. Jak np. color linków dziedziczony
-            po &lt;section&gt; w którym link się znajduje:
-          </p>
-          <div>
-            section a &#123; <br />
-            color: inherit; <br />&#125;
-          </div>
-        </section>
-        <section>
-          <h3>Lista dziedziczonych własności CSS</h3>
-          <table class="css__inheritanc--table">
-            <tbody>
-              <tr>
-                <td>border-collapse</td>
-                <td>font-style</td>
-                <td>list-style-position</td>
-                <td>text-indent</td>
-              </tr>
-              <tr>
-                <td>border-spacing</td>
-                <td>font-variant</td>
-                <td>list-style-type</td>
-                <td>text-justify</td>
-              </tr>
-              <tr>
-                <td>caption-side</td>
-                <td>font-weight</td>
-                <td>list-style</td>
-                <td>text-shadow</td>
-              </tr>
-              <tr>
-                <td>color</td>
-                <td>font-size-adjust</td>
-                <td>orphans</td>
-                <td>text-transform</td>
-              </tr>
-              <tr>
-                <td>curosr</td>
-                <td>font-stretch</td>
-                <td>quotes</td>
-                <td>visibility</td>
-              </tr>
-              <tr>
-                <td>direction</td>
-                <td>font</td>
-                <td>tab-size</td>
-                <td>white-space</td>
-              </tr>
-              <tr>
-                <td>empty-cells</td>
-                <td>letter-spacing</td>
-                <td>text-align</td>
-                <td>widows</td>
-              </tr>
-              <tr>
-                <td>font-family</td>
-                <td>line-height</td>
-                <td>text-align-last</td>
-                <td>word-break</td>
-              </tr>
-              <tr>
-                <td>font-size</td>
-                <td>list-style-image</td>
-                <td>text-decoration-color</td>
-                <td>word-spacing</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>word-wrap</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-      </article>
-
-      <article>
-        <h2>Nazewnictwo klas</h2>
-        <ul>
-          <li>pojedyńcze słowa z języka angielskiego</li>
-          <li>nazwy zgodne z ich funkcją na stronie</li>
-          <li>startuj z małej litery</li>
-          <li>nie zaczynać od cyfry</li>
-          <li>
-            jeśli dwa słowa nie używamu spacji:
-            <ul>
-              <li>- camelCase - łączenie wyrazów zlepiając je i oddzielając wielkimi literami</li>
-              <li>- kebab-case - łączenie wyrazów myślnikiem</li>
-              <li>
-                - snake_case - łączenie wyrazów za pomocą dolnej belki - nie używać bo nie zawsze
-              </li>
-              <li>- PascalCase - zaczynamy od wielkiej litery i łączymy nimi kolejne wyrazy</li>
-            </ul>
-          </li>
-          <li>starać się aby każdy element miał jedną klasę, unikać specyficzności</li>
-          <li>jeśli wybierzemy jakiś schemat nazewnictwa to trzymamy się go konsekwentnie</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Podsumowanie klas</h2>
-        <ul>
-          <li>HTML: class="name" = CSS: .name</li>
-          <li>HTML: id="name" = CSS: #name</li>
-          <li>stylujemy po klasach (bez zagnieżdzeń)</li>
-          <li>nazwyamy klasy po angielsku zgodnie z przeznaczeniem</li>
-          <li>tworzymy klasy nawet jeśli mamy tylko jeden element danego typu</li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>div</h2>
-        <ul>
-          <li>nie ma znaczenia semantycznego</li>
-          <li>
-            gdy chcemy coś opakować i tylko kiedy <strong>nie istnieje</strong> odpowiedni
-            semantyczny znacznik
-          </li>
-          <li>przydaje się przy stylowaniu elementów</li>
-          <li>jeśli opakowujemy nim treść to prawdopodobnie robimy to źle</li>
-        </ul>
-      </article>
-    </main>
+<body>
+  <main>
+    <header class="header__img">
+      <h1>CSS3 - Cascading Style Sheets<br />(Kaskadowe arkusze stylów)</h1>
+    </header>
+    <nav class="navigation">
+      <a href="./index.html">Home</a>
+      <a href="./html.html">HTML</a>
+      <a href="./css.html">CSS</a>
+      <a href="./javascript.html">JS</a>
+      <a href="./vcs.html">VSC</a>
+      <a href="./git.html">git</a>
+      <a href="./entities.html">entities</a>
+      <a href="./power.html">Power User</a>
+      <a href="./chat.html">ChatGPT</a>
+      <a href="./net.html">Internet</a>
+      <a href="./terminal.html">Terminal</a>
+      <a href="./figma.html">Figma</a>
+      <a href="./webflow.html">webflow</a>
+      <a href="./about.html">Wizytówka</a>
+    </nav>
 
     <article>
-      <h2>display: block</h2>
-      <ul>
-        <li>element zajmuje całą dostępną szerokość ekranu</li>
-        <li>jeśli nawet zajmuje mniej miejsca, rezerwuje tą przestrzeń</li>
-        <li>kolejne elementy będzie przerzucał do kolejnej linii</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>display: inline</h2>
-      <ul>
-        <li>element zajmuje tylko tyle miejsca ile wyświetlana w nim treść</li>
-        <li>kolejne elementy będą następować jeden po drugim w linii</li>
-        <li>wyświetlają się z delikatną przerwą jakby była między nimi spacja.</li>
-        <li>nie działa określanie width i height</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>display: inline-block</h2>
-      <ul>
-        <li>box który ma mniej treści zachowuje się jak liniowy</li>
-        <li>box któy ma więcej treści i wchodzi w kolejną linie staje się blokowym.</li>
-        <li>gdy przestał być całkowicie inline stał się blokowym</li>
-        <li>hybryda pomiędzy inline a block</li>
-        <li>elementy zachowują się trochę inlinowo ale można nadawać im szerokość i wysokość</li>
-      </ul>
-    </article>
-
-    <section>
-      <h2>Definiowanie zachowania bloków</h2>
-      <article>
-        <h3>width i height</h3>
-        <ul>
-          <li>sztywne rozmiary obiektu</li>
-          <li>jeśli się nie mieści na ekranie pojawia się scroll boczny</li>
-          <li>gdy węższy od ekranu pozostawia pustą przestrzeń</li>
-        </ul>
-      </article>
-      <article>
-        <h3>max-width i max-height</h3>
-        <ul>
-          <li>bloki zajmują całą dostępną zdeklarowaną przestrzeń</li>
-          <li>treść dostosowuje się do zmieniającej się szerokości ekranu</li>
-          <li>nie rozszerzy się bardziej niż maksymalna zadelkarowana</li>
-        </ul>
-      </article>
-      <article>
-        <h3>min-width i min-height</h3>
-        <ul>
-          <li>
-            gdy ekran się zmniejsza poniżej zadeklarowanej wartości minimalnej pojawia się boczny
-            scroll
-          </li>
-          <li>element nie może być mniejszy niż zadeklarowana</li>
-          <li>zachowują się trochę jak elementy blokowe</li>
-        </ul>
-      </article>
-
-      <article>
-        <h3>overflow</h3>
-        <ul>
-          <li>definiuje jak ma się zachować element gdy treść zajmuje więcej miejsca niż blok</li>
-          <li>: hidden; - wizulanie ucina treść która się nie mieści</li>
-          <li>
-            : auto; - tworzy scrolla aby można przewinąć treść - tylko tam gdzie jest potrzebny
-          </li>
-          <li>
-            : clip; - na tym etapie działa jak hidden ale przydaje się przy bardziej zaawansowanym
-            stylowaniu
-          </li>
-          <li>
-            : scroll; - wszystkie elementy, niezależnie czy potrzebują mają pasek do przewijania
-          </li>
-          <li>
-            : visible; - treść wystaje po za blok, tak jakby overflow nie był definiowany<br />
-            w tym przypadku treść nachodzi na treść elementu poniżej, nie respektuje jego
-            przestrzeni
-          </li>
-        </ul>
-      </article>
-    </section>
-
-    <article>
-      <h2>jednostki</h2>
-      <p>zapisywać bez spacji</p>
-      <ul>
-        <li>0 - bez jednostek, zero to jest zero nieważne czego</li>
-        <li>
-          px - piksele - jeden punkt na ekranie <br />
-          przeliczony przez przeglądarkę a nie ten ze specyfikacji technicznej monitora
-        </li>
-        <li>
-          % - procenty - wartość odnosząca się do wielkości rodzica. <br />
-          element wyżej musi mieć zdefiniowaną wysokość aby móc wyrazić ją w procentach
-        </li>
-        <li>
-          vw - viewport width - szerokość okna w którym wyświetla się dokument w procentach<br />
-          nie odnosi się do rodzica, zawsze do okna ekranu (posiada margines)
-        </li>
-        <li>
-          vh - viewport height - bierze całą wysokość okna (nie całości dokumantu) <br />
-          gdy treść sekcji ma być na cały ekran jest to robione za pomocą height: 100vh;
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>Box model</h2>
-
-      <div class="css__box-model--margin">
-        margin
-        <div class="css__box-model--border">
-          border
-          <div class="css__box-model--padding">
-            padding
-            <div class="css__box-model--element">element</div>
-          </div>
-        </div>
+      <h2>Definicja</h2>
+      <p>
+        Definiuje wygląd HTMLa, prezentację na ekranach, czytnikach, wydrukach. Składnia CSS to reguły.
+        Przeglądarki potrafią różnie interpretować CSS co prowadzi do różnic w wyświetlaniu.
+        Składnia CSS to reguły:
+      </p>
+      <div>
+        <p>Składnia CSS to reguły:</p>
+        selektor &#123; - informacja co powinno być ostylowane, jaki fragment strony<br />
+        właścwości: wartość;
+        <br />&#125;
       </div>
 
-      <p>
-        Wszystkie elementy na stronie są otoczone "niewidzialnym prostokątem"<br />
-        Jest widoczny gdy podświetla się go w Inspect
-      </p>
+    </article>
+
+    <article>
+      <h2>Deklaracja styli</h2>
       <ul>
         <li>
-          <h3>margin</h3>
-          <ul>
-            <li>Określa o ile element ma się odsunąć od innych elementów, które go otaczają.</li>
-            <li>Zapisuyjemy tak samo jak padding.</li>
-            <li>marginesy nakładają się na siebie.</li>
-            <li>elementy są od siebie odsunięte o wyższą wartość, mniejsza jest jako minimalna.</li>
-            <li>
-              margin: __px auto; pierwsza wartość do top-bottom a druga auto = wyśrodkowanie
-              elementu
-            </li>
-          </ul>
+          inlinowe - ma jest nadżędny na innymi stylami, tylko jeśli nie możemy edytować pliku ze
+          stylami bo są np. w zewnętrznej bibliotece.<br />
+          &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;
         </li>
-
+        <li>pliku html w head pomiędzy znacznikami style: &amp;lt;style&amp;gt;&amp;lt;/style&amp;gt; </li>
         <li>
-          <h3>border</h3>
-          <ul>
-            <li>
-              <h4>Zapis pełny:</h4>
-              <ul>
-                <li>border-width: 3px;</li>
-                <li>border-style: solid;</li>
-                <li>border-color: #fe201a;</li>
-              </ul>
-            </li>
-            <li>
-              <h4>Zapis skrótowy:</h4>
-              <ul>
-                <li>border: 3px solid #fe201a;</li>
-              </ul>
-            </li>
-            <li>
-              <h4>wybór fragmentu ramki:</h4>
-              <ul>
-                <li>border-top: 3px solid #fe201a;</li>
-                <li>border-right</li>
-                <li>border-bottom</li>
-                <li>border-left</li>
-              </ul>
-            </li>
-            <li>
-              <h4>border-radius:</h4>
-
-              <ul>
-                <li>Odpowiada za zaokrąglenie.</li>
-                <li>px lub %</li>
-                <li>Nie tzeba definiować border aby mieć zaokrąglony box.</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>padding</h3>
-          <ul>
-            <li>definiuje o ile nasza treść ma być oddalona od ramki, krawędzi tego elementu</li>
-
-            <li>
-              <h4>Zapis pełny:</h4>
-              <ul>
-                <li>padding-top: 4px;</li>
-                <li>padding-right: 4px;</li>
-                <li>padding-bottom: 5px;</li>
-                <li>padding-left: 6px;</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4>Zapis skrótowy (shorthand):</h4>
-              <ul>
-                <li>padding: top right bottom left;</li>
-                <li>padding: 4px 4px 5px 6px;</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4>Wartości lustrzane:</h4>
-              <ul>
-                <li>padding: top right-left bottom;</li>
-                <li>padding: 4px 5px 6px;</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4>Drugi zapis skrótowy:</h4>
-              <ul>
-                <li>padding: top-bottom right-left;</li>
-                <li>padding: 4px 5px 6px;</li>
-              </ul>
-            </li>
-
-            <li>
-              <h4>Wszystkie wartości są takie same:</h4>
-              <ul>
-                <li>padding: 16px;</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>box-sizing: border-box;</h3>
-          <ul>
-            <li>
-              sprawia, że podany wymiar width i height jest traktowany jako całkowity aż do border
-            </li>
-            <li>element + padding + border = zdeklarowany width i height</li>
-            <li>standardowa wartość to content-box;</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>position: static;</h3>
-          <ul>
-            <li>
-              domyślna wartość - przeglądarka sama decyduje o układzie elementu (na podstawie jego
-              parametrów)
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>position: relative;</h3>
-          <ul>
-            <li>
-              pozwala stworzyć pewnego rodzaju przestrzeń, względem której możemy umieszczać inne
-              elementy
-            </li>
-            <li>samo dodanie nic nie zmienia wizulanie ale pozwala na wykorzystanie przestrzeni</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>position: absolute;</h3>
-          <ul>
-            <li>absolutne pozycjonowanie względem elementu z relative</li>
-            <li>top: left: right: bottom:</li>
-            <li>top: 0px - element będzie przyklejony do krawędzi paddinga</li>
-            <li>można dodać padding do elementu</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>position: fixed;</h3>
-          <ul>
-            <li>odpawiada za przyklejenie elementu do vievportu - otwartego okna</li>
-            <li>i pływa razem ze stroną</li>
-            <li>jest ciągle przyklejony w pozycji: top, left, right, bottom</li>
-            <li>gdy ma z-index: -1; podczas przesuwania chowa się za elementami</li>
-            <li>używany w urządzeniach mobilnych do przyklejania przycisku np. menu</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>position: sticky;</h3>
-          <ul>
-            <li>
-              bardzo przydatna własność szczególnie przy dłuższych tekstach i chcemy przykleić
-              nagłówek wewnątrz kontenera
-            </li>
-            <li>nie zadziała bez własności zdefiniowanej własności top</li>
-            <li>jeśli rodzić ma własność overflow to sticky nie zadziała</li>
-            <li>jest przyklejony w pozycji: top, w miejscu w którym był jako np. nagłówek</li>
-            <li>
-              pływa razem ze stroną do momentu aż dojdzie do końca elementu gdzie się zatrzymuje
-            </li>
-            <li>działa tylko wewnątrz rodzica</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>float</h3>
-          <ul>
-            <li>
-              element w divie jest opływany przez tekst jak np w wordzie
-              <ul>
-                <li>width: 100px;</li>
-                <li>height: 100px</li>
-                <li>background: red;</li>
-                <li>margin-right: 20px;</li>
-                <li>float: left;</li>
-              </ul>
-            </li>
-            <li>
-              margines diva, który jest automatyczny na całą szerokość jest zastępowany przez ten
-              który definiujemy
-            </li>
-            <li>nie używamy float do budowania layoutów</li>
-            <li>tylko do opływania img</li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>clear</h3>
-          <ul>
-            <li>czyści floaty</li>
-            <li>clear: both; - czyści lewy i prawy</li>
-            <li></li>
-          </ul>
-        </li>
-
-        <li>
-          <h3>Z-index</h3>
-          <ul>
-            <li>odpowiada za ułożenie warstw</li>
-            <li>im wyższy index to element będzie wyżej</li>
-            <li>tło może mieć wartość -1</li>
-            <li>
-              domyślnie ten element, który jest niżej w kodzie jest wgrywany ostatni na stronę i
-              może nadpisać wcześniejsze
-            </li>
-            <li>
-              Microsof Edge ma wbudowane narzędzie do podglądu Z-index
-              <ul>
-                <li>uruchomić dev tools</li>
-                <li>Ctrl + Shift + P</li>
-                <li>3D View</li>
-              </ul>
-            </li>
-          </ul>
+          Deklarowanie pliku zewnętrznego ze stylami CSS w head strony:
+          <div>&lt; link href="style.css" rel="stylesheet" type="text/css" &gt;</div>
         </li>
       </ul>
     </article>
 
     <article>
-      <h2>Ujednolicanie styli - przeglądarki posiadają własne style (user agent stylecheet)</h2>
+      <h2>Łączenie selektorów</h2>
+      <p>po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
+      <div>
+        section a &#123; <br />
+        właścwości: wartość; <br />&#125;
+      </div>
+      <div>
+        <p>W inspect można podejrzeć jak napisana jest strona.
+          Aby sprawić aby na istniejącej stronie można tstować zmiany jakby to był google docs należy do &amp;lt;body
+          style&amp;gt; prawy przycisk myszy Add attribute i za stle dopisać contenteditable.
+        </p>
+      </div>
+    </article>
+
+    <article>
+      <h2>Specyficzność w CSS</h2>
+      <table>
+        <tr>
+          <td>( _</td>
+          <td>, _ )</td>
+          <td>, _</td>
+          <td>, _</td>
+          <td>, _</td>
+        </tr>
+        <tr>
+          <td>!important</td>
+          <td>style=""</td>
+          <td>#name</td>
+          <td>.name</td>
+          <td>element</td>
+        </tr>
+      </table>
+
+      <section>
+        <h3>Dziedziczenie</h3>
+        <p>
+          selektor {name:wartość;} <br />
+          !important - reguła umieszczana po deklaracji ale przed średnikiem czyni ją nadrzędną,
+          ale jeśli ma być dziedziczony i nie jest zdefiniowany bezpośrenio do danego elementu nie
+          jest brany pod uwagę. nadpisuje inne reguły dotyczące tej własności.<br />
+
+          #id #(hash) - selektor id - nie używamy <br />
+          .class .(kropka) - selektor klasy<br />
+          element - selektor elementu <br />
+        </p>
+
+        <p>
+          Jeśli specyficzność jest równa - pierwszeństwo ma selektor "bliżej" elementu, czyli
+          niżej, na końcu pliku.
+        </p>
+        <p>
+          Rekomendowane jest dodawanie klas do wszystkich elementów i unikanie zagnieżdzeń. Nie
+          dodawać styli za pomocą tagów (selektor elementu).
+        </p>
+      </section>
+      <section>
+        <h3>wartość: inherit;</h3>
+        <p>
+          Definiujemy tą wartością, że coś ma być dziedziczone. Jak np. color linków dziedziczony
+          po &lt;section&gt; w którym link się znajduje:
+        </p>
+        <div>
+          section a &#123; <br />
+          color: inherit; <br />&#125;
+        </div>
+      </section>
+      <section>
+        <h3>Lista dziedziczonych własności CSS</h3>
+        <table class="css__inheritanc--table">
+          <tbody>
+            <tr>
+              <td>border-collapse</td>
+              <td>font-style</td>
+              <td>list-style-position</td>
+              <td>text-indent</td>
+            </tr>
+            <tr>
+              <td>border-spacing</td>
+              <td>font-variant</td>
+              <td>list-style-type</td>
+              <td>text-justify</td>
+            </tr>
+            <tr>
+              <td>caption-side</td>
+              <td>font-weight</td>
+              <td>list-style</td>
+              <td>text-shadow</td>
+            </tr>
+            <tr>
+              <td>color</td>
+              <td>font-size-adjust</td>
+              <td>orphans</td>
+              <td>text-transform</td>
+            </tr>
+            <tr>
+              <td>curosr</td>
+              <td>font-stretch</td>
+              <td>quotes</td>
+              <td>visibility</td>
+            </tr>
+            <tr>
+              <td>direction</td>
+              <td>font</td>
+              <td>tab-size</td>
+              <td>white-space</td>
+            </tr>
+            <tr>
+              <td>empty-cells</td>
+              <td>letter-spacing</td>
+              <td>text-align</td>
+              <td>widows</td>
+            </tr>
+            <tr>
+              <td>font-family</td>
+              <td>line-height</td>
+              <td>text-align-last</td>
+              <td>word-break</td>
+            </tr>
+            <tr>
+              <td>font-size</td>
+              <td>list-style-image</td>
+              <td>text-decoration-color</td>
+              <td>word-spacing</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>word-wrap</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </article>
+
+    <article>
+      <h2>Nazewnictwo klas</h2>
       <ul>
+        <li>pojedyńcze słowa z języka angielskiego</li>
+        <li>nazwy zgodne z ich funkcją na stronie</li>
+        <li>startuj z małej litery</li>
+        <li>nie zaczynać od cyfry</li>
         <li>
-          Reset - stara technika
+          jeśli dwa słowa nie używamu spacji:
           <ul>
-            <li>* { - selektor uniwersalny, wybiera wszystkie elementy na stronie</li>
-            <li>margin: 0;</li>
-            <li>padding: 0;</li>
+            <li>- camelCase - łączenie wyrazów zlepiając je i oddzielając wielkimi literami</li>
+            <li>- kebab-case - łączenie wyrazów myślnikiem</li>
             <li>
-              outline: none; - niewidać, na jaką wartość przeskoczyło się tabulatorem = problem dla
-              ludzi słabowidzących
+              - snake_case - łączenie wyrazów za pomocą dolnej belki - nie używać bo nie zawsze
             </li>
-            <li>}</li>
+            <li>- PascalCase - zaczynamy od wielkiej litery i łączymy nimi kolejne wyrazy</li>
           </ul>
         </li>
-        <li>
-          Normalizacja -
-          <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
-          <ul>
-            <li>
-              Elementy będą wyświetlać się na różnych przeglądarkach bardziej spójnie, zgodnie z
-              najnowszymi standardami.
-            </li>
-            <li>skopiować treść i dodać do projektu jako normalize.css</li>
-            <br />
-            <li>html {</li>
-            <li>box-sizing: border-box;</li>
-            <li>}</li>
-            <br />
-            <li>*, *:before, *:after {</li>
-            <li>box-sizing: inherit;</li>
-            <li>}</li>
-          </ul>
-        </li>
+        <li>starać się aby każdy element miał jedną klasę, unikać specyficzności</li>
+        <li>jeśli wybierzemy jakiś schemat nazewnictwa to trzymamy się go konsekwentnie</li>
       </ul>
     </article>
 
     <article>
-      <h2>BEM - block element modifier</h2>
+      <h2>Podsumowanie klas</h2>
       <ul>
-        <li>Block - nadrzędny element</li>
-        <li>Element - część bloku (nie musi być bezpośrednim dzieckiem)</li>
-        <li>
-          Modifier - modyfikator - jeśli element występuje w kilku wariantach tworzymy dodatkową
-          klasę.
-        </li>
-      </ul>
-      <ul>
-        <li>block__element--modifier</li>
-        <li>Nadajemy klasami sens semantyczny odwzorowując strukturę strony</li>
-        <li>zaczynamy od stylu blockowego (nagłówek)</li>
-        <li>następnie style elemtów (rozdziały)</li>
-        <li>a pod każdym elementem modyfikatory (pod rozdziały)</li>
-        <br />
-        <li>Szukamy elementów na stronie i dzielimy na bloki.</li>
-        <li>Myślimy o elementach składowych / robimy analizę-selekcję.</li>
-        <li>
-          Tworzymy dwie klasy jeśli element ma modyfiaktor (w modyfiaktorze zmieniamy tylko unikalne
-          dla niego wartości, nie przepisujemy rzeczy z klasy bazowej).
-        </li>
-      </ul>
-
-      <p>Powstał ponieważ:</p>
-      <ul>
-        <li>Świat stylowania doszedł wysokiego stopnia skomplikowania (specyficznosć).</li>
-        <li>Problem z logicznym nazywaniem klas.</li>
-        <li>Brak ujednoliconego spopsobu stylowania.</li>
-        <li>Importanty. Nadpisywanie rzeczy (znowu specyiczność).</li>
-        <li>Brak odwzorowania struktury HTML w CSS.</li>
-        <li>Stylowanie kilkoma klasami, powtarzające się nazwy.</li>
+        <li>HTML: class="name" = CSS: .name</li>
+        <li>HTML: id="name" = CSS: #name</li>
+        <li>stylujemy po klasach (bez zagnieżdzeń)</li>
+        <li>nazwyamy klasy po angielsku zgodnie z przeznaczeniem</li>
+        <li>tworzymy klasy nawet jeśli mamy tylko jeden element danego typu</li>
       </ul>
     </article>
 
     <article>
-      <h2>Typografia</h2>
+      <h2>div</h2>
       <ul>
-        <li>font-size - rozmiar tekstu</li>
-        <li>font-family - krój fontu, bezszeryfowe do nagłówków, a szeryfowe do tekstu.</li>
-        <li>font-weight - grubość</li>
-        <li>line-height - wysokość odległości między wierszami.</li>
-        <li>letter-spacing - odstępy między literami w wyrazie</li>
+        <li>nie ma znaczenia semantycznego</li>
+        <li>
+          gdy chcemy coś opakować i tylko kiedy <strong>nie istnieje</strong> odpowiedni
+          semantyczny znacznik
+        </li>
+        <li>przydaje się przy stylowaniu elementów</li>
+        <li>jeśli opakowujemy nim treść to prawdopodobnie robimy to źle</li>
+      </ul>
+    </article>
+  </main>
+
+  <article>
+    <h2>display: block</h2>
+    <ul>
+      <li>element zajmuje całą dostępną szerokość ekranu</li>
+      <li>jeśli nawet zajmuje mniej miejsca, rezerwuje tą przestrzeń</li>
+      <li>kolejne elementy będzie przerzucał do kolejnej linii</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>display: inline</h2>
+    <ul>
+      <li>element zajmuje tylko tyle miejsca ile wyświetlana w nim treść</li>
+      <li>kolejne elementy będą następować jeden po drugim w linii</li>
+      <li>wyświetlają się z delikatną przerwą jakby była między nimi spacja.</li>
+      <li>nie działa określanie width i height</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>display: inline-block</h2>
+    <ul>
+      <li>box który ma mniej treści zachowuje się jak liniowy</li>
+      <li>box któy ma więcej treści i wchodzi w kolejną linie staje się blokowym.</li>
+      <li>gdy przestał być całkowicie inline stał się blokowym</li>
+      <li>hybryda pomiędzy inline a block</li>
+      <li>elementy zachowują się trochę inlinowo ale można nadawać im szerokość i wysokość</li>
+    </ul>
+  </article>
+
+  <section>
+    <h2>Definiowanie zachowania bloków</h2>
+    <article>
+      <h3>width i height</h3>
+      <ul>
+        <li>sztywne rozmiary obiektu</li>
+        <li>jeśli się nie mieści na ekranie pojawia się scroll boczny</li>
+        <li>gdy węższy od ekranu pozostawia pustą przestrzeń</li>
+      </ul>
+    </article>
+    <article>
+      <h3>max-width i max-height</h3>
+      <ul>
+        <li>bloki zajmują całą dostępną zdeklarowaną przestrzeń</li>
+        <li>treść dostosowuje się do zmieniającej się szerokości ekranu</li>
+        <li>nie rozszerzy się bardziej niż maksymalna zadelkarowana</li>
+      </ul>
+    </article>
+    <article>
+      <h3>min-width i min-height</h3>
+      <ul>
+        <li>
+          gdy ekran się zmniejsza poniżej zadeklarowanej wartości minimalnej pojawia się boczny
+          scroll
+        </li>
+        <li>element nie może być mniejszy niż zadeklarowana</li>
+        <li>zachowują się trochę jak elementy blokowe</li>
       </ul>
     </article>
 
     <article>
-      <h2>Typografia - jednostki</h2>
+      <h3>overflow</h3>
       <ul>
-        <li>1em = font-size dla elementu (dziedziczony / ustawiony) *1</li>
-        <li>1rem = font-size dla root elementu *1</li>
-        <li>(domyślnie przeglądarka nadaje 16px = root, pobierany z htmla)</li>
+        <li>definiuje jak ma się zachować element gdy treść zajmuje więcej miejsca niż blok</li>
+        <li>: hidden; - wizulanie ucina treść która się nie mieści</li>
         <li>
-          <a href="https://nekocalc.com/px-to-rem-converter"
-            >https://nekocalc.com/px-to-rem-converter - kalkulator px na rem</a
-          >
-        </li>
-        <li>zostawić lub ustawić font-size na 16px</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>display: flex;</h2>
-      <ul>
-        <li>
-          Algorytm, sposob działania - przeliczenie pewnych wartości aby elementy zachowywały się w
-          oczekiwany sposób.
-        </li>
-        <li>elementy blokowe (dzieci), zachowują się jak liniowe</li>
-        <li>
-          W narzędziach developerskich pojawia się obok włączonego flexa ikona, w której można
-          eksperymentować z różnymi ustawieniam, różnych właściwości
+          : auto; - tworzy scrolla aby można przewinąć treść - tylko tam gdzie jest potrzebny
         </li>
         <li>
-          align-self trzeba dopisać sobie w devtoolsach w klasie z flex, niestety nie jest łatwe
-          klikalne, ale pojawiają się na liście rozwijalne wszystkie opcje
+          : clip; - na tym etapie działa jak hidden ale przydaje się przy bardziej zaawansowanym
+          stylowaniu
         </li>
         <li>
-          <h3>flex-direction:</h3>
-          <ul>
-            <li>row - domyślny - interesuje go tylk oś X jak coś się nie mieści wystaje na Y</li>
-            <li>
-              column - wygląda jakby nic się nie zmieniło - interesuje go tylko oś Y i jak coś się
-              nie mieści wystaje na X
-            </li>
-            <li>row-reverse - dociągnięcie do prawej strony i odwrócenie kolejności</li>
-            <li>
-              column-reverse - odwórcenie kolejności, pozornie wyglądają jak elementy blokowe, w
-              DOMie okazuje się, że są w kolejności pierwotnej.
-            </li>
-          </ul>
+          : scroll; - wszystkie elementy, niezależnie czy potrzebują mają pasek do przewijania
         </li>
         <li>
-          <h3>flex-wrap:</h3>
-          <ul>
-            <li>zawijanie wiersza / koluumny</li>
-            <li>
-              nowrap - wartość domyślna, flex stara się upchnąć wszystkie elementy w jednej linii,
-              pudełku.
-            </li>
-            <li>
-              wrap - już nie stata się upchnąć w jednym wierszu elementów i mają rzeczywisty wymiar
-              a nie zmniejszany aby zmieścić w jednej linii. <br />
-              Głównym wymiarem jest wysokość, jeśli nie ma podanej to rozciąga w dół, jeśli mniejsza
-              niż elementów to będą wystawać na szerokości.
-            </li>
-            <li>wrap-reverse - zaczyna od dołu i jak wystaje za rodzica to na górze.</li>
-          </ul>
-        </li>
-        <li>
-          <h3>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;</h3>
-          - zapis skrótowy
-        </li>
-        <li>np. flex-flow: row wrap;</li>
-        <li></li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>justify-content:</h2>
-      <ul>
-        <li>ustawianie elementów wzdłuż osi flex-direction</li>
-        <li>dodaję go do kontenera (rodzica).</li>
-      </ul>
-      <ul>
-        <li>flex-start - wartość domyślna</li>
-        <li>
-          flex-end - elemenety są dosunięte do końca w zależności po której osi się poruszam
-          zachowując kolejność
-        </li>
-        <li>center - centrowane - nie trzeba używać margin: 0 auto;</li>
-        <li>
-          space-between - rozciąga w całym kontenerze w równych odstępach po wybranej osi (row - X,
-          column - Y)
-        </li>
-        <li>
-          space-around - dodaje po bokach dodatkowe przestrzenie równe &#189; odległości pomiędzy
-          elementami (tak jakby wszystkie elementy miała po bokach marginesy), nie trzebe liczyć
-          ręcznie, a jest to niemożliwe dla każdego urządzenia.
+          : visible; - treść wystaje po za blok, tak jakby overflow nie był definiowany<br />
+          w tym przypadku treść nachodzi na treść elementu poniżej, nie respektuje jego
+          przestrzeni
         </li>
       </ul>
     </article>
+  </section>
 
-    <article>
-      <h2>align-content:</h2>
-      <ul>
-        <li>
-          ustawianie (wszystkich) /kolumn wzdłuż osi przeciwnej do flex-direction<br />(taki
-          justify-content dla drugiej osi)
-        </li>
-        <li>działa tylko i wyłącznie kiedy jest włączony flex-wrap: wrap;</li>
-        <li>i kiedy mamy więcej niż jeden wiersz lub więcej niż jedną kolumnę</li>
-        <li>nie używa się za często</li>
-        <li><br /></li>
-        <li>
-          stretch - domyślny - rozciąga obiekty w całym konterze wzdłóż osi przeciwnej do flexa
-        </li>
-        <li>
-          flex-start - nie zagospodarowuje całej przestrzeni w drugiej osi, przerzuca wiersze na
-          początek
-        </li>
-        <li>flex-end - przyklejone do dołu</li>
-        <li>center - wyśrodkuje</li>
-        <li>
-          space-between - elementy rozsuną się na maxa w rodzicu, gdy brak podanej wysokości nie
-          widać zmian
-        </li>
-        <li>space-around</li>
-      </ul>
-    </article>
+  <article>
+    <h2>jednostki</h2>
+    <p>zapisywać bez spacji</p>
+    <ul>
+      <li>0 - bez jednostek, zero to jest zero nieważne czego</li>
+      <li>
+        px - piksele - jeden punkt na ekranie <br />
+        przeliczony przez przeglądarkę a nie ten ze specyfikacji technicznej monitora
+      </li>
+      <li>
+        % - procenty - wartość odnosząca się do wielkości rodzica. <br />
+        element wyżej musi mieć zdefiniowaną wysokość aby móc wyrazić ją w procentach
+      </li>
+      <li>
+        vw - viewport width - szerokość okna w którym wyświetla się dokument w procentach<br />
+        nie odnosi się do rodzica, zawsze do okna ekranu (posiada margines)
+      </li>
+      <li>
+        vh - viewport height - bierze całą wysokość okna (nie całości dokumantu) <br />
+        gdy treść sekcji ma być na cały ekran jest to robione za pomocą height: 100vh;
+      </li>
+    </ul>
+  </article>
 
-    <article>
-      <h2>align-items:</h2>
-      <ul>
-        <li>ustawianie elementów wzdłuż osi przeciwnej do flex-direction</li>
-        <li>ustawianie wewnątrz wiersza</li>
-        <li><br /></li>
-        <li>
-          stretch - domyślna wartość, rozciąganie maksymalne do granic kontenera, jeśi nie ma
-          podanej wysokości to do wysokości elementu, kjtóry jest najwyższy w danym wierszu.
-        </li>
-        <li>
-          flex-start - przyklej do początkowej krawędzi, największy element jest dłuższy od innych
-        </li>
-        <li>flex-end</li>
-        <li>center - środek osi kontenera lub najwyższego elementu</li>
-        <li>baseline - ustawia elementy względem elementu początkowego</li>
-      </ul>
-    </article>
+  <article>
+    <h2>Box model</h2>
 
-    <article>
-      <h2>align-self:</h2>
-      <ul>
-        <li>ustawianie elementu wzgłuż osi przeciwnej do flex-direction</li>
-        <li>
-          jakiś pojedyńczy element może zachowywać się inaczej niż inne znajdujące się z nim w
-          wierszu
-        </li>
-        <li><br /></li>
-        <li>stretch</li>
-        <li>flex-start</li>
-        <li>flex-end</li>
-        <li>center</li>
-        <li>baseline</li>
-      </ul>
-    </article>
+    <div class="css__box-model--margin">
+      margin
+      <div class="css__box-model--border">
+        border
+        <div class="css__box-model--padding">
+          padding
+          <div class="css__box-model--element">element</div>
+        </div>
+      </div>
+    </div>
 
-    <article>
-      <h2>order:</h2>
-      <ul>
-        <li>odpowiada za kolejnosć</li>
-        <li>0 - domyślnie</li>
-        <li>może przyjmować wartość licz całkowitych (-/+)</li>
-        <li>im wyższa wartość tym później element występuje</li>
-        <li>przydatny gdy chcę ustawić kolejność elementów zależnie od rozdzielczości ekranu</li>
-      </ul>
-    </article>
+    <p>
+      Wszystkie elementy na stronie są otoczone "niewidzialnym prostokątem"<br />
+      Jest widoczny gdy podświetla się go w Inspect
+    </p>
+    <ul>
+      <li>
+        <h3>margin</h3>
+        <ul>
+          <li>Określa o ile element ma się odsunąć od innych elementów, które go otaczają.</li>
+          <li>Zapisuyjemy tak samo jak padding.</li>
+          <li>marginesy nakładają się na siebie.</li>
+          <li>elementy są od siebie odsunięte o wyższą wartość, mniejsza jest jako minimalna.</li>
+          <li>
+            margin: __px auto; pierwsza wartość do top-bottom a druga auto = wyśrodkowanie
+            elementu
+          </li>
+        </ul>
+      </li>
 
-    <article>
-      <h2>flex-grow:</h2>
-      <ul>
-        <li>liczba / proporcja</li>
-        <li>
-          0 - wartość domyślna, element ma nie rosnąć, nawet gdy inne mają np. 1, ma być taki jak na
-          początku i niech się nie zmienia
-        </li>
-        <li>1 - wolna przestrzeń zostanie rozdysponowana pomiędzy elementy po równo</li>
-        <li>
-          2 - jeśli jakiemuś elementowi nadam taką wartość dostanie podwójną ilość miejsca względem
-          pojedyńczego elemntu a reszta po równo
-        </li>
-        <li>3 - z trzech elementów ten dostanie potrójną = &#8535; a reszta po &#8533;</li>
-        <li></li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>flex-shrink:</h2>
-      <ul>
-        <li>odpowiada za to jak element ma się zachowywać gdy ma się kurczyć</li>
-        <li>
-          1 - domyślna wartoś - przestrzeń liczona proporcjonalnie do wszystkich elementów, nawet
-          przy zdefiniowanej szerokości
-        </li>
-        <li>
-          0 - nie pozwala elementowi na rośnięcie powyżej width nawet jak ma dostępną przestrzeń
-        </li>
-        <li>0 - w kontenerze definiuje wszsystkie elementy na sztywno, blokuje rozmiar</li>
-        <li>
-          ale poniżej zdefiniowanej szerokości element się kurczy i dostosowuje do szerokości ekranu
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>flex-basis:</h2>
-      <ul>
-        <li>odnosi się tylko do dzieci kontenera</li>
-        <li>działa jak min-height, min-width - zależnie od kierunku osi bazowej flexa</li>
-        <li>none - domyślnie</li>
-        <li>rozmiar bazowy => flex-basis: 100px;</li>
-        <li></li>
-        <li></li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</h2>
-      <ul>
-        <li>flex: 1 0 100px;</li>
-        <li>1 - grow - rosną równomiernie w całej dostępnej przestrzeni</li>
-        <li>0 - shrink - nie maleją</li>
-        <li>100px - minimalna wartość i elementy nie będą mniejsze bo shrink = 0</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>Odstępy</h2>
-      <ul>
-        <li>row-gap: odstęp między wierszami - widać w flex-direction: column;</li>
-        <li>column-gap: odstęm między kolumnami - w flex-direction: row;</li>
-        <li>gap: 2 rem; - nie trzeba się zastanawiać w jakim trybie jesteśmy</li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>background</h2>
-      <ul>
-        <li>
-          <h3>background-image: url('sciezka-do-pliku');</h3>
-          <ul>
-            <li>
-              nie rozszerza strony, zajmuje tyle miejsca ile jest dostępne, obrazek jest ucinany
-            </li>
-            <li>if plik png z przezroczystością tło prześwituje</li>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-        <li>
-          <h3>background-postion: &lt;pozycja-x&gt; &lt;pozycja-y&gt;</h3>
-          <ul>
-            <li>domyślnie: 0 0; - górny lewy róg elementu do ktorego jest przypinany</li>
-            <li>center center ; - środek elememntu</li>
-            <li>right top;</li>
-            <li>xx% xx%;</li>
-            <li>xxpx xxpx;</li>
-            <li>
-              bootom center; - dolna krawędz obrazka będzie miejscem startu u dołu - środek
-              przesunięty wyżej
-            </li>
-            <li>top center; - start obrazka górna krawędź - środek obrazka przesunięty w dół</li>
-            <li>
-              left center; - lewa krawędż obrazka dotyka lewej krawędzi strony, środek przesunięty w
-              prawo
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>background-repeat:</h3>
-          <ul>
-            <li>
-              repeat - wartość domyślna
-              <ul>
-                <li>if background-position: ceneter center;</li>
-                <li>powtarzanie będzie się rozschodzić od środka</li>
-              </ul>
-            </li>
-            <li>repeat-x - powtarza tylko w osi X</li>
-            <li>repeat-y - powtarza w osi Y</li>
-            <li>
-              no-repeat - tylko raz, w oryginalnym rozmiarze w miejscu zdefiniowanym przez
-              background-position
-            </li>
-            <li>
-              round - rozmiar grafiki jest zaokrąglony w taki sposób aby powtrzenia mieściły się
-              całe w kontenerze bez ucinania, też podczas skalowania
-            </li>
-            <li>
-              space - podobnie jak round ale nie przeskalowuje elementu - trochę jak wrap w flexbox
-              ale do grafik <br />
-              tyle ile się zmieści a jeśli się nie mieści to robi coś w na wzór "space-between"
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>backround-attachment:</h3>
-          <ul>
-            <li>odpowiada za to jak tło jest przyklejane do strony do elementów</li>
-            <li>
-              scroll - domyślne zachowanie tła - przyklejone do treści i przewija się razem z textem
-            </li>
-            <li>fixed - tło jest nieruchome a przewija się jedynie treść strony</li>
-            <li>
-              local
-              <ul>
-                <li>overflow: scroll;</li>
-                <li>
-                  tło skaluje sie do rozmiarów tego elementu, który jest przewijany wewnątrz
-                  overflow
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>background-origin:</h3>
-          <ul>
-            <li>
-              Punkt origin obrazka - względem czego będziemy liczyli punkt startwoy, względem czego
-              będziemy śrdkować, odsuwać tło
-            </li>
-            <li>padding-box - domyślnie</li>
-            <li>border-box - liczone razem z borderem</li>
-            <li>
-              content-box - transformacje tła liczone względem samego contentu z box-model (kolor
-              niebieski)
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h3>background-clip:</h3>
-          <ul>
-            <li>ucinanie tła względem:</li>
-            <li>border-box - domyślna wartość</li>
-            <li>padding-box</li>
-            <li>content-box - tło je usuwane w miejscu gdzie kończy sie treść strony</li>
-          </ul>
-        </li>
-        <li>
-          <h3>
-            background-color:
+      <li>
+        <h3>border</h3>
+        <ul>
+          <li>
+            <h4>Zapis pełny:</h4>
             <ul>
-              <li>używaĆ do nadania koloru jeśli jest więcej wartości np. image</li>
-              <li>samo background stosuje wartości domyślne i kasuje inne ustawienia</li>
+              <li>border-width: 3px;</li>
+              <li>border-style: solid;</li>
+              <li>border-color: #fe201a;</li>
             </ul>
-          </h3>
-        </li>
+          </li>
+          <li>
+            <h4>Zapis skrótowy:</h4>
+            <ul>
+              <li>border: 3px solid #fe201a;</li>
+            </ul>
+          </li>
+          <li>
+            <h4>wybór fragmentu ramki:</h4>
+            <ul>
+              <li>border-top: 3px solid #fe201a;</li>
+              <li>border-right</li>
+              <li>border-bottom</li>
+              <li>border-left</li>
+            </ul>
+          </li>
+          <li>
+            <h4>border-radius:</h4>
 
-        <li>
-          rgb(a)
+            <ul>
+              <li>Odpowiada za zaokrąglenie.</li>
+              <li>px lub %</li>
+              <li>Nie tzeba definiować border aby mieć zaokrąglony box.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>padding</h3>
+        <ul>
+          <li>definiuje o ile nasza treść ma być oddalona od ramki, krawędzi tego elementu</li>
+
+          <li>
+            <h4>Zapis pełny:</h4>
+            <ul>
+              <li>padding-top: 4px;</li>
+              <li>padding-right: 4px;</li>
+              <li>padding-bottom: 5px;</li>
+              <li>padding-left: 6px;</li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Zapis skrótowy (shorthand):</h4>
+            <ul>
+              <li>padding: top right bottom left;</li>
+              <li>padding: 4px 4px 5px 6px;</li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Wartości lustrzane:</h4>
+            <ul>
+              <li>padding: top right-left bottom;</li>
+              <li>padding: 4px 5px 6px;</li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Drugi zapis skrótowy:</h4>
+            <ul>
+              <li>padding: top-bottom right-left;</li>
+              <li>padding: 4px 5px 6px;</li>
+            </ul>
+          </li>
+
+          <li>
+            <h4>Wszystkie wartości są takie same:</h4>
+            <ul>
+              <li>padding: 16px;</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>box-sizing: border-box;</h3>
+        <ul>
+          <li>
+            sprawia, że podany wymiar width i height jest traktowany jako całkowity aż do border
+          </li>
+          <li>element + padding + border = zdeklarowany width i height</li>
+          <li>standardowa wartość to content-box;</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>position: static;</h3>
+        <ul>
+          <li>
+            domyślna wartość - przeglądarka sama decyduje o układzie elementu (na podstawie jego
+            parametrów)
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>position: relative;</h3>
+        <ul>
+          <li>
+            pozwala stworzyć pewnego rodzaju przestrzeń, względem której możemy umieszczać inne
+            elementy
+          </li>
+          <li>samo dodanie nic nie zmienia wizulanie ale pozwala na wykorzystanie przestrzeni</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>position: absolute;</h3>
+        <ul>
+          <li>absolutne pozycjonowanie względem elementu z relative</li>
+          <li>top: left: right: bottom:</li>
+          <li>top: 0px - element będzie przyklejony do krawędzi paddinga</li>
+          <li>można dodać padding do elementu</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>position: fixed;</h3>
+        <ul>
+          <li>odpawiada za przyklejenie elementu do vievportu - otwartego okna</li>
+          <li>i pływa razem ze stroną</li>
+          <li>jest ciągle przyklejony w pozycji: top, left, right, bottom</li>
+          <li>gdy ma z-index: -1; podczas przesuwania chowa się za elementami</li>
+          <li>używany w urządzeniach mobilnych do przyklejania przycisku np. menu</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>position: sticky;</h3>
+        <ul>
+          <li>
+            bardzo przydatna własność szczególnie przy dłuższych tekstach i chcemy przykleić
+            nagłówek wewnątrz kontenera
+          </li>
+          <li>nie zadziała bez własności zdefiniowanej własności top</li>
+          <li>jeśli rodzić ma własność overflow to sticky nie zadziała</li>
+          <li>jest przyklejony w pozycji: top, w miejscu w którym był jako np. nagłówek</li>
+          <li>
+            pływa razem ze stroną do momentu aż dojdzie do końca elementu gdzie się zatrzymuje
+          </li>
+          <li>działa tylko wewnątrz rodzica</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>float</h3>
+        <ul>
+          <li>
+            element w divie jest opływany przez tekst jak np w wordzie
+            <ul>
+              <li>width: 100px;</li>
+              <li>height: 100px</li>
+              <li>background: red;</li>
+              <li>margin-right: 20px;</li>
+              <li>float: left;</li>
+            </ul>
+          </li>
+          <li>
+            margines diva, który jest automatyczny na całą szerokość jest zastępowany przez ten
+            który definiujemy
+          </li>
+          <li>nie używamy float do budowania layoutów</li>
+          <li>tylko do opływania img</li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>clear</h3>
+        <ul>
+          <li>czyści floaty</li>
+          <li>clear: both; - czyści lewy i prawy</li>
+          <li></li>
+        </ul>
+      </li>
+
+      <li>
+        <h3>Z-index</h3>
+        <ul>
+          <li>odpowiada za ułożenie warstw</li>
+          <li>im wyższy index to element będzie wyżej</li>
+          <li>tło może mieć wartość -1</li>
+          <li>
+            domyślnie ten element, który jest niżej w kodzie jest wgrywany ostatni na stronę i
+            może nadpisać wcześniejsze
+          </li>
+          <li>
+            Microsof Edge ma wbudowane narzędzie do podglądu Z-index
+            <ul>
+              <li>uruchomić dev tools</li>
+              <li>Ctrl + Shift + P</li>
+              <li>3D View</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Ujednolicanie styli - przeglądarki posiadają własne style (user agent stylecheet)</h2>
+    <ul>
+      <li>
+        Reset - stara technika
+        <ul>
+          <li>* { - selektor uniwersalny, wybiera wszystkie elementy na stronie</li>
+          <li>margin: 0;</li>
+          <li>padding: 0;</li>
+          <li>
+            outline: none; - niewidać, na jaką wartość przeskoczyło się tabulatorem = problem dla
+            ludzi słabowidzących
+          </li>
+          <li>}</li>
+        </ul>
+      </li>
+      <li>
+        Normalizacja -
+        <a href="https://necolas.github.io/normalize.css/" target="_blank">normalize.css</a>
+        <ul>
+          <li>
+            Elementy będą wyświetlać się na różnych przeglądarkach bardziej spójnie, zgodnie z
+            najnowszymi standardami.
+          </li>
+          <li>skopiować treść i dodać do projektu jako normalize.css</li>
+          <br />
+          <li>html {</li>
+          <li>box-sizing: border-box;</li>
+          <li>}</li>
+          <br />
+          <li>*, *:before, *:after {</li>
+          <li>box-sizing: inherit;</li>
+          <li>}</li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>BEM - block element modifier</h2>
+    <ul>
+      <li>Block - nadrzędny element</li>
+      <li>Element - część bloku (nie musi być bezpośrednim dzieckiem)</li>
+      <li>
+        Modifier - modyfikator - jeśli element występuje w kilku wariantach tworzymy dodatkową
+        klasę.
+      </li>
+    </ul>
+    <ul>
+      <li>block__element--modifier</li>
+      <li>Nadajemy klasami sens semantyczny odwzorowując strukturę strony</li>
+      <li>zaczynamy od stylu blockowego (nagłówek)</li>
+      <li>następnie style elemtów (rozdziały)</li>
+      <li>a pod każdym elementem modyfikatory (pod rozdziały)</li>
+      <br />
+      <li>Szukamy elementów na stronie i dzielimy na bloki.</li>
+      <li>Myślimy o elementach składowych / robimy analizę-selekcję.</li>
+      <li>
+        Tworzymy dwie klasy jeśli element ma modyfiaktor (w modyfiaktorze zmieniamy tylko unikalne
+        dla niego wartości, nie przepisujemy rzeczy z klasy bazowej).
+      </li>
+    </ul>
+
+    <p>Powstał ponieważ:</p>
+    <ul>
+      <li>Świat stylowania doszedł wysokiego stopnia skomplikowania (specyficznosć).</li>
+      <li>Problem z logicznym nazywaniem klas.</li>
+      <li>Brak ujednoliconego spopsobu stylowania.</li>
+      <li>Importanty. Nadpisywanie rzeczy (znowu specyiczność).</li>
+      <li>Brak odwzorowania struktury HTML w CSS.</li>
+      <li>Stylowanie kilkoma klasami, powtarzające się nazwy.</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Typografia</h2>
+    <ul>
+      <li>font-size - rozmiar tekstu</li>
+      <li>font-family - krój fontu, bezszeryfowe do nagłówków, a szeryfowe do tekstu.</li>
+      <li>font-weight - grubość</li>
+      <li>line-height - wysokość odległości między wierszami.</li>
+      <li>letter-spacing - odstępy między literami w wyrazie</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Typografia - jednostki</h2>
+    <ul>
+      <li>1em = font-size dla elementu (dziedziczony / ustawiony) *1</li>
+      <li>1rem = font-size dla root elementu *1</li>
+      <li>(domyślnie przeglądarka nadaje 16px = root, pobierany z htmla)</li>
+      <li>
+        <a href="https://nekocalc.com/px-to-rem-converter">https://nekocalc.com/px-to-rem-converter - kalkulator px na
+          rem</a>
+      </li>
+      <li>zostawić lub ustawić font-size na 16px</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>display: flex;</h2>
+    <ul>
+      <li>
+        Algorytm, sposob działania - przeliczenie pewnych wartości aby elementy zachowywały się w
+        oczekiwany sposób.
+      </li>
+      <li>elementy blokowe (dzieci), zachowują się jak liniowe</li>
+      <li>
+        W narzędziach developerskich pojawia się obok włączonego flexa ikona, w której można
+        eksperymentować z różnymi ustawieniam, różnych właściwości
+      </li>
+      <li>
+        align-self trzeba dopisać sobie w devtoolsach w klasie z flex, niestety nie jest łatwe
+        klikalne, ale pojawiają się na liście rozwijalne wszystkie opcje
+      </li>
+      <li>
+        <h3>flex-direction:</h3>
+        <ul>
+          <li>row - domyślny - interesuje go tylk oś X jak coś się nie mieści wystaje na Y</li>
+          <li>
+            column - wygląda jakby nic się nie zmieniło - interesuje go tylko oś Y i jak coś się
+            nie mieści wystaje na X
+          </li>
+          <li>row-reverse - dociągnięcie do prawej strony i odwrócenie kolejności</li>
+          <li>
+            column-reverse - odwórcenie kolejności, pozornie wyglądają jak elementy blokowe, w
+            DOMie okazuje się, że są w kolejności pierwotnej.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>flex-wrap:</h3>
+        <ul>
+          <li>zawijanie wiersza / koluumny</li>
+          <li>
+            nowrap - wartość domyślna, flex stara się upchnąć wszystkie elementy w jednej linii,
+            pudełku.
+          </li>
+          <li>
+            wrap - już nie stata się upchnąć w jednym wierszu elementów i mają rzeczywisty wymiar
+            a nie zmniejszany aby zmieścić w jednej linii. <br />
+            Głównym wymiarem jest wysokość, jeśli nie ma podanej to rozciąga w dół, jeśli mniejsza
+            niż elementów to będą wystawać na szerokości.
+          </li>
+          <li>wrap-reverse - zaczyna od dołu i jak wystaje za rodzica to na górze.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>flex-flow: &lt;flex-direction&gt; &lt;flex-wrap&gt;</h3>
+        - zapis skrótowy
+      </li>
+      <li>np. flex-flow: row wrap;</li>
+      <li></li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>justify-content:</h2>
+    <ul>
+      <li>ustawianie elementów wzdłuż osi flex-direction</li>
+      <li>dodaję go do kontenera (rodzica).</li>
+    </ul>
+    <ul>
+      <li>flex-start - wartość domyślna</li>
+      <li>
+        flex-end - elemenety są dosunięte do końca w zależności po której osi się poruszam
+        zachowując kolejność
+      </li>
+      <li>center - centrowane - nie trzeba używać margin: 0 auto;</li>
+      <li>
+        space-between - rozciąga w całym kontenerze w równych odstępach po wybranej osi (row - X,
+        column - Y)
+      </li>
+      <li>
+        space-around - dodaje po bokach dodatkowe przestrzenie równe &#189; odległości pomiędzy
+        elementami (tak jakby wszystkie elementy miała po bokach marginesy), nie trzebe liczyć
+        ręcznie, a jest to niemożliwe dla każdego urządzenia.
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>align-content:</h2>
+    <ul>
+      <li>
+        ustawianie (wszystkich) /kolumn wzdłuż osi przeciwnej do flex-direction<br />(taki
+        justify-content dla drugiej osi)
+      </li>
+      <li>działa tylko i wyłącznie kiedy jest włączony flex-wrap: wrap;</li>
+      <li>i kiedy mamy więcej niż jeden wiersz lub więcej niż jedną kolumnę</li>
+      <li>nie używa się za często</li>
+      <li><br /></li>
+      <li>
+        stretch - domyślny - rozciąga obiekty w całym konterze wzdłóż osi przeciwnej do flexa
+      </li>
+      <li>
+        flex-start - nie zagospodarowuje całej przestrzeni w drugiej osi, przerzuca wiersze na
+        początek
+      </li>
+      <li>flex-end - przyklejone do dołu</li>
+      <li>center - wyśrodkuje</li>
+      <li>
+        space-between - elementy rozsuną się na maxa w rodzicu, gdy brak podanej wysokości nie
+        widać zmian
+      </li>
+      <li>space-around</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>align-items:</h2>
+    <ul>
+      <li>ustawianie elementów wzdłuż osi przeciwnej do flex-direction</li>
+      <li>ustawianie wewnątrz wiersza</li>
+      <li><br /></li>
+      <li>
+        stretch - domyślna wartość, rozciąganie maksymalne do granic kontenera, jeśi nie ma
+        podanej wysokości to do wysokości elementu, kjtóry jest najwyższy w danym wierszu.
+      </li>
+      <li>
+        flex-start - przyklej do początkowej krawędzi, największy element jest dłuższy od innych
+      </li>
+      <li>flex-end</li>
+      <li>center - środek osi kontenera lub najwyższego elementu</li>
+      <li>baseline - ustawia elementy względem elementu początkowego</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>align-self:</h2>
+    <ul>
+      <li>ustawianie elementu wzgłuż osi przeciwnej do flex-direction</li>
+      <li>
+        jakiś pojedyńczy element może zachowywać się inaczej niż inne znajdujące się z nim w
+        wierszu
+      </li>
+      <li><br /></li>
+      <li>stretch</li>
+      <li>flex-start</li>
+      <li>flex-end</li>
+      <li>center</li>
+      <li>baseline</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>order:</h2>
+    <ul>
+      <li>odpowiada za kolejnosć</li>
+      <li>0 - domyślnie</li>
+      <li>może przyjmować wartość licz całkowitych (-/+)</li>
+      <li>im wyższa wartość tym później element występuje</li>
+      <li>przydatny gdy chcę ustawić kolejność elementów zależnie od rozdzielczości ekranu</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>flex-grow:</h2>
+    <ul>
+      <li>liczba / proporcja</li>
+      <li>
+        0 - wartość domyślna, element ma nie rosnąć, nawet gdy inne mają np. 1, ma być taki jak na
+        początku i niech się nie zmienia
+      </li>
+      <li>1 - wolna przestrzeń zostanie rozdysponowana pomiędzy elementy po równo</li>
+      <li>
+        2 - jeśli jakiemuś elementowi nadam taką wartość dostanie podwójną ilość miejsca względem
+        pojedyńczego elemntu a reszta po równo
+      </li>
+      <li>3 - z trzech elementów ten dostanie potrójną = &#8535; a reszta po &#8533;</li>
+      <li></li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>flex-shrink:</h2>
+    <ul>
+      <li>odpowiada za to jak element ma się zachowywać gdy ma się kurczyć</li>
+      <li>
+        1 - domyślna wartoś - przestrzeń liczona proporcjonalnie do wszystkich elementów, nawet
+        przy zdefiniowanej szerokości
+      </li>
+      <li>
+        0 - nie pozwala elementowi na rośnięcie powyżej width nawet jak ma dostępną przestrzeń
+      </li>
+      <li>0 - w kontenerze definiuje wszsystkie elementy na sztywno, blokuje rozmiar</li>
+      <li>
+        ale poniżej zdefiniowanej szerokości element się kurczy i dostosowuje do szerokości ekranu
+      </li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>flex-basis:</h2>
+    <ul>
+      <li>odnosi się tylko do dzieci kontenera</li>
+      <li>działa jak min-height, min-width - zależnie od kierunku osi bazowej flexa</li>
+      <li>none - domyślnie</li>
+      <li>rozmiar bazowy => flex-basis: 100px;</li>
+      <li></li>
+      <li></li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>flex: &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</h2>
+    <ul>
+      <li>flex: 1 0 100px;</li>
+      <li>1 - grow - rosną równomiernie w całej dostępnej przestrzeni</li>
+      <li>0 - shrink - nie maleją</li>
+      <li>100px - minimalna wartość i elementy nie będą mniejsze bo shrink = 0</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>Odstępy</h2>
+    <ul>
+      <li>row-gap: odstęp między wierszami - widać w flex-direction: column;</li>
+      <li>column-gap: odstęm między kolumnami - w flex-direction: row;</li>
+      <li>gap: 2 rem; - nie trzeba się zastanawiać w jakim trybie jesteśmy</li>
+    </ul>
+  </article>
+
+  <article>
+    <h2>background</h2>
+    <ul>
+      <li>
+        <h3>background-image: url('sciezka-do-pliku');</h3>
+        <ul>
+          <li>
+            nie rozszerza strony, zajmuje tyle miejsca ile jest dostępne, obrazek jest ucinany
+          </li>
+          <li>if plik png z przezroczystością tło prześwituje</li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+      <li>
+        <h3>background-postion: &lt;pozycja-x&gt; &lt;pozycja-y&gt;</h3>
+        <ul>
+          <li>domyślnie: 0 0; - górny lewy róg elementu do ktorego jest przypinany</li>
+          <li>center center ; - środek elememntu</li>
+          <li>right top;</li>
+          <li>xx% xx%;</li>
+          <li>xxpx xxpx;</li>
+          <li>
+            bootom center; - dolna krawędz obrazka będzie miejscem startu u dołu - środek
+            przesunięty wyżej
+          </li>
+          <li>top center; - start obrazka górna krawędź - środek obrazka przesunięty w dół</li>
+          <li>
+            left center; - lewa krawędż obrazka dotyka lewej krawędzi strony, środek przesunięty w
+            prawo
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>background-repeat:</h3>
+        <ul>
+          <li>
+            repeat - wartość domyślna
+            <ul>
+              <li>if background-position: ceneter center;</li>
+              <li>powtarzanie będzie się rozschodzić od środka</li>
+            </ul>
+          </li>
+          <li>repeat-x - powtarza tylko w osi X</li>
+          <li>repeat-y - powtarza w osi Y</li>
+          <li>
+            no-repeat - tylko raz, w oryginalnym rozmiarze w miejscu zdefiniowanym przez
+            background-position
+          </li>
+          <li>
+            round - rozmiar grafiki jest zaokrąglony w taki sposób aby powtrzenia mieściły się
+            całe w kontenerze bez ucinania, też podczas skalowania
+          </li>
+          <li>
+            space - podobnie jak round ale nie przeskalowuje elementu - trochę jak wrap w flexbox
+            ale do grafik <br />
+            tyle ile się zmieści a jeśli się nie mieści to robi coś w na wzór "space-between"
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>backround-attachment:</h3>
+        <ul>
+          <li>odpowiada za to jak tło jest przyklejane do strony do elementów</li>
+          <li>
+            scroll - domyślne zachowanie tła - przyklejone do treści i przewija się razem z textem
+          </li>
+          <li>fixed - tło jest nieruchome a przewija się jedynie treść strony</li>
+          <li>
+            local
+            <ul>
+              <li>overflow: scroll;</li>
+              <li>
+                tło skaluje sie do rozmiarów tego elementu, który jest przewijany wewnątrz
+                overflow
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>background-origin:</h3>
+        <ul>
+          <li>
+            Punkt origin obrazka - względem czego będziemy liczyli punkt startwoy, względem czego
+            będziemy śrdkować, odsuwać tło
+          </li>
+          <li>padding-box - domyślnie</li>
+          <li>border-box - liczone razem z borderem</li>
+          <li>
+            content-box - transformacje tła liczone względem samego contentu z box-model (kolor
+            niebieski)
+          </li>
+        </ul>
+      </li>
+      <li>
+        <h3>background-clip:</h3>
+        <ul>
+          <li>ucinanie tła względem:</li>
+          <li>border-box - domyślna wartość</li>
+          <li>padding-box</li>
+          <li>content-box - tło je usuwane w miejscu gdzie kończy sie treść strony</li>
+        </ul>
+      </li>
+      <li>
+        <h3>
+          background-color:
           <ul>
-            <li>kanał alfa 0-1, poziom przezroczystości</li>
-            <li>
-              zastosować do textu z obrazkiem aby lepiej czytało się treść i żeby obrazek nie
-              rozpraszał dodajemy na obrazek tło z opacity
-            </li>
+            <li>używaĆ do nadania koloru jeśli jest więcej wartości np. image</li>
+            <li>samo background stosuje wartości domyślne i kasuje inne ustawienia</li>
           </ul>
-        </li>
+        </h3>
+      </li>
 
-        <li>
-          <h3>background-size:</h3>
-          <ul>
-            <li>auto - domyślna wartość rozmiaru tła taki jak ma obrazek</li>
-            <li>
-              cover - wypełnia cały ekran+, jest większy od ekranu i troche go ucina, aby nie było
-              białych pól i nie zmienia swoich proporcji - jest responsywne
-            </li>
-            <li>contain - widoczny w całości, nie jest ucinany po krawędziach jak przy cover</li>
-            <li>&lt;width&gt; &lt;height&gt;</li>
-          </ul>
-        </li>
+      <li>
+        rgb(a)
+        <ul>
+          <li>kanał alfa 0-1, poziom przezroczystości</li>
+          <li>
+            zastosować do textu z obrazkiem aby lepiej czytało się treść i żeby obrazek nie
+            rozpraszał dodajemy na obrazek tło z opacity
+          </li>
+        </ul>
+      </li>
 
-        <li>
-          <h3>grqadienty</h3>
-          <ul>
-            <li>
-              <a href="https://cssgradient.io/gradient-backgrounds/" target="_blank"
-                >https://cssgradient.io/gradient-backgrounds/</a
-              >
-            </li>
-            <li>body {</li>
-            <li>
-              background-color: #4158d0 //jeśli przeglądarka nie wspiera gradientów to wyświetli sie
-              ten kolor
-            </li>
-            <li>
-              background-image: linear-gradient(43deg, #4158d028%, #82187a 63%, #FFCC70 100%);
-            </li>
-            <li>}</li>
-            <li>można użyć kolorów rgba, aby zrobić pół przezroczysty gradient</li>
-          </ul>
-        </li>
-      </ul>
-    </article>
+      <li>
+        <h3>background-size:</h3>
+        <ul>
+          <li>auto - domyślna wartość rozmiaru tła taki jak ma obrazek</li>
+          <li>
+            cover - wypełnia cały ekran+, jest większy od ekranu i troche go ucina, aby nie było
+            białych pól i nie zmienia swoich proporcji - jest responsywne
+          </li>
+          <li>contain - widoczny w całości, nie jest ucinany po krawędziach jak przy cover</li>
+          <li>&lt;width&gt; &lt;height&gt;</li>
+        </ul>
+      </li>
 
-    <footer>
-      <p>
-        Strona szkoleniowa z frontendu.<br />
-        autor: Rafał Kubiak WTF edycja #3
-      </p>
-      <div>Rafał Kubiak &copy;</div>
-    </footer>
-  </body>
+      <li>
+        <h3>grqadienty</h3>
+        <ul>
+          <li>
+            <a href="https://cssgradient.io/gradient-backgrounds/"
+              target="_blank">https://cssgradient.io/gradient-backgrounds/</a>
+          </li>
+          <li>body {</li>
+          <li>
+            background-color: #4158d0 //jeśli przeglądarka nie wspiera gradientów to wyświetli sie
+            ten kolor
+          </li>
+          <li>
+            background-image: linear-gradient(43deg, #4158d028%, #82187a 63%, #FFCC70 100%);
+          </li>
+          <li>}</li>
+          <li>można użyć kolorów rgba, aby zrobić pół przezroczysty gradient</li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+
+  <footer>
+    <p>
+      Strona szkoleniowa z frontendu.<br />
+      autor: Rafał Kubiak WTF edycja #3
+    </p>
+    <div>Rafał Kubiak &copy;</div>
+  </footer>
+</body>
+
 </html>
