@@ -12,10 +12,7 @@
 </head>
 
 <body>
-  <main>
-    <header class="header__img">
-      <h1>HTML5 - Hyper Text Markup Language<br />(Hipertekstowy język znaczników)</h1>
-    </header>
+  <header>
     <nav class="navigation">
       <a href="./index.html">Home</a>
       <a href="./html.html">HTML</a>
@@ -32,6 +29,12 @@
       <a href="./webflow.html">webflow</a>
       <a href="./about.html">Wizytówka</a>
     </nav>
+  </header>
+  <main>
+    <header class="header__img">
+      <h1>HTML5 - Hyper Text Markup Language<br />(Hipertekstowy język znaczników)</h1>
+    </header>
+
 
     <article>
       <h2>Definicja</h2>
@@ -66,7 +69,8 @@
           &lt;html lang="en"&gt; - korzeń strony i atrybut języka strony, ważne dla czytników ekranowych
         </li>
         <li>
-          &lt;head&gt; - dodatkowe informacje dla przeglądarki potrzebne do załadowania strony oraz silników wyszukujących
+          &lt;head&gt; - dodatkowe informacje dla przeglądarki potrzebne do załadowania strony oraz silników
+          wyszukujących
         </li>
         <li>
           &lt;meta charset="UTF-8"&gt; - kodowanie znaków dla całego świata
@@ -106,537 +110,548 @@
           &lt;p&gt;treść paragrafu 1&lt;/p&gt;
         </li>
         <li>&lt;/section&gt;
-          </li>
-          <li>
-            &lt;section&gt;
-          </li>
-          <li>
-            &lt;h2&gt;&lt;/h2&gt;
-          </li>
-          <li>
-            &lt;article&gt;
-          </li>
-          &lt;h3&gt;&lt;/h3&gt;
-          <li>
-            &lt;p&gt;treść paragrafu artykułu&lt;/p&gt;
-          </li>
-          <li>
-            &lt;/article&gt;
-    </li>
-    <li>
-      &lt;article&gt;
-    </li>
-    &lt;h3&gt;&lt;/h3&gt;
-    <li>
-      &lt;p&gt;treść paragrafu artykułu&lt;/p&gt;
-    </li>
-    <li>
-      &lt;/article&gt;
-    </li>
-    <li>
-      &lt;/section&gt;
-    </li>
-    <li>
-      &lt;/main&gt;
-  </li>
-  <li>
-    &lt;footer&gt;
-  </li>
-  <li>
-    &lt;p&gt;&lt;/p&gt;
-  </li>
-  <li>
-    &lt;/footer&gt;
-  </li>
-  <li>
-    &lt;/body&gt;
-</li>
-<li>
-  &lt;/html&gt;
-</li>
-</ul>
-</article>
-
-<article>
-  <h2>main</h2>
-  <p>Unikatowa treść strony, nie występująca na innych podstronach. Główna część dokumentu.</p>
-</article>
-
-<article>
-  <h2>header</h2>
-  <p>
-    Nałówek - dokumentu(main) / sekcji(section) / artykułu(article) Kontener, pudełko na
-    nagłówki.
-  </p>
-</article>
-
-<article>
-  <h2>nav</h2>
-  <p>Znacznik opakowujący nawigację serwisu. Umieszcza się go w &lt;header&gt;</p>
-</article>
-
-<article>
-  <h2>article | section</h2>
-  <p>
-    Sekcja to jakby dział sklepu, półka. Może mieć w sobie kilka artykułów. Zawiera w sobie ten sam rodzaj
-    treści.<br />Artykuł to tak jakby artykuł w sklepie na półce. Samodzielna treść.
-    Jedne artykuł np. na blogu, może mieć w sobie sekcje i zaczynają się one od nagłówka.
-  </p>
-  <article>
-    <h2>article</h2>
-    <ul>
-      <li>
-        do oznaczania niezależnych, samodzielnych elementów zawartości, które mają sens w
-        oderwaniu od reszty strony
-      </li>
-      <li>pojedynczy artykuł, wpis na blogu, komentarz, wiadomość itp.</li>
-      <li>powinien zawierać treść, która stanowi samodzielny byt</li>
-    </ul>
-  </article>
-  <article>
-    <h2>section</h2>
-    <ul>
-      <li>używany do logicznego podzielenia zawartości strony na sekcje</li>
-      <li>może zawierać różne rodzaje zawrtości: tekst, obrazy, listy itp</li>
-      <li>cel - pomóc w organizacji strony i podzielenie na spójne części</li>
-      <li>gdy mam treść, którą można logicznie pogrupować</li>
-      <li>gdy nie są na tyle niezależne, aby stanowić osobne artykuły</li>
-    </ul>
-  </article>
-</article>
-
-<article>
-  <h2>footer</h2>
-  <p>Stopka - dokumentu / sekcji / artykułu</p>
-  <p>
-    Jeśli mamy wiele pod stron to &lt;footer&gt; musi znaleść się za &lt;main&gt;, bo powiela
-    się na wszystkich stronach
-  </p>
-</article>
-
-<article>
-  <h2>h1-h6</h2>
-  <p>
-    Nagłówek tekstowy - dokumentu / sekcji / artykułu W dokumencie od największego do
-    najmniejszego. Opakowany przez header jeśli są dodatkowe info dotyczące nagłówka np. data
-    publikacji, autor.
-  </p>
-</article>
-
-<article>
-  <h2>p - paragraf</h2>
-  <p>Blok tekstu.</p>
-</article>
-
-<article>
-  <h2>&lt;br /&gt; - break line</h2>
-  <p>Złamanie tekstu</p>
-</article>
-
-<article>
-  <h2>Elementy do wyróżnienia tekstu</h2>
-  <ul>
-    <li>&lt;b&gt; - bold - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać</li>
-    <li>&lt;i&gt; - italic - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać</li>
-    <li>&lt;u&gt; - under line - działa ale teraz CSS, nie używać</li>
-    <li>
-      &lt;strong&gt; - bold i położenie akcentu, podkreśla wysoką istotność i poważność frazy
-    </li>
-    <li>&lt;em&gt; - italic i podkreśla, że tekst może mieć inne znaczenie (np. ironia)</li>
-  </ul>
-</article>
-
-<article>
-  <h2>span</h2>
-  <ul>
-    <li>brak znaczenia semantycznego</li>
-    <li>element liniowy</li>
-    <li>głównie do opakowywania tekstu i stylowania</li>
-  </ul>
-</article>
-
-<article>
-  <h2>Listy</h2>
-  <ul>
-    <li>&lt;ul&gt; - unordered list - lista nieuporządkowana</li>
-    <li>&lt;li&gt; - list item</li>
-    <li>&lt;ol&gt; - ordered list - lista uporządkowana</li>
-    <li>list-style(-type): disc, none, circle, squere</li>
-  </ul>
-  <ul>
-    <li>&lt;dl&gt; - description list</li>
-    <li>&lt;dt&gt; - description term</li>
-    <li>&lt;dd&gt; - description details</li>
-  </ul>
-</article>
-
-<article>
-  <h2>Tabele</h2>
-  <ul>
-    <li>&lt;table&gt; - znacznik otwierający tabelę</li>
-    <li>&lt;tr&gt; - table row - wiersz tabeli</li>
-    <li>&lt;td&gt; - table data - komórka tabeli</li>
-    <li>&lt;thead&gt; - nagłówek tabeli</li>
-    <li>&lt;th&gt; - komórka w nagłówku tabeli</li>
-    <li>&lt;tbody&gt; - ciało tabeli</li>
-    <li>&lt;caption&gt; - opis tabeli</li>
-  </ul>
-</article>
-
-<article>
-  <h2>a - anchor (kotwica)</h2>
-  &lt;a href="https://..." target="_blank" &gt;"opis"&lt;/a&gt;<br />
-  &lt;a href="#name" &gt;"chapter 1"&lt;/a&gt; przenosi do elementu &lt;zancznik id="name"&gt;
-</article>
-
-<article>
-  <h2>img - image</h2>
-  &lt;img src="*.jpg" alt="alternativ text"/&gt;
-  <p>Jest to znacznik samozamykający się.</p>
-  <p>
-    / - przed destynacją obrazka jest odwołaniem do korzenia strony i zaczynaniem szukania od
-    poziomu 0. <br />
-    Brak / z przodu ścieżki czyni adres zasobu relatywnym.<br />
-    Jeśli dodam go w stronie robionej na dysku to będzie odwoływać się do początku dysku C.
-  </p>
-</article>
-
-<article>
-  <h2>Relacje między elementami</h2>
-  <ul>
-    <li>Głómny element html to korzeń,</li>
-    <li>dalej są zagnieżdżenia, które mogą mieć w sobie kolejne zagnieżdżenia.</li>
-    <li>
-      Element zagnieżdżony jest dzieckiem elementu w którym jest zagnieżdżony czyli rodzica
-      (powszechna metoda opisywania relacji między elementami).
-    </li>
-    <li>Pojedyńczy element nazywamy węzłem lub nodem.</li>
-  </ul>
-</article>
-
-
-<article>
-  <h2>DOM - Document Object Model</h2>
-  <ul>
-    <li>Plik html ani źródło strony(view source) to nie jest DOM</li>
-    <li>to co widzimy w devtoolsach to jest DOM - to taki złożony w przeglądarce HTML</li>
-    <li>plik HTML to instrukcja - to co w devtoolsach to działająca strona (skręcony mebel)</li>
-    <li>DOM to taki pomost między HTML a JS</li>
-    <li>JavaScript może modyfikować DOM</li>
-    <li>
-      funkcja querySelector zwraca node (węzeł) z HTML-a, selektor jest zapisywany zgodnie z CSS
-    </li>
-    <li>
-      korzystając z BEM - tworzymy dodatkową klasę z mofygikatorem --js (block__element--js)
-      <br />
-      (ułatwia identyfikację / wyklucza potencjalne problemy)
-    </li>
-  </ul>
-  <ul>
-    <li>document.querySelektor('.selector') &larr; Tak samo jak w CSS!</li>
-    <li>
-      main.js:
-      <ul>
-        <li>const header = document.querySelector('h1')</li>
-        <li>console.log(header) - odnosi się do elementu</li>
-        <li>=> w Inspect w Console pojawia się węzeł dokumentu:</li>
-        <li>&#9658;h1.page-header__heading.page-header__heading--js :</li>
-        <li>&#9660; lista pól i funkcji do wykorzystania na tym elemencie</li>
-        <li>
-          dodanie "defer" przed "src" do polecenia wczytania JavaScriptu powoduje, że Consola
-          zwraca nam to co w sourceview
-        </li>
-        <li>>&lt;script defer src="main.js"&gt; &lt;/script&gt; :</li>
-        <li>
-          &lt; h1 class="h1.page-header__heading page-header__heading--js">Treść nagłówka z kodu
-          html&lt;/h1&gt;
-        </li>
-        <li>klasy zostały nadane zgodnie z BEM w kodzie</li>
-        <li>const header = document.querySelector('.page-header__heading--js')</li>
-        <li>wybór za pomocą selektora</li>
-      </ul>
-    </li>
-    <li>
-      nazwaZmiennejQuerySelector.innerHTML = 'treść'
-      <ul>
-        <li>własność innerHTML odpowiada za treść elementu</li>
-        <li>
-          console.log(header.innerHTML) = wyświetli w Console aktualną treść headera - podaje
-          wartość a nie element
         </li>
         <li>
-          header.innerHTML = 'string' - podmienia wartość, którą przeglądarka wyświetli - bo js
-          nadpisuje html
+          &lt;section&gt;
         </li>
-        <li>np:</li>
         <li>
-          header.innerHTML = 'Nazywam się ${firstName} i mam ${age} lat.' - będzie się
-          wyświetlać w h1 na stronie
+          &lt;h2&gt;&lt;/h2&gt;
+        </li>
+        <li>
+          &lt;article&gt;
+        </li>
+        &lt;h3&gt;&lt;/h3&gt;
+        <li>
+          &lt;p&gt;treść paragrafu artykułu&lt;/p&gt;
+        </li>
+        <li>
+          &lt;/article&gt;
+        </li>
+        <li>
+          &lt;article&gt;
+        </li>
+        &lt;h3&gt;&lt;/h3&gt;
+        <li>
+          &lt;p&gt;treść paragrafu artykułu&lt;/p&gt;
+        </li>
+        <li>
+          &lt;/article&gt;
+        </li>
+        <li>
+          &lt;/section&gt;
+        </li>
+        <li>
+          &lt;/main&gt;
+        </li>
+        <li>
+          &lt;footer&gt;
+        </li>
+        <li>
+          &lt;p&gt;&lt;/p&gt;
+        </li>
+        <li>
+          &lt;/footer&gt;
+        </li>
+        <li>
+          &lt;/body&gt;
+        </li>
+        <li>
+          &lt;/html&gt;
         </li>
       </ul>
-      <ul>
-        <li>
-          console.log(header.style) = w Console: &#9658;CSSStyleCeclaration - wszystkie
-          własności CSSowe które są możliwe i można je modyfikować:
-        </li>
-        <li>
-          header.style.color = 'red'; - wpisanie w main.js nadpisze inlinowo w html, styl ccsowy
-          w DOM
-        </li>
-        <li>w kodzie nie widać bo widoczne w DOM i oczywiście generuje problemy</li>
-      </ul>
-    </li>
-  </ul>
-</article>
+    </article>
 
-<article>
-  <h2>Formularze</h2>
-  <p>Umożliwiają kontakt ze światem i wysyłanie danych.</p>
-  <section>
-    <h3>type="text"</h3>
-    <ul>
-      <li>
-        &lt;form&gt; - otwarcie formularz, wyznacza jego granice
+    <article>
+      <h2>main</h2>
+      <p>Unikatowa treść strony, nie występująca na innych podstronach. Główna część dokumentu.</p>
+    </article>
+
+    <article>
+      <h2>header</h2>
+      <p>
+        Nałówek - dokumentu (main) / sekcji (section) / artykułu (article) Kontener, pudełko na
+        nagłówki.
+      </p>
+      <p>Jeśli zawiera nav to musi być poza main gdyż powatarza się na wszystkich stronach i nie jest unikatową treścią. Kolejny header może być nagłówkiem main.</p>
+    </article>
+
+    <article>
+      <h2>nav</h2>
+      <p>Znacznik opakowujący nawigację serwisu. Umieszcza się go w &lt;header&gt;. Opakowuje główną nawigację między stronami.</p>
+    </article>
+
+    <article>
+      <h2>article | section</h2>
+      <p>
+        Sekcja to jakby dział sklepu, półka. Może mieć w sobie kilka artykułów. Zawiera w sobie ten sam rodzaj
+        treści.<br />Artykuł to tak jakby artykuł w sklepie na półce. Samodzielna treść.
+        Jedne artykuł np. na blogu, może mieć w sobie sekcje i zaczynają się one od nagłówka.
+      </p>
+      <article>
+        <h2>article</h2>
         <ul>
-          <li>&lt;p&gt;</li>
           <li>
-            &lt;label for="firstName"&gt;Imię&lt;/label&gt; - etykieta do pola formularza z
-            opisem
+            do oznaczania niezależnych, samodzielnych elementów zawartości, które mają sens w
+            oderwaniu od reszty strony
+          </li>
+          <li>pojedynczy artykuł, wpis na blogu, komentarz, wiadomość itp.</li>
+          <li>powinien zawierać treść, która stanowi samodzielny byt</li>
+        </ul>
+      </article>
+      <article>
+        <h2>section</h2>
+        <ul>
+          <li>używany do logicznego podzielenia zawartości strony na sekcje</li>
+          <li>może zawierać różne rodzaje zawrtości: tekst, obrazy, listy itp</li>
+          <li>cel - pomóc w organizacji strony i podzielenie na spójne części</li>
+          <li>gdy mam treść, którą można logicznie pogrupować</li>
+          <li>gdy nie są na tyle niezależne, aby stanowić osobne artykuły</li>
+        </ul>
+      </article>
+    </article>
+
+    <article>
+      <h2>footer</h2>
+      <p>Stopka - dokumentu / sekcji / artykułu</p>
+      <p>
+        Jeśli mamy wiele pod stron to &lt;footer&gt; musi znaleść się za &lt;main&gt;, bo powiela
+        się na wszystkich stronach
+      </p>
+    </article>
+
+    <article>
+      <h2>h1-h6</h2>
+      <p>
+        Nagłówek tekstowy - dokumentu / sekcji / artykułu W dokumencie od największego do
+        najmniejszego. Opakowany przez header jeśli są dodatkowe info dotyczące nagłówka np. data
+        publikacji, autor.
+      </p>
+    </article>
+
+    <article>
+      <h2>p - paragraf</h2>
+      <p>Blok tekstu.</p>
+    </article>
+
+    <article>
+      <h2>&lt;br /&gt; - break line</h2>
+      <p>Złamanie tekstu, nie trzeba już go zamykać za pomocą "/"</p>
+    </article>
+
+    <article>
+      <h2>Elementy do wyróżnienia tekstu</h2>
+      <ul>
+        <li>&lt;b&gt; - bold - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać, teraz używa się CSS</li>
+        <li>&lt;i&gt; - italic - brak znaczenia semantycznego, wyróżnia wizulanie, nie używać, teraz używa się CSS</li>
+        <li>&lt;u&gt; - under line - działa ale teraz CSS, nie używać</li>
+        <li>
+          &lt;strong&gt; - bold i położenie akcentu, podkreśla wysoką istotność i poważność frazy
+        </li>
+        <li>&lt;em&gt; - italic i podkreśla, że tekst może mieć inne znaczenie (np. ironia)</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>span</h2>
+      <ul>
+        <li>brak znaczenia semantycznego</li>
+        <li>element liniowy</li>
+        <li>głównie do opakowywania tekstu i stylowania</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Listy</h2>
+      <ul>
+        <li>&lt;ul&gt; - unordered list - lista nieuporządkowana</li>
+        <li>&lt;li&gt; - list item</li>
+        <li>&lt;ol&gt; - ordered list - lista uporządkowana</li>
+        <li>list-style(-type): disc, none, circle, squere</li>
+      </ul>
+      <ul>
+        <li>&lt;dl&gt; - description list</li>
+        <li>&lt;dt&gt; - description term</li>
+        <li>&lt;dd&gt; - description details</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Tabele</h2>
+      <ul>
+        <li>&lt;table&gt; - znacznik otwierający tabelę</li>
+        <li>&lt;tr&gt; - table row - wiersz tabeli</li>
+        <li>&lt;td&gt; - table data - komórka tabeli</li>
+        <li>&lt;thead&gt; - nagłówek tabeli</li>
+        <li>&lt;th&gt; - komórka w nagłówku tabeli</li>
+        <li>&lt;tbody&gt; - ciało tabeli</li>
+        <li>&lt;caption&gt; - opis tabeli</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>a - anchor (kotwica)</h2>
+      <ul>
+        <li>&lt;a href="https://..." target="_blank" &gt;"opis"&lt;/a&gt;</li>
+        <li> &lt;a href="#name" &gt;"chapter 1"&lt;/a&gt; przenosi do elementu &lt;zancznik id="name"&gt;</li>
+        <li>Używamy do linków oraz do łącz wewnątrz dokumentu.</li>
+        <li>target="_blank" - sprawia, że link otwiera się w nowym oknie</li>
+      </ul>
+      <h2>atrybut id - identyfikuje element</h2>
+      <ul>
+        <li>Przydaje się do nawigacji w obrębie dokumentu, nie może się powtarzać bo jest unikalny.</li>
+        <li>&lt;element id="moj-identyfiaktor"&gt; - id identyfikuje dowolny element na stronie</li>
+        <li>&lt;a href="#moj-identyfikator"&gt; - link do zdefiniowanego wyżej elementu na stronie</li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>img - image</h2>
+      &lt;img src="*.png" alt="alternativ text"/&gt;
+      <p>Jest to znacznik samozamykający się.</p>
+      <p>
+        / - przed destynacją obrazka jest odwołaniem do korzenia strony i zaczynaniem szukania od
+        poziomu 0. <br />
+        Brak / z przodu ścieżki czyni adres zasobu relatywnym.<br />
+        Jeśli dodam go w stronie robionej na dysku to będzie odwoływać się do początku dysku C.
+      </p>
+    </article>
+
+    <article>
+      <h2>Relacje między elementami</h2>
+      <ul>
+        <li>Głómny element html to korzeń,</li>
+        <li>dalej są zagnieżdżenia, które mogą mieć w sobie kolejne zagnieżdżenia.</li>
+        <li>
+          Element zagnieżdżony jest dzieckiem elementu w którym jest zagnieżdżony czyli rodzica
+          (powszechna metoda opisywania relacji między elementami).
+        </li>
+        <li>Pojedyńczy element nazywamy węzłem lub nodem.</li>
+      </ul>
+    </article>
+
+
+    <article>
+      <h2>DOM - Document Object Model</h2>
+      <ul>
+        <li>Plik html ani źródło strony(view source) to nie jest DOM</li>
+        <li>to co widzimy w devtoolsach to jest DOM - to taki złożony w przeglądarce HTML</li>
+        <li>plik HTML to instrukcja - to co w devtoolsach to działająca strona (skręcony mebel)</li>
+        <li>DOM to taki pomost między HTML a JS</li>
+        <li>JavaScript może modyfikować DOM</li>
+        <li>
+          funkcja querySelector zwraca node (węzeł) z HTML-a, selektor jest zapisywany zgodnie z CSS
+        </li>
+        <li>
+          korzystając z BEM - tworzymy dodatkową klasę z mofygikatorem --js (block__element--js)
+          <br />
+          (ułatwia identyfikację / wyklucza potencjalne problemy)
+        </li>
+      </ul>
+      <ul>
+        <li>document.querySelektor('.selector') &larr; Tak samo jak w CSS!</li>
+        <li>
+          main.js:
+          <ul>
+            <li>const header = document.querySelector('h1')</li>
+            <li>console.log(header) - odnosi się do elementu</li>
+            <li>=> w Inspect w Console pojawia się węzeł dokumentu:</li>
+            <li>&#9658;h1.page-header__heading.page-header__heading--js :</li>
+            <li>&#9660; lista pól i funkcji do wykorzystania na tym elemencie</li>
+            <li>
+              dodanie "defer" przed "src" do polecenia wczytania JavaScriptu powoduje, że Consola
+              zwraca nam to co w sourceview
+            </li>
+            <li>>&lt;script defer src="main.js"&gt; &lt;/script&gt; :</li>
+            <li>
+              &lt; h1 class="h1.page-header__heading page-header__heading--js">Treść nagłówka z kodu
+              html&lt;/h1&gt;
+            </li>
+            <li>klasy zostały nadane zgodnie z BEM w kodzie</li>
+            <li>const header = document.querySelector('.page-header__heading--js')</li>
+            <li>wybór za pomocą selektora</li>
+          </ul>
+        </li>
+        <li>
+          nazwaZmiennejQuerySelector.innerHTML = 'treść'
+          <ul>
+            <li>własność innerHTML odpowiada za treść elementu</li>
+            <li>
+              console.log(header.innerHTML) = wyświetli w Console aktualną treść headera - podaje
+              wartość a nie element
+            </li>
+            <li>
+              header.innerHTML = 'string' - podmienia wartość, którą przeglądarka wyświetli - bo js
+              nadpisuje html
+            </li>
+            <li>np:</li>
+            <li>
+              header.innerHTML = 'Nazywam się ${firstName} i mam ${age} lat.' - będzie się
+              wyświetlać w h1 na stronie
+            </li>
+          </ul>
+          <ul>
+            <li>
+              console.log(header.style) = w Console: &#9658;CSSStyleCeclaration - wszystkie
+              własności CSSowe które są możliwe i można je modyfikować:
+            </li>
+            <li>
+              header.style.color = 'red'; - wpisanie w main.js nadpisze inlinowo w html, styl ccsowy
+              w DOM
+            </li>
+            <li>w kodzie nie widać bo widoczne w DOM i oczywiście generuje problemy</li>
+          </ul>
+        </li>
+      </ul>
+    </article>
+
+    <article>
+      <h2>Formularze</h2>
+      <p>Umożliwiają kontakt ze światem i wysyłanie danych.</p>
+      <section>
+        <h3>type="text"</h3>
+        <ul>
+          <li>
+            &lt;form&gt; - otwarcie formularz, wyznacza jego granice
             <ul>
-              <li>powiązanie label z idPola - for==id</li>
-              <li>po kliknięciu w nazwę pola można pisać w inpucie</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label for="firstName"&gt;Imię&lt;/label&gt; - etykieta do pola formularza z
+                opisem
+                <ul>
+                  <li>powiązanie label z idPola - for==id</li>
+                  <li>po kliknięciu w nazwę pola można pisać w inpucie</li>
+                </ul>
+              </li>
+              <li>
+                &lt;input type="text" id="firstName" name="firstName" value="Rafał"
+                placeholder="Wpisz imię"/&gt;
+                <ul>
+                  <li>
+                    &lt;input /&gt; - znacznik samozamykający, najczęściej opakowany w znacznik p,
+                    aby było w miarę prawidłowo semantycznie
+                  </li>
+                  <li>type="text" - podstawowy typ inputa, jednowierszowy text</li>
+                  <li>
+                    id="idPola" - używany do identyfikowacji pola, zwykle takie samo jako nazwa
+                    pola, ale to nie to samo
+                  </li>
+                  <li>
+                    name="nazwaPola" - atrybut inputa, łączy ze sobą w radio ze sobą pozycje z
+                    fomrularza, np. aby nie można zaznaczyć kilku w radio
+                  </li>
+                  <li>
+                    value="wartość" - (domyślna wartość w inpucie wpusuje w okno), wysyła ją na
+                    serwer
+                  </li>
+                  <li>
+                    placeholder="wyszarzona podpowiedź" - wyświetla się gdy inut jest pusty, nie
+                    zastępuje labela
+                  </li>
+                  <li>checked - w polach wyboru ta opcja będzie domyślnie zaznaczona</li>
+                </ul>
+              </li>
+              <li>&lt;/p&gt;</li>
             </ul>
           </li>
+          <li>&lt;/form&gt;</li>
+        </ul>
+
+        <form>
+          <p>
+            <label for="firstName">Imię:</label>
+            <input type="text" id="firstName" name="firstName" value="Rafał" placeholder="Wpisz swoje imię" />
+          </p>
+          <p>
+            <label for="lastName">Nazwisko:</label>
+            <input type="text" id="lastName" name="lastName" value="Kubiak" placeholder="Wpisz swoje nazwisko" />
+          </p>
+          <p>
+            <label for="age">Wiek:</label>
+            <input id="age" name="age" type="number" value="40" placeholder="Ile masz lat?" />
+          </p>
+        </form>
+
+        <ul>
           <li>
-            &lt;input type="text" id="firstName" name="firstName" value="Rafał"
-            placeholder="Wpisz imię"/&gt;
+            &lt;fieldset&gt; - grupuje dane formularza i otacza ramką
             <ul>
+              <li>&lt;legend&gt;Dane adresowe:&lt;/legend&gt; - wcina od góry w ramkę</li>
+              <li>&lt;p&gt;</li>
+              <li>&lt;label for="street"&gt;Ulica&lt;/label&gt;</li>
               <li>
-                &lt;input /&gt; - znacznik samozamykający, najczęściej opakowany w znacznik p,
-                aby było w miarę prawidłowo semantycznie
+                &lt;input placeholder="Twoja ulica" id="street" name="street" type="text" /&gt;
               </li>
-              <li>type="text" - podstawowy typ inputa, jednowierszowy text</li>
+              <li>&lt;label for="city"&gt;Miasto&lt;/label&gt;</li>
+              <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
+
+              <li>&lt;label for="phone"&gt;Nr telefonu&lt;/label&gt;</li>
               <li>
-                id="idPola" - używany do identyfikowacji pola, zwykle takie samo jako nazwa
-                pola, ale to nie to samo
+                &lt;input placeholder="Twój numer telefonu" id="phone" name="phone" type="tel" /&gt;
               </li>
+
+              <li>&lt;label for="email"&gt;E-mail&lt;/label&gt;</li>
               <li>
-                name="nazwaPola" - atrybut inputa, łączy ze sobą w radio ze sobą pozycje z
-                fomrularza, np. aby nie można zaznaczyć kilku w radio
+                &lt;input placeholder="Twoje e-mail" id="email" name="email" type="email" /&gt;
               </li>
-              <li>
-                value="wartość" - (domyślna wartość w inpucie wpusuje w okno), wysyła ją na
-                serwer
-              </li>
-              <li>
-                placeholder="wyszarzona podpowiedź" - wyświetla się gdy inut jest pusty, nie
-                zastępuje labela
-              </li>
-              <li>checked - w polach wyboru ta opcja będzie domyślnie zaznaczona</li>
+
+              <li>&lt;/p&gt;</li>
             </ul>
           </li>
-          <li>&lt;/p&gt;</li>
+          <li>&lt;/fieldset&gt;</li>
         </ul>
-      </li>
-      <li>&lt;/form&gt;</li>
-    </ul>
 
-    <form>
-      <p>
-        <label for="firstName">Imię:</label>
-        <input type="text" id="firstName" name="firstName" value="Rafał" placeholder="Wpisz swoje imię" />
-      </p>
-      <p>
-        <label for="lastName">Nazwisko:</label>
-        <input type="text" id="lastName" name="lastName" value="Kubiak" placeholder="Wpisz swoje nazwisko" />
-      </p>
-      <p>
-        <label for="age">Wiek:</label>
-        <input id="age" name="age" type="number" value="40" placeholder="Ile masz lat?" />
-      </p>
-    </form>
+        <fieldset>
+          <legend>Dane adresowe:</legend>
+          <p>
+            <label for="street">Ulica:</label>
+            <input placeholder="Twoja ulica" id="street" name="street" type="text" />
+          </p>
+          <p>
+            <label for="city">Miasto:</label>
+            <input placeholder="Twoje miasto" id="city" name="city" type="text" />
+          </p>
+          <p>
+            <label for="phone">Nr telefonu:</label>
+            <input placeholder="Twój numer telefonu" id="phone" name="phone" type="tel" />
+          </p>
+          <p>
+            <label for="email">E-mail:</label>
+            <input placeholder="Twoje e-mail" id="email" name="email" type="email" />
+          </p>
+        </fieldset>
+      </section>
 
-    <ul>
-      <li>
-        &lt;fieldset&gt; - grupuje dane formularza i otacza ramką
+      <section>
+        <h3>type="password"</h3>
+        &lt;label for="secret"&gt;Tajna wiadomość:&lt;/label&gt; &lt;imput placeholder="secret"
+        id="secret" type="password" name="secret" /&gt;
+
+        <label for="secret">Tajna wiadomość:</label>
+        <input placeholder="secret" id="secret" type="password" name="secret" />
+      </section>
+
+      <section>
+        <h3>type="radio"</h3>
+        <p>
+          Tylko jeden może być aktywny - pole jednokrotnego wyboru. <br />Zagnieżdzając input w
+          label, nie trzeba wypisywać for i id:
+        </p>
         <ul>
-          <li>&lt;legend&gt;Dane adresowe:&lt;/legend&gt; - wcina od góry w ramkę</li>
+          <li>
+            &lt;fieldset&gt;
+            <ul>
+              <li>&lt;legend&gt;Ulubione lody:&lt;/legend&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" name="icecream" value="chocolate"
+                /&gt;Czekoladowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" checked name="icecream" value="vanilla"
+                /&gt;Waniliowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="radio" name="icecream" value="pistachio"
+                /&gt;Pistacjowe&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li></li>
+            </ul>
+          </li>
+          <li>&lt;/fieldset&gt;</li>
+        </ul>
+
+        <fieldset>
+          <legend>Ulubione lody:</legend>
+          <p>
+            <label> <input type="radio" name="icecream" value="chocolate" />Czekoladowe</label>
+          </p>
+          <p>
+            <label> <input type="radio" checked name="icecream" value="vanilla" />Waniliowe</label>
+          </p>
+          <p>
+            <label> <input type="radio" name="icecream" value="pistachio" />Pistacjowe</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <section>
+        <h3>type="checkbox"</h3>
+        <ul>
+          <li>pole wielokrotnego wyboru</li>
+          <li>
+            &lt;fieldset&gt;
+            <ul>
+              <li>&lt;legend&gt;Ulubione zespoły:&lt;/legend&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="checkbox" name="band" value="radiohead"
+                /&gt;Radiohead&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="checkbox" checked name="band" value="metallica"
+                /&gt;Metallica&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li>&lt;p&gt;</li>
+              <li>
+                &lt;label&gt; &lt;input type="checkbox" name="band" value="ironmaiden" /&gt;Iron
+                Maiden&lt;/label&gt;
+              </li>
+              <li>&lt;/p&gt;</li>
+              <li></li>
+            </ul>
+          </li>
+          <li>&lt;/fieldset&gt;</li>
+        </ul>
+
+        <fieldset>
+          <legend>Ulubione zespoły:</legend>
+          <p>
+            <label><input type="checkbox" name="band" value="radiohead" />Radiohead</label>
+          </p>
+          <p>
+            <label><input type="checkbox" checked name="band" value="metallica" />Metallica</label>
+          </p>
+          <p>
+            <label><input type="checkbox" name="band" value="ironmaiden" />Iron Maiden</label>
+          </p>
+        </fieldset>
+      </section>
+
+      <section>
+        <h3>type="range"</h3>
+        <ul>
+          <li>&lt;input type="range" min="0" max="100" step="5" /&gt;</li>
+          <li><br /></li>
           <li>&lt;p&gt;</li>
-          <li>&lt;label for="street"&gt;Ulica&lt;/label&gt;</li>
+          <li>&lt;label for="height"&gt;Wzrost:&lt;/label&gt;</li>
           <li>
-            &lt;input placeholder="Twoja ulica" id="street" name="street" type="text" /&gt;
+            &lt;input type="range" id="height" name="height" min="0" max="220" step="5" value="160"
+            /&gt;
           </li>
-          <li>&lt;label for="city"&gt;Miasto&lt;/label&gt;</li>
-          <li>&lt;input placeholder="Twoje miasto" id="city" name="city" type="text" /&gt;</li>
-
-          <li>&lt;label for="phone"&gt;Nr telefonu&lt;/label&gt;</li>
-          <li>
-            &lt;input placeholder="Twój numer telefonu" id="phone" name="phone" type="tel" /&gt;
-          </li>
-
-          <li>&lt;label for="email"&gt;E-mail&lt;/label&gt;</li>
-          <li>
-            &lt;input placeholder="Twoje e-mail" id="email" name="email" type="email" /&gt;
-          </li>
-
           <li>&lt;/p&gt;</li>
         </ul>
-      </li>
-      <li>&lt;/fieldset&gt;</li>
-    </ul>
-
-    <fieldset>
-      <legend>Dane adresowe:</legend>
-      <p>
-        <label for="street">Ulica:</label>
-        <input placeholder="Twoja ulica" id="street" name="street" type="text" />
-      </p>
-      <p>
-        <label for="city">Miasto:</label>
-        <input placeholder="Twoje miasto" id="city" name="city" type="text" />
-      </p>
-      <p>
-        <label for="phone">Nr telefonu:</label>
-        <input placeholder="Twój numer telefonu" id="phone" name="phone" type="tel" />
-      </p>
-      <p>
-        <label for="email">E-mail:</label>
-        <input placeholder="Twoje e-mail" id="email" name="email" type="email" />
-      </p>
-    </fieldset>
-  </section>
-
-  <section>
-    <h3>type="password"</h3>
-    &lt;label for="secret"&gt;Tajna wiadomość:&lt;/label&gt; &lt;imput placeholder="secret"
-    id="secret" type="password" name="secret" /&gt;
-
-    <label for="secret">Tajna wiadomość:</label>
-    <input placeholder="secret" id="secret" type="password" name="secret" />
-  </section>
-
-  <section>
-    <h3>type="radio"</h3>
+        <p>
+          <label for="height">Wzrost:</label>
+          <input type="range" id="height" name="height" min="0" max="220" step="5" value="160" />
+        </p>
+      </section>
+    </article>
+  </main>
+  <footer>
     <p>
-      Tylko jeden może być aktywny - poole jednokrotnego wyboru. <br />Zagnieżdzając input w
-      label, nie trzeba wypisywać for i id:
+      Strona szkoleniowa z frontendu.<br />
+      autor: Rafał Kubiak WTF edycja #3
     </p>
-    <ul>
-      <li>
-        &lt;fieldset&gt;
-        <ul>
-          <li>&lt;legend&gt;Ulubione lody:&lt;/legend&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="radio" name="icecream" value="chocolate"
-            /&gt;Czekoladowe&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="radio" checked name="icecream" value="vanilla"
-            /&gt;Waniliowe&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="radio" name="icecream" value="pistachio"
-            /&gt;Pistacjowe&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li></li>
-        </ul>
-      </li>
-      <li>&lt;/fieldset&gt;</li>
-    </ul>
-
-    <fieldset>
-      <legend>Ulubione lody:</legend>
-      <p>
-        <label> <input type="radio" name="icecream" value="chocolate" />Czekoladowe</label>
-      </p>
-      <p>
-        <label> <input type="radio" checked name="icecream" value="vanilla" />Waniliowe</label>
-      </p>
-      <p>
-        <label> <input type="radio" name="icecream" value="pistachio" />Pistacjowe</label>
-      </p>
-    </fieldset>
-  </section>
-
-  <section>
-    <h3>type="checkbox"</h3>
-    <ul>
-      <li>pole wielokrotnego wyboru</li>
-      <li>
-        &lt;fieldset&gt;
-        <ul>
-          <li>&lt;legend&gt;Ulubione zespoły:&lt;/legend&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="checkbox" name="band" value="radiohead"
-            /&gt;Radiohead&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="checkbox" checked name="band" value="metallica"
-            /&gt;Metallica&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li>&lt;p&gt;</li>
-          <li>
-            &lt;label&gt; &lt;input type="checkbox" name="band" value="ironmaiden" /&gt;Iron
-            Maiden&lt;/label&gt;
-          </li>
-          <li>&lt;/p&gt;</li>
-          <li></li>
-        </ul>
-      </li>
-      <li>&lt;/fieldset&gt;</li>
-    </ul>
-
-    <fieldset>
-      <legend>Ulubione zespoły:</legend>
-      <p>
-        <label><input type="checkbox" name="band" value="radiohead" />Radiohead</label>
-      </p>
-      <p>
-        <label><input type="checkbox" checked name="band" value="metallica" />Metallica</label>
-      </p>
-      <p>
-        <label><input type="checkbox" name="band" value="ironmaiden" />Iron Maiden</label>
-      </p>
-    </fieldset>
-  </section>
-
-  <section>
-    <h3>type="range"</h3>
-    <ul>
-      <li>&lt;input type="range" min="0" max="100" step="5" /&gt;</li>
-      <li><br /></li>
-      <li>&lt;p&gt;</li>
-      <li>&lt;label for="height"&gt;Wzrost:&lt;/label&gt;</li>
-      <li>
-        &lt;input type="range" id="height" name="height" min="0" max="220" step="5" value="160"
-        /&gt;
-      </li>
-      <li>&lt;/p&gt;</li>
-    </ul>
-    <p>
-      <label for="height">Wzrost:</label>
-      <input type="range" id="height" name="height" min="0" max="220" step="5" value="160" />
-    </p>
-  </section>
-</article>
-</main>
-<footer>
-  <p>
-    Strona szkoleniowa z frontendu.<br />
-    autor: Rafał Kubiak WTF edycja #3
-  </p>
-  <div>Rafał Kubiak &copy;</div>
-</footer>
+    <div>Rafał Kubiak &copy;</div>
+  </footer>
 </body>
 
 </html>
