@@ -40,14 +40,7 @@
       <p>
         Definiuje wygląd HTMLa, prezentację na ekranach, czytnikach, wydrukach. Składnia CSS to reguły.
         Przeglądarki potrafią różnie interpretować CSS co prowadzi do różnic w wyświetlaniu.
-        Składnia CSS to reguły:
       </p>
-      <div>
-        <p>Składnia CSS to reguły:</p>
-        selektor &#123; - informacja co powinno być ostylowane, jaki fragment strony<br />
-        właścwości: wartość;
-        <br />&#125;
-      </div>
 
     </article>
 
@@ -55,15 +48,49 @@
       <h2>Deklaracja styli</h2>
       <ul>
         <li>
-          inlinowe - ma jest nadżędny na innymi stylami, tylko jeśli nie możemy edytować pliku ze
-          stylami bo są np. w zewnętrznej bibliotece.<br />
-          &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;
+          <p>inlinowy - styl przy znaczniku, jest nadżędny na innymi stylami, używać tylko jeśli nie możemy edytować
+            pliku ze
+            stylami bo są np. w zewnętrznej bibliotece.<br />
+            &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;</p>
         </li>
-        <li>pliku html w head pomiędzy znacznikami style: &amp;lt;style&amp;gt;&amp;lt;/style&amp;gt; </li>
         <li>
-          Deklarowanie pliku zewnętrznego ze stylami CSS w head strony:
-          <div>&lt; link href="style.css" rel="stylesheet" type="text/css" &gt;</div>
+          <p>W pliku html w head pomiędzy znacznikami style: &lt;style&gt;&lt;/style&gt;</p>
         </li>
+        <li>
+          <h3>Deklarowanie pliku zewnętrznego ze stylami CSS w head strony:</h3>
+          &lt; link href="style.css" rel="stylesheet" type="text/css" &gt;
+        </li>
+        <li>
+          <h3>Składnia CSS to reguły:</h3>
+        </li>
+        <li><p>Informacja co powinno być ostylowane, jaki fragment strony</p></li>
+        <li>selektor &#123;
+        </li>
+        <li>właścwości: wartość;</li>
+        <li>&#125;</li>
+        <li>___</li>
+        <li> .name &#123; </li>
+        <li> właścwości: wartość;</li>
+        <li>&#125;</li>
+        <li>
+          <p>Użycie selektora wewnątrz kodu: <br />
+            &lt;znacznik class="name"&gt;treść&lt;/znacznik&gt;
+          </p>
+        </li>
+
+        <li>
+          <h3>Selektor id</h3>
+        </li>
+        <li>- może być jeden unikalny na stronie</li>
+        <li> #name &#123; </li>
+        <li> właścwości: wartość;</li>
+        <li>&#125;</li>
+        <li><h3>!important</h3></li>
+        <li>Jest używany do nadania wysokiego priorytetu określonym właściwościom stylów. </li>
+        <li>Użycie !important, oznacza to, że ta reguła powinna być stosowana bez względu na inne reguły, które mogą mieć wyższy poziom specyfikacji.</li>
+        <li>Używanie !important powinno być ograniczone do wyjątkowych przypadków, gdy inne metody nie działają.</li>
+        <li>Może być użyteczne w prototypach lub szybkich poprawkach.</li>
+        <li>
       </ul>
     </article>
 
