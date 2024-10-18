@@ -51,7 +51,7 @@
           <p>inlinowy - styl przy znaczniku, jest nadżędny na innymi stylami, używać tylko jeśli nie możemy edytować
             pliku ze
             stylami bo są np. w zewnętrznej bibliotece.<br />
-            &lt;znacznik style="name:wartość;"&gt;treść&lt;/znacznik&gt;</p>
+            &lt;znacznik style="właściwość:wartość;"&gt;treść&lt;/znacznik&gt;</p>
         </li>
         <li>
           <p>W pliku html w head pomiędzy znacznikami style: &lt;style&gt;&lt;/style&gt;</p>
@@ -64,7 +64,7 @@
           <h3>Składnia CSS to reguły:</h3>
         </li>
         <li><p>Informacja co powinno być ostylowane, jaki fragment strony</p></li>
-        <li>selektor &#123;
+        <li>selektor elementu, znacznika &#123;
         </li>
         <li>właścwości: wartość;</li>
         <li>&#125;</li>
@@ -96,7 +96,7 @@
 
     <article>
       <h2>Łączenie selektorów</h2>
-      <p>po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section</p>
+      <p>po spacji = wszystkie a, które znajdują pośrednio lub bezpośrednio w section, nie ważne jak głęboko a się znajduję, nie musi być bezpośrednim dzieckiem section.</p>
       <div>
         section a &#123; <br />
         właścwości: wartość; <br />&#125;
@@ -143,7 +143,7 @@
 
         <p>
           Jeśli specyficzność jest równa - pierwszeństwo ma selektor "bliżej" elementu, czyli
-          niżej, na końcu pliku.
+          niżej, na końcu pliku (bo deklaruje się style w nagłówku i wczytuje się je najpierw).
         </p>
         <p>
           Rekomendowane jest dodawanie klas do wszystkich elementów i unikanie zagnieżdzeń. Nie
@@ -238,7 +238,7 @@
         <li>startuj z małej litery</li>
         <li>nie zaczynać od cyfry</li>
         <li>
-          jeśli dwa słowa nie używamu spacji:
+          jeśli dwa słowa nie używamy spacji:
           <ul>
             <li>- camelCase - łączenie wyrazów zlepiając je i oddzielając wielkimi literami</li>
             <li>- kebab-case - łączenie wyrazów myślnikiem</li>
