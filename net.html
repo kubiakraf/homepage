@@ -45,11 +45,11 @@
           Z serwera do naszej przeglądarki z przeglądarki do serwera.
         </p>
         <ul>
-          Kody odpowiedzi HTTP
+          Kody odpowiedzi HTTP:
           <li>100 - poczekaj chwilkę, za chwilę będziesz mógł zrobić kolejne rządanie</li>
           <li>200 - OK</li>
           <li>30x - Szukasz w złym miejscu - przekieruję Cię w dobre</li>
-          <li>404 - Strony nie odnaleziono, nie mam tego co potrzebujesz</li>
+          <li>404 - Kod błędu, strony nie odnaleziono, nie mam tego co potrzebujesz</li>
           <li>50x - nie czuję się najlepiej..., błąd wewnętrzny serwera</li>
         </ul>
         <p>Aktualnie coraz częściej HTTP/2, który jest szybszy i pozwala na więcej połączeń.</p>
@@ -115,11 +115,15 @@
       <article>
         <h2>DNS</h2>
         <p>
-          Przeglądarka za jego pomocą szuka wpisanego adresu strony. Tłumaczy wpisane nazwy na
-          adresy serwerów.<br />
-          Po znalezieniu serwera przeglądarka odpytuje go o index. <br />Przeglądarka działa w
-          oparciu o system request - response. Wysyła zapytanie do serwera o wartość zasobu jeśli
-          serwer go posiada to przeglądarka otrzymuje go.
+          <ul>
+            <li> Przeglądarka za jego pomocą szuka wpisanego adresu strony. Tłumaczy wpisane nazwy na
+              adresy serwerów.</li>
+            <li>Po znalezieniu serwera przeglądarka odpytuje go o index. To jaki jest to zależy od konfiguracji serwera, przy stronach statycznych najczęściej jest to index.html.</li>
+            <li>Przeglądarka działa w
+              oparciu o system request - response.</li>
+            <li>Wysyła zapytanie do serwera o wartość zasobu jeśli
+              serwer go posiada to przeglądarka otrzymuje go.</li>
+          </ul>
         </p>
       </article>
 
