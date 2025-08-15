@@ -1,7 +1,7 @@
 
 const firstName = "Rafał";
 const lastName = "Kubiak";
-const age = 41;
+const age = 42;
 
 alert('Witaj');
 
